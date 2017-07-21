@@ -21,7 +21,8 @@ I would not recommend modifying any of the code written in decompose.py, symplec
 
 ## Resources 
 Many of the functions in this software are implementations of algorithms described in the following academic papers 
-[Improved Simulation of Stabilizer Circuits](https://arxiv.org/pdf/quant-ph/0406196.pdf)
+[Improved Simulation of Stabilizer Circuits](https://arxiv.org/pdf/quant-ph/0406196.pdf) 
+
 [How to efficiently select an arbitrary Clifford group element](https://arxiv.org/pdf/1406.2170.pdf)
 
 ## License
