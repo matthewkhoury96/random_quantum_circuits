@@ -5,7 +5,7 @@ Code written in Python 3.5 in order to simulate pseudo-random quantum circuits c
 This code makes use of the following libraries: numpy, scipy, numba, matplotlib. 
 
 ## Testing the Code 
-To make sure everything is working properly, run following command inside the appropriate directory
+To make sure everything is working properly, run the following command inside the appropriate directory
 ```
 python test.py 
 ```
