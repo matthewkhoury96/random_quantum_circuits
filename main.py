@@ -221,21 +221,20 @@ def simulate_complete_graph(n, m):
 # FEEL FREE TO MODIFY the code below to run your own simulations          #
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
 
-for i in range(4, 6, 1):
+for i in range(5, 11, 5):
     print("")
     print("start")
     start = time.time()
-    cbrt_n = i
-    n = i * i * i
-    folder = '3D'
+    sqrt_n = i
+    n = i * i
+    folder = '2D'
     print(i)
     m = 25
-    data = simulate_qubit_pairs_3D_lattice(cbrt_n, m)
+    data = simulate_qubit_pairs_2D_lattice(sqrt_n, m)
     utils.save_data(data, "/data_{}/data_{}_{}".format(folder, n, m))
     data = utils.load_data("/data_{}/data_{}_{}".format(folder, n, m))
-    utils.change_font_size(False)
-    utils.save_plot_3D_lattice(data)
-
+    utils.change_font_size(True)
+    utils.save_plot_2D_lattice(data)
     end = time.time()
     print("Time elapsed: " + str(end - start))
     print("done")

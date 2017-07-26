@@ -78,13 +78,12 @@ class CHP_Simulation(object):
         B = np.vstack((np.zeros((self.n, self.n)), np.identity(self.n)))
         C = np.hstack((A, B))
 
-        # k = number of pivots in REF(C) = rank(C)
-        k = decompose.get_rank(C)
-        # k = decompose.row_wise_gaussian_elimination_pivots_fast(C)
+        # r = number of pivots in REF(C) = rank(C)
+        r = decompose.get_rank(C)
 
-        # Collision probaiblity is 1 / (2^(k - n))
-        # so log2(collision_probability) = n - k
-        return(self.n - k)
+        # Collision probaiblity is 1 / (2^(r - n)) = 2^(n-r)
+        # so log2(collision_probability) = n - r
+        return(self.n - r)
 
     @property
     def collision_probability(self):

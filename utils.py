@@ -264,14 +264,16 @@ def save_plot_1D_lattice(data):
     prediction = n * (1 - np.power(1 / d, 1))
 
     # plot k as a function of d
-    f_1, ax_1 = plt.subplots(figsize=(12, 6))
+    f_1, ax_1 = plt.subplots(figsize=(24, 12))
     ax_1.set_xlabel("d = Depth of Circuit")
     ax_1.set_ylabel("k such that Collision Probability = (1/2)^k")
     ax_1.set_title("Collision Probability in a 1D Lattice, " +
                    "Number of Qubits = " +
                    "{}, Number of Samples = {}".format(n, m))
     ax_1.errorbar(d, k, yerr=k_err, fmt="--o", label="Simulation")
-    ax_1.plot(d, prediction, 'r-', label="Prediction = n(1 - 1/d)")
+    ax_1.plot(d, prediction, 'r-', label="Prediction: k = n(1 - 1/d)")
+    ax_1.axvline(n, color='g',
+                 linestyle='--', label="n")
     ax_1.legend(loc=4)
 
     # Save the figure to the plots folder, then delete it
@@ -293,35 +295,58 @@ def save_plot_2D_lattice(data):
     sqrt_n = int(np.sqrt(n))
     shape = (sqrt_n, sqrt_n)
     m = data['m']
+    prediction_1 = n * (1 - np.power(1 / d, 2))
 
-    prediction = n * (1 - np.power(1 / d, 2))
-    f = k
-    f_err = k_err
+    # c = np.power(d, 2) * (1 - k / n)
+    # p_coef = np.polyfit(d, c, 2)
+    # p_string = "{:0.3f}d^2 + {:0.3f}d + {:0.3f}".format(*p_coef)
+    # p = np.poly1d(p_coef)(d)
+    # prediction_2 = n * (1 - (p * np.power(1 / d, 2)))
 
     # Add a linear regression in the plot
-    slope, intercept, r_value = stats.linregress(d[1:7], f[1:7])[:3]
-    d_lin = d[:8]
-    linear_reg = intercept + (slope * d_lin)
+    # slope, intercept, r_value = stats.linregress(d[1:7], f[1:7])[:3]
+    # d_lin = d[:8]
+    # linear_reg = intercept + (slope * d_lin)
 
     # Create a figure plotting our simulation and our prediction
-    f_1, ax_1 = plt.subplots(figsize=(12, 6))
+    f_1, ax_1 = plt.subplots(figsize=(24, 12))
     ax_1.set_xlabel("d = Depth of Circuit")
     ax_1.set_ylabel("k such that Collision Probability = (1/2)^k")
     ax_1.set_title("Collision Probability in a 2D lattice, " +
                    "Shape = {}, ".format(shape) +
                    "Number of Qubits = {}, ".format(n) +
                    "Number of Samples = {}".format(m))
-    ax_1.errorbar(d, f, yerr=f_err, fmt="--o", label="Simulation")
-    ax_1.plot(d, prediction, "r-", label="Prediction: k = n(1 - 1/d^2)")
-    ax_1.plot(d_lin, linear_reg, "g-",
-              label="Linear Regression with (m, b, r) = "
-              + "({:0.2f}, {:0.2f}, {:0.2f})".format(
-                  slope, intercept, r_value))
+    ax_1.errorbar(d, k, yerr=k_err, fmt="--o", label="Simulation")
+    ax_1.plot(d, prediction_1, "r-", label="Prediction: k = n(1 - 1/d^2)")
+    ax_1.axvline(sqrt_n, color='g',
+                 linestyle='--', label="n^(1/2)")
+
+    # ax_1.plot(d, prediction_2, "g-",
+    # label="Prediction 2: k = n(1 - p/d^2), p = {}".format(p_string))
+    # ax_1.plot(d_lin, linear_reg, "g-",
+    #           label="Linear Regression with (m, b, r) = "
+    #           + "({:0.2f}, {:0.2f}, {:0.2f})".format(
+    #               slope, intercept, r_value))
     ax_1.legend(loc=4)
+
+    # f_2, ax_2 = plt.subplots(figsize=(24, 12))
+    # ax_2.plot(d, c, 'bo--', label='Simulation')
+    # ax_2.plot(d, p, 'r-',
+    #           label='p = polyfit(Simulation) = {}'.format(p_string))
+    # ax_2.set_xlabel("d = Depth of Circuit")
+    # ax_2.set_ylabel("c such that k = n(1 - c/d^2)")
+    # ax_2.set_title("Collision Probability in a 2D Lattice, " +
+    #                "Shape = {}, ".format(shape) +
+    #                "Number of Qubits = {}, ".format(n) +
+    #                "Number of Samples = {}".format(m))
+    # ax_2.legend(loc=4)
 
     # Save the figure to the plots folder, then delete it
     f_1.savefig("plots/plots_2D/plot_{}.png".format(n), dpi=200)
     f_1.clf()
+
+    # f_2.savefig('plots/plots_2D/plot_c_{}.png'.format(n), dpi=200)
+    # f_2.clf()
 
 
 def save_plot_3D_lattice(data):
@@ -337,11 +362,16 @@ def save_plot_3D_lattice(data):
     k = data['k_mean']
     k_err = data['k_std']
     m = data['m']
-    # d_smooth = np.arange(d[-1])
-    prediction = n * (1 - np.power(1 / d, 3))
+    prediction_1 = n * (1 - 1 * np.power(1 / d, 3))
+
+    # c = np.power(d, 3) * (1 - k / n)
+    # p_coef = np.polyfit(d, c, 3)
+    # p_string = "{:0.3f}d^3 + {:0.3f}d^2 + {:0.3f}d + {:0.3f}".format(*p_coef)
+    # p = np.poly1d(p_coef)(d)
+    # prediction_2 = n * (1 - p * np.power(1 / d, 3))
 
     # plot k as a function of d
-    f_1, ax_1 = plt.subplots(figsize=(12, 6))
+    f_1, ax_1 = plt.subplots(figsize=(24, 12))
     ax_1.set_xlabel("d = Depth of Circuit")
     ax_1.set_ylabel("k such that Collision Probability = (1/2)^k")
     ax_1.set_title("Collision Probability in a 3D Lattice, " +
@@ -349,12 +379,34 @@ def save_plot_3D_lattice(data):
                    "Number of Qubits = {}, ".format(n) +
                    "Number of Samples = {}".format(m))
     ax_1.errorbar(d, k, yerr=k_err, fmt="--o", label="Simulation")
-    ax_1.plot(d, prediction, 'r-', label="Prediction = n(1-1/d^3)")
+    ax_1.plot(d, prediction_1, 'r-', label="Prediction: k = n(1-1/d^3)")
+    ax_1.axvline(cbrt_n, color='g',
+                 linestyle='--', label="n^(1/3)")
+
+    # ax_1.plot(d, prediction_2, 'g-',
+    # label="Prediction 2: k = n(1 - p/d^3), p = {}".format(p_string))
     ax_1.legend(loc=4)
+
+    # f_2, ax_2 = plt.subplots(figsize=(24, 12))
+    # ax_2.plot(d, c, 'bo--', label='Simulation')
+    # ax_2.plot(d, p, 'r-',
+    #           label='p = polyfit(Simulation) = {}'.format(p_string))
+    # ax_2.set_xlabel("d = Depth of Circuit")
+    # ax_2.set_ylabel("c such that k = n(1 - c/d^3)")
+    # ax_2.set_title("Collision Probability in a 3D Lattice, " +
+    #                "Shape = {}, ".format(shape) +
+    #                "Number of Qubits = {}, ".format(n) +
+    #                "Number of Samples = {}".format(m))
+    # ax_2.legend(loc=4)
+
+    # print("mean value = {}, std = {}".format(np.mean(c), np.std(c)))
 
     # Save the figure to the plots folder, then delete it
     f_1.savefig('plots/plots_3D/plot_{}.png'.format(n), dpi=200)
     f_1.clf()
+
+    # f_2.savefig('plots/plots_3D/plot_c_{}.png'.format(n), dpi=200)
+    # f_2.clf()
 
 
 def save_plot_complete_graph(data):
@@ -368,16 +420,21 @@ def save_plot_complete_graph(data):
     k = data['k_mean']
     k_err = data['k_std']
     m = data['m']
+    # d = N / n
+    # prediction_1 = n * (1 - np.power(1 / d, 6))
 
     # plot k as a function of N
-    f_1, ax_1 = plt.subplots(figsize=(12, 6))
+    f_1, ax_1 = plt.subplots(figsize=(24, 12))
+    # ax_1.set_ylim([int(0 - .2 * n), int(1.2 * n)])
     ax_1.set_xlabel("N = Number of Gates Applied")
     ax_1.set_ylabel("k such that Collision Probability = (1/2)^k")
     ax_1.set_title("Collision Probability in a Complete Graph, " +
                    "Number of Qubits = " +
                    "{}, Number of Samples = {}".format(n, m))
     ax_1.errorbar(N, k, yerr=k_err, fmt="--o", label="Simulation")
-    ax_1.axvline(n * np.log(n), color='r',
+    # ax_1.plot(N, prediction_1, 'r-',
+    #           label="Prediction: k = n(1 - 1/N)")
+    ax_1.axvline(n * np.log(n), color='g',
                  linestyle='--', label="n ln(n)")
 
     ax_1.legend(loc=4)
