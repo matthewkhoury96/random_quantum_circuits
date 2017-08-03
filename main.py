@@ -49,7 +49,7 @@ def simulate_qubit_pairs_1D_lattice(n, m):
         k_matrix[i, :] = utils.sims_to_collision_probabilty(sims)
 
         end = time.time()
-        print("Time elapsed = {:0.2f}, for i = {}".format(end - start, i))
+        print("Time elapsed = {:0.2f}, for sample = {}".format(end - start, i))
 
     # Average collision_probability over m samples
     k_mean = np.mean(k_matrix, axis=0)
@@ -98,7 +98,7 @@ def simulate_qubit_pairs_2D_lattice(sqrt_n, m):
         k_matrix[i, :] = utils.sims_to_collision_probabilty(sims)
 
         end = time.time()
-        print("Time elapsed = {:0.2f}, for i = {}".format(end - start, i))
+        print("Time elapsed = {:0.2f}, for sample = {}".format(end - start, i))
 
     # Average collision_probability over m samples
     k_mean = np.mean(k_matrix, axis=0)
@@ -147,7 +147,7 @@ def simulate_qubit_pairs_3D_lattice(cbrt_n, m):
         k_matrix[i, :] = utils.sims_to_collision_probabilty(sims)
 
         end = time.time()
-        print("Time elapsed = {:0.2f}, for i = {}".format(end - start, i))
+        print("Time elapsed = {:0.2f}, for sample = {}".format(end - start, i))
 
     # Average collision_probability over m samples
     k_mean = np.mean(k_matrix, axis=0)
@@ -196,7 +196,7 @@ def simulate_complete_graph(n, m):
         k_matrix[i, :] = utils.sims_to_collision_probabilty(sims)
 
         end = time.time()
-        print("Time elapsed = {:0.2f}, for i = {}".format(end - start, i))
+        print("Time elapsed = {:0.2f}, for sample = {}".format(end - start, i))
 
     # Average collision_probability over m samples
     k_mean = np.mean(k_matrix, axis=0)
@@ -204,6 +204,7 @@ def simulate_complete_graph(n, m):
 
     # Store everything in data
     data = {"N": N,
+            "d": N / n,
             "k_mean": k_mean,
             "k_std": k_std,
             "n": n,
@@ -221,28 +222,49 @@ def simulate_complete_graph(n, m):
 # FEEL FREE TO MODIFY the code below to run your own simulations          #
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
 
-for i in range(5, 11, 5):
-    print("")
-    print("start")
-    start = time.time()
-    sqrt_n = i
-    n = i * i
-    folder = '2D'
-    print(i)
-    m = 25
-    data = simulate_qubit_pairs_2D_lattice(sqrt_n, m)
-    utils.save_data(data, "/data_{}/data_{}_{}".format(folder, n, m))
-    data = utils.load_data("/data_{}/data_{}_{}".format(folder, n, m))
-    utils.change_font_size(True)
-    utils.save_plot_2D_lattice(data)
-    end = time.time()
-    print("Time elapsed: " + str(end - start))
-    print("done")
+folders = ['1D', '2D', '3D', 'CG']
+sim_funcs = [simulate_qubit_pairs_1D_lattice,
+             simulate_qubit_pairs_2D_lattice,
+             simulate_qubit_pairs_3D_lattice,
+             simulate_complete_graph]
+all_sizes = [[25, 49, 64, 100, 169, 225, 324, 400, 529, 625],
+             [25, 49, 64, 100, 169, 225, 324, 400, 529, 625, 784, 900],
+             [27, 64, 125, 216, 343, 512, 729, 1000],
+             [25, 49, 64, 100, 169, 225, 324, 400, 529, 625]]
+modifiers = [np.abs, np.sqrt, np.cbrt, np.abs]
+m = 25
+a_list = [1, 5, 10, 15, 20]
+all_data = dict()
 
-# c = 10
-# utils.change_font_size(True)
-# utils.plot_all_shapes_k()
-# utils.plot_all_shapes_n_minus_k(c)
-# utils.change_font_size(False)
-# utils.plot_d_star(c)
-# print("done")
+# Run simulations, store and/or load data
+for i in range(0, 4):
+    folder = folders[i]
+    sim_func = sim_funcs[i]
+    sizes = all_sizes[i]
+    mod = modifiers[i]
+    data_list = []
+
+    for n in sizes:
+        print("\nStarting {} circuit with {} qubits".format(folder, n))
+        start = time.time()
+
+        # Perform simulation, store the data, then save a plot
+        # Uncomment the next two lines to run your own simulations
+        # data = sim_func(int(mod(n)), m)
+        # utils.save_data(data, "/data_{}/data_{}_{}".format(folder, n, m))
+        data = utils.load_data("/data_{}/data_{}_{}".format(folder, n, m))
+        data_list.append(data)
+
+        end = time.time()
+        print("Finished {} circuit with {} qubits".format(folder, n))
+        print("Total time elapsed = {}".format(end - start))
+
+    # Add the data from a given folder to all_data
+    all_data[folder] = data_list
+
+# All plotting happens here
+print("\nStarting plotting software")
+utils.plot_k(all_data)
+for a in a_list:
+    utils.plot_x_star(all_data, a)
+print("Finished saving all plots")

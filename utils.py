@@ -249,425 +249,216 @@ def get_lattice_gates(shape, r):
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
 
 
-def save_plot_1D_lattice(data):
+def plot_k(all_data):
     """
-    Creates a plot using the data outputted collected from a 1D lattice
-    plotting k as a function of d = depth of circuit
+    Plots k as a function of d or N in all types of circuits
+    all_data is a dictionary with keys that are folders and values
+    that are data_lists, each data_list is a list of dictionaries,
+    each dictionary will provide an entire plot of k as a function of d
+    For example: all_data['1D'][0] is the data from the 0th simulation
+                 of the 1D lattice
     """
-    # Initialize some variables
-    d = data['d']
-    n = data['n']
-    k = data['k_mean']
-    k_err = data['k_std']
-    m = data['m']
-    # d_smooth = np.arange(d[-1])
-    prediction = n * (1 - np.power(1 / d, 1))
+    folders = all_data.keys()
 
-    # plot k as a function of d
-    f_1, ax_1 = plt.subplots(figsize=(24, 12))
-    ax_1.set_xlabel("d = Depth of Circuit")
-    ax_1.set_ylabel("k such that Collision Probability = (1/2)^k")
-    ax_1.set_title("Collision Probability in a 1D Lattice, " +
-                   "Number of Qubits = " +
-                   "{}, Number of Samples = {}".format(n, m))
-    ax_1.errorbar(d, k, yerr=k_err, fmt="--o", label="Simulation")
-    ax_1.plot(d, prediction, 'r-', label="Prediction: k = n(1 - 1/d)")
-    ax_1.axvline(n, color='g',
-                 linestyle='--', label="n")
-    ax_1.legend(loc=4)
+    for folder in folders:
+        data_list = all_data[folder]
+        for data in data_list:
+            # Initialize a figure and some variables
+            f_1, ax_1 = plt.subplots(figsize=(8, 4))
+            n = data['n']
+            m = data['m']
+            k = data['k_mean']
+            k_err = data['k_std']
 
-    # Save the figure to the plots folder, then delete it
-    f_1.savefig('plots/plots_1D/plot_{}.png'.format(n), dpi=200)
-    f_1.clf()
+            if folder != "CG":
+                # Create some more variables
+                x = data['d']
+                w = int(folder[0])
+                cutoff = int(np.power(n, 1 / w))
+                shape = tuple(cutoff for i in range(w))
+                prediction = n * (1 - 1 * np.power(1 / x, w))
+
+                # Create some helper strings for 2D and 3D Lattice
+                if w > 1:
+                    shape_str = "Shape = {}, ".format(shape)
+                    exp_str_pred = "^{}".format(w)
+                    exp_str_cutoff = "^(1/{})".format(w)
+                else:
+                    shape_str = ""
+                    exp_str_pred = ""
+                    exp_str_cutoff = ""
+
+                # Labels for 1D, 2D, or 3D Lattice
+                x_label = "d = Depth of Circuit"
+                y_label = "k such that Collision Probability = (1/2)^k"
+                title = ("Collision Probability in a " +
+                         "{} Lattice\n{}".format(folder, shape_str) +
+                         "Number of Qubits = {}, ".format(n) +
+                         "Number of Samples = {}".format(m))
+                sim_label = "k from Simulations"
+                pred_label = ("Prediction: k = " +
+                              "n(1 - 1 / d{})".format(exp_str_pred))
+                cutoff_label = "n{}".format(exp_str_cutoff)
+
+            else:
+                # Create some more variables
+                x = data['N']
+                cutoff = n * np.log(n)
+                prediction = n * (1 - 1 / np.exp(x / n))
+
+                # Labels for a Complete Graph
+                x_label = "N = Number of Gates Applied"
+                y_label = "k such that Collision Probability = (1/2)^k"
+                title = ("Collision Probability in a Complete Graph\n" +
+                         "Number of Qubits = " +
+                         "{}, Number of Samples = {}".format(n, m))
+                sim_label = "k from Simulations"
+                pred_label = "Prediction: k = n(1 - 1 / e^(N/n))"
+                cutoff_label = "n ln(n)"
+
+            # Add labels to the figures
+            ax_1.set_xlabel(x_label)
+            ax_1.set_ylabel(y_label)
+            ax_1.set_title(title)
+
+            # Add plots to the figure
+            ax_1.errorbar(x, k, yerr=k_err, fmt='--o', color='b',
+                          label=sim_label, ms=4)
+            ax_1.plot(x, prediction, 'r-', label=pred_label)
+            ax_1.axvline(cutoff, color='g', linestyle='--',
+                         label=cutoff_label)
+
+            # Add the legend and save the plot
+            ax_1.legend(loc=4)
+            f_1.savefig(
+                'plots/plots_{}/k_{}.pdf'.format(folder, n), dpi=200)
 
 
-def save_plot_2D_lattice(data):
+def plot_x_star(all_data, a):
     """
-    Creates a plot using the data outputted collected from 2-qubit
-    operations performed on a 2D square lattice
-    Plots on a log log scale with error bars
+    Plots x_star as a function of n in all types of circuits
+    all_data is a dictionary with keys that are folders and values
+    that are data_lists, each data_list is a list of dictionaries,
+    each dictionary will provide a data point on a plot
+    For example: all_data['1D'][0] is the data from the 0th simulation
+                 of the 1D lattice
     """
-    # Initialize some variables
-    d = data['d']
-    k = data['k_mean']
-    k_err = data['k_std']
-    n = data['n']
-    sqrt_n = int(np.sqrt(n))
-    shape = (sqrt_n, sqrt_n)
-    m = data['m']
-    prediction_1 = n * (1 - np.power(1 / d, 2))
+    folders = all_data.keys()
 
-    # c = np.power(d, 2) * (1 - k / n)
-    # p_coef = np.polyfit(d, c, 2)
-    # p_string = "{:0.3f}d^2 + {:0.3f}d + {:0.3f}".format(*p_coef)
-    # p = np.poly1d(p_coef)(d)
-    # prediction_2 = n * (1 - (p * np.power(1 / d, 2)))
+    for folder in folders:
+        # Initialize a figure
+        data_list = all_data[folder]
+        f_1, ax_1 = plt.subplots(figsize=(8, 4))
 
-    # Add a linear regression in the plot
-    # slope, intercept, r_value = stats.linregress(d[1:7], f[1:7])[:3]
-    # d_lin = d[:8]
-    # linear_reg = intercept + (slope * d_lin)
+        # The data for the plot will be stored in these lists
+        n_vals = []
+        x_star_vals = []
+        x_star_err_vals = []
 
-    # Create a figure plotting our simulation and our prediction
-    f_1, ax_1 = plt.subplots(figsize=(24, 12))
-    ax_1.set_xlabel("d = Depth of Circuit")
-    ax_1.set_ylabel("k such that Collision Probability = (1/2)^k")
-    ax_1.set_title("Collision Probability in a 2D lattice, " +
-                   "Shape = {}, ".format(shape) +
-                   "Number of Qubits = {}, ".format(n) +
-                   "Number of Samples = {}".format(m))
-    ax_1.errorbar(d, k, yerr=k_err, fmt="--o", label="Simulation")
-    ax_1.plot(d, prediction_1, "r-", label="Prediction: k = n(1 - 1/d^2)")
-    ax_1.axvline(sqrt_n, color='g',
-                 linestyle='--', label="n^(1/2)")
+        # Extract x_star from the data_list
+        for data in data_list:
+            k = data['k_mean']
+            k_err = data['k_std']
+            n = data['n']
+            if folder != 'CG':
+                # For a lattice x is d
+                x = data['d']
+                c = n - a
+            else:
+                # For a complete graph x is N
+                x = data['N']
+                c = n - (n / a)
+            x_star, x_star_err = get_x_star(x, k, k_err, c)
+            n_vals.append(n)
+            x_star_vals.append(x_star)
+            x_star_err_vals.append(x_star_err)
 
-    # ax_1.plot(d, prediction_2, "g-",
-    # label="Prediction 2: k = n(1 - p/d^2), p = {}".format(p_string))
-    # ax_1.plot(d_lin, linear_reg, "g-",
-    #           label="Linear Regression with (m, b, r) = "
-    #           + "({:0.2f}, {:0.2f}, {:0.2f})".format(
-    #               slope, intercept, r_value))
-    ax_1.legend(loc=4)
+        # Create some more variables
+        n = np.array(n_vals)
+        x_star = np.array(x_star_vals)
+        x_star_err = np.array(x_star_err_vals)
 
-    # f_2, ax_2 = plt.subplots(figsize=(24, 12))
-    # ax_2.plot(d, c, 'bo--', label='Simulation')
-    # ax_2.plot(d, p, 'r-',
-    #           label='p = polyfit(Simulation) = {}'.format(p_string))
-    # ax_2.set_xlabel("d = Depth of Circuit")
-    # ax_2.set_ylabel("c such that k = n(1 - c/d^2)")
-    # ax_2.set_title("Collision Probability in a 2D Lattice, " +
-    #                "Shape = {}, ".format(shape) +
-    #                "Number of Qubits = {}, ".format(n) +
-    #                "Number of Samples = {}".format(m))
-    # ax_2.legend(loc=4)
+        # Convert to log-log scales
+        log_n = np.log(n)
+        log_x_star = np.log(x_star)
+        log_x_star_err = x_star_err / x_star
 
-    # Save the figure to the plots folder, then delete it
-    f_1.savefig("plots/plots_2D/plot_{}.png".format(n), dpi=200)
-    f_1.clf()
+        # Add a linear regression
+        slope, intercept, r_value, p_value, std_err = stats.linregress(
+            log_n, log_x_star)
+        lin_reg = slope * log_n + intercept
 
-    # f_2.savefig('plots/plots_2D/plot_c_{}.png'.format(n), dpi=200)
-    # f_2.clf()
+        if folder != "CG":
+            # Labels for the 1D, 2D, 3D Lattice
+            x_label = "ln(n), n = Number of Qubits"
+            y_label = "ln(d*), d* = depth such that k = n - {}".format(a)
+            title = "d* in a {} Lattice".format(folder)
+            sim_label = "ln(d*) from Simulations"
+            w = int(folder[0])
+
+            # Different prediction labels for 1D lattice
+            if w > 1:
+                pred_label = ("Prediction: ln(d*) = " +
+                              "(1/{})(ln(n) - ln({}))".format(w, a))
+            else:
+                pred_label = ("Prediction: ln(d*) = " +
+                              "ln(n) - ln({})".format(a))
+
+            # Create prediction
+            prediction = np.power(n / a, 1 / w)
+            log_prediction = np.log(prediction)
+
+        else:
+            # Labels for the Complete Graph
+            x_label = "ln(n), n = Number of Qubits"
+            y_label = ("ln(N*), N* = number of gates such that " +
+                       "k = n - n/{}".format(a))
+            title = "N* in a Complete Graph"
+            sim_label = "ln(N*) from Simulations"
+            pred_label = "Prediction: ln(N*) = ln(n) + ln(ln({}))".format(a)
+
+            # Create Prediction
+            prediction = n * np.log(a)
+            log_prediction = np.log(prediction)
+
+        # Add labels to the figures
+        ax_1.set_xlabel(x_label)
+        ax_1.set_ylabel(y_label)
+        ax_1.set_title(title)
+
+        # Add plots to the figure
+        ax_1.errorbar(log_n, log_x_star, yerr=log_x_star_err,
+                      fmt='--o', color='b', label=sim_label, ms=4)
+        ax_1.plot(log_n, log_prediction, 'r-', label=pred_label)
+        ax_1.plot(log_n, lin_reg, 'g-',
+                  label=("Linear Regression: (m, b, r) = " +
+                         "({:1.2f}, {:1.2f}, {:1.2f})".format(
+                             slope, intercept, r_value)))
+
+        # Add the legend and save the figure
+        ax_1.legend(loc=4)
+        f_1.savefig('plots/plots_{}/x_star_{}.pdf'.format(folder, a), dpi=200)
 
 
-def save_plot_3D_lattice(data):
+def get_x_star(x, k, k_err, c):
     """
-    Creates a plot using the data outputted collected from a 3D lattice
-    plotting k as a function of d = depth of circuit
-    """
-    # Initialize some variables
-    d = data['d']
-    n = data['n']
-    cbrt_n = int(np.cbrt(n))
-    shape = (cbrt_n, cbrt_n, cbrt_n)
-    k = data['k_mean']
-    k_err = data['k_std']
-    m = data['m']
-    prediction_1 = n * (1 - 1 * np.power(1 / d, 3))
-
-    # c = np.power(d, 3) * (1 - k / n)
-    # p_coef = np.polyfit(d, c, 3)
-    # p_string = "{:0.3f}d^3 + {:0.3f}d^2 + {:0.3f}d + {:0.3f}".format(*p_coef)
-    # p = np.poly1d(p_coef)(d)
-    # prediction_2 = n * (1 - p * np.power(1 / d, 3))
-
-    # plot k as a function of d
-    f_1, ax_1 = plt.subplots(figsize=(24, 12))
-    ax_1.set_xlabel("d = Depth of Circuit")
-    ax_1.set_ylabel("k such that Collision Probability = (1/2)^k")
-    ax_1.set_title("Collision Probability in a 3D Lattice, " +
-                   "Shape = {}, ".format(shape) +
-                   "Number of Qubits = {}, ".format(n) +
-                   "Number of Samples = {}".format(m))
-    ax_1.errorbar(d, k, yerr=k_err, fmt="--o", label="Simulation")
-    ax_1.plot(d, prediction_1, 'r-', label="Prediction: k = n(1-1/d^3)")
-    ax_1.axvline(cbrt_n, color='g',
-                 linestyle='--', label="n^(1/3)")
-
-    # ax_1.plot(d, prediction_2, 'g-',
-    # label="Prediction 2: k = n(1 - p/d^3), p = {}".format(p_string))
-    ax_1.legend(loc=4)
-
-    # f_2, ax_2 = plt.subplots(figsize=(24, 12))
-    # ax_2.plot(d, c, 'bo--', label='Simulation')
-    # ax_2.plot(d, p, 'r-',
-    #           label='p = polyfit(Simulation) = {}'.format(p_string))
-    # ax_2.set_xlabel("d = Depth of Circuit")
-    # ax_2.set_ylabel("c such that k = n(1 - c/d^3)")
-    # ax_2.set_title("Collision Probability in a 3D Lattice, " +
-    #                "Shape = {}, ".format(shape) +
-    #                "Number of Qubits = {}, ".format(n) +
-    #                "Number of Samples = {}".format(m))
-    # ax_2.legend(loc=4)
-
-    # print("mean value = {}, std = {}".format(np.mean(c), np.std(c)))
-
-    # Save the figure to the plots folder, then delete it
-    f_1.savefig('plots/plots_3D/plot_{}.png'.format(n), dpi=200)
-    f_1.clf()
-
-    # f_2.savefig('plots/plots_3D/plot_c_{}.png'.format(n), dpi=200)
-    # f_2.clf()
-
-
-def save_plot_complete_graph(data):
-    """
-    Creates a plot using the data outputted collected from a complete graph
-    plotting k as a function of N = number of gates
-    """
-    # Initialize some variables
-    N = data['N']
-    n = data['n']
-    k = data['k_mean']
-    k_err = data['k_std']
-    m = data['m']
-    # d = N / n
-    # prediction_1 = n * (1 - np.power(1 / d, 6))
-
-    # plot k as a function of N
-    f_1, ax_1 = plt.subplots(figsize=(24, 12))
-    # ax_1.set_ylim([int(0 - .2 * n), int(1.2 * n)])
-    ax_1.set_xlabel("N = Number of Gates Applied")
-    ax_1.set_ylabel("k such that Collision Probability = (1/2)^k")
-    ax_1.set_title("Collision Probability in a Complete Graph, " +
-                   "Number of Qubits = " +
-                   "{}, Number of Samples = {}".format(n, m))
-    ax_1.errorbar(N, k, yerr=k_err, fmt="--o", label="Simulation")
-    # ax_1.plot(N, prediction_1, 'r-',
-    #           label="Prediction: k = n(1 - 1/N)")
-    ax_1.axvline(n * np.log(n), color='g',
-                 linestyle='--', label="n ln(n)")
-
-    ax_1.legend(loc=4)
-
-    # Save the figure to the plots folder, then delete it
-    f_1.savefig('plots/plots_CG/plot_{}.png'.format(n), dpi=200)
-    f_1.clf()
-
-
-def plot_all_shapes_k():
-    # Initialize some variables
-    f_1, ax_1 = plt.subplots(figsize=(24, 12))
-    ax_1.set_xlabel("d = Depth of Circuit")
-    ax_1.set_ylabel("k/n such that Collision Probability = (1/2)^k")
-    ax_1.set_title("Collision Probability for Different Sized Circuits, "
-                   + "Number of Samples = 25")
-    colors = ['b', 'g', 'c', 'm', 'y', 'k']
-
-    for i in range(5, 31, 5):
-        m = 25
-        n = i * i
-        data = load_data("/data_2D/data_{}_{}".format(n, m))
-
-        # Initialize some variables
-        d = data['d']
-        k = data['k_mean']
-        k_err = data['k_std']
-
-        prediction = (1 - np.power(1 / d, 2))
-        f = k / n
-        f_err = k_err / n
-
-        ax_1.errorbar(d, f, yerr=f_err, fmt="--o", color=colors[i // 5 - 1],
-                      label="Simulation for shape ({}, {})".format(i, i))
-
-    ax_1.plot(d, prediction, "r-", label="Prediction: k/n = (1 - 1/d^2)")
-    ax_1.legend(loc=4)
-    # Save the figure to the plots folder, then delete it
-    f_1.savefig('plots/plots_2D/k÷n.png', dpi=200)
-    f_1.clf()
-
-
-def get_d_star(d, k, k_err, n, c):
-    """
-    Finds d_star such that n - k = c, where n - k is a function of d
+    Finds x_star such that k = c, where k is a function of x
     Uses a closed form solution in order to calculate the propogation of error
-    Performs a Linear interpolation to find d_star
+    Performs a Linear interpolation to find x_star
     """
 
-    # First get the index of the point closest to, but less than c
-    i = np.where(n - k < c)[0][0]
+    # First get the smallest index i where k[i] > c
+    i = np.where(k > c)[0][0]
 
     # Get the two points that you will use for the linear interpolation
-    x_1, y_1, y_1_err = (d[i - 1], n - k[i - 1], k_err[i - 1])
-    x_2, y_2, y_2_err = (d[i], n - k[i], k_err[i])
+    x_1, y_1, y_1_err = (x[i - 1], k[i - 1], k_err[i - 1])
+    x_2, y_2, y_2_err = (x[i], k[i], k_err[i])
 
     # Find closed form for d_star and d_star_err
-    d_star = (((x_2 - x_1) * (c - y_1)) / (y_2 - y_1)) + x_1
+    x_star = (((x_2 - x_1) * (c - y_1)) / (y_2 - y_1)) + x_1
     partial_y_1 = ((x_2 - x_1) * (c - y_2)) / np.power((y_2 - y_1), 2)
     partial_y_2 = ((x_2 - x_1) * (y_1 - c)) / np.power((y_2 - y_1), 2)
-    d_star_err = np.sqrt(np.power(partial_y_1 * y_1_err, 2) +
+    x_star_err = np.sqrt(np.power(partial_y_1 * y_1_err, 2) +
                          np.power(partial_y_2 * y_2_err, 2))
 
-    return (d_star, d_star_err)
-
-
-def plot_all_shapes_n_minus_k(c):
-    # Initialize some variables
-    # f_1 is the original plot
-    # f_2 is the zoomed in plot with the values of d_star
-    f_1, ax_1 = plt.subplots(figsize=(24, 12))
-    ax_1.set_xlabel("d = Depth of Circuit")
-    ax_1.set_ylabel("n - k such that Collision Probability = (1/2)^k")
-    ax_1.set_title("Collision Probability for Different Sized Circuits, "
-                   + "Number of Samples = 25")
-    f_2, ax_2 = plt.subplots(figsize=(24, 12))
-    ax_2.set_xlabel("d = Depth of Circuit")
-    ax_2.set_ylabel("n - k such that Collision Probability = (1/2)^k")
-    ax_2.set_title("Collision Probability for Different Sized Circuits, "
-                   + "Number of Samples = 25")
-    colors = ['b', 'g', 'c', 'm', 'y', 'k']
-    d_star_vals = []
-    d_star_err_vals = []
-    m = 25
-
-    # Collect data and add to the plots
-    for i in range(5, 31, 5):
-        n = i * i
-        data = load_data("/data_2D/data_{}_{}".format(n, m))
-
-        # get parts of data that we need
-        d = data['d']
-        k = data['k_mean']
-        k_err = data['k_std']
-
-        # add our prediction to the original plot
-        prediction = n * (np.power(1 / d, 2))
-        f = n - k
-        f_err = k_err
-
-        ax_1.plot(d, prediction, color=colors[i // 5 - 1],
-                  label="Prediction: n - k = {}/d^2".format(n))
-
-        ax_1.errorbar(d, f, yerr=f_err, fmt="--o", color=colors[i // 5 - 1],
-                      label="Simulation for shape ({}, {})".format(i, i))
-
-        # get d_star and error for the zoomed in plot
-        d_star, d_star_err = get_d_star(d, k, k_err, n, c)
-        d_star_vals.append(d_star)
-        d_star_err_vals.append(d_star_err)
-
-        ax_2.errorbar(d, f, yerr=f_err, fmt="--o", color=colors[i // 5 - 1],
-                      label="Simulation for shape ({}, {})".format(i, i))
-
-    # Add some extra stuff to the zoomed in plot
-    ax_2.plot(d, c * np.ones(len(d)), 'r--', label="c = {}".format(c))
-    ax_2.errorbar(d_star_vals, c * np.ones(len(d_star_vals)),
-                  xerr=d_star_err_vals, fmt="X", color='r',
-                  label="d* such that n - k = {}".format(c),
-                  capsize=5)
-    ax_2.set_ylim([0, 20])
-    ax_2.set_xlim([0, 8])
-
-    # Add the legends
-    ax_1.legend(loc=1)
-    ax_2.legend(loc=3)
-
-    # Save both figures to the plots folder
-    f_1.savefig('plots/plots_2D/n-k.png', dpi=200)
-    f_2.savefig('plots/plots_2D/n-k_zoom.png', dpi=200)
-    f_1.clf()
-    f_2.clf()
-
-
-def plot_d_star(c):
-    # Initialize some variables
-    d_star_vals = []
-    d_star_err_vals = []
-    n_vals = []
-    m = 25
-
-    # Get the values of d_star and d_star_err
-    for i in range(5, 31, 5):
-        n = i * i
-        data = load_data("/data_2D/data_{}_{}".format(n, m))
-
-        # Initialize some variables
-        d = data['d']
-        k = data['k_mean']
-        k_err = data['k_std']
-
-        d_star, d_star_err = get_d_star(d, k, k_err, n, c)
-        d_star_vals.append(d_star)
-        d_star_err_vals.append(d_star_err)
-        n_vals.append(n)
-
-    # Changing the names of variables for ease
-    d_star = np.array(d_star_vals)
-    d_star_err = np.array(d_star_err_vals)
-    n = np.array(n_vals)
-    n_smooth = np.arange(n_vals[0], n_vals[-1])
-    prediction = np.sqrt(n_smooth / c)
-
-    # For the log-log-scale
-    log_d_star = np.log(d_star)
-    log_d_star_err = np.abs(d_star_err / d_star)
-    log_n = np.log(n)
-    log_n_smooth = np.log(n_smooth)
-    log_prediction = np.log(prediction)
-
-    # Add a linear regression to the log-log-scale
-    slope, intercept, r_value = stats.linregress(log_n, log_d_star)[:3]
-    linear_reg = intercept + (slope * log_n)
-
-    print(slope, intercept, r_value)
-
-    # log-log plot
-    f_1, ax_1 = plt.subplots(figsize=(12, 6))
-    ax_1.set_xlabel("log(n), n = Number of Qubits")
-    ax_1.set_ylabel("log(d*) such that n - k = 10")
-    ax_1.set_title(
-        "Depth for Different Sized Circuits for n - k = {}, ".format(c)
-        + "Number of Samples = 25")
-    ax_1.errorbar(log_n, log_d_star, yerr=log_d_star_err,
-                  fmt="--o", color="b", label="Simulation")
-    ax_1.plot(log_n_smooth, log_prediction,  'r-',
-              label="Prediction: log(d*) = log((n/{})^(1/2))".format(c))
-
-    ax_1.plot(log_n, linear_reg, "g-",
-              label="Linear Regression with (m, b, r) = "
-              + "({:0.3f}, {:0.3f}, {:0.3f})".format(
-                  slope, intercept, r_value))
-
-    ax_1.legend(loc=4)
-    # Save the figure to the plots folder, then delete it
-    f_1.savefig('plots/plots_2D/d_star_log_log.png', dpi=200)
-    f_1.clf()
-
-    # Original plot of d* as a function of n
-    f_1, ax_1 = plt.subplots(figsize=(12, 6))
-    ax_1.set_xlabel("n = Number of Qubits")
-    ax_1.set_ylabel("d* such that n - k = 10")
-    ax_1.set_title(
-        "Depth for Different Sized Circuits for n - k = {}, ".format(c)
-        + "Number of Samples = 25")
-    ax_1.errorbar(n, d_star, yerr=d_star_err,
-                  fmt="--o", color="b", label="Simulation")
-    ax_1.plot(n_smooth, prediction,  'r-',
-              label="Prediction: d* = (n/{})^(1/2)".format(c))
-    ax_1.legend(loc=4)
-    # Save the figure to the plots folder, then delete it
-    f_1.savefig('plots/plots_2D/d_star.png', dpi=200)
-    f_1.clf()
-
-
-def change_font_size(big):
-    """
-    Makes the font size of the matplotlib plots
-    The font gets bigger if big is true
-    """
-    if big:
-        SMALL_SIZE = 16
-        MEDIUM_SIZE = 20
-        BIGGER_SIZE = 24
-    else:
-        SMALL_SIZE = 8
-        MEDIUM_SIZE = 10
-        BIGGER_SIZE = 12
-
-    plt.rc('font', size=SMALL_SIZE)          # controls default text sizes
-    plt.rc('axes', titlesize=BIGGER_SIZE)    # fontsize of the axes title
-    plt.rc('axes', labelsize=MEDIUM_SIZE)    # fontsize of the x and y labels
-    plt.rc('xtick', labelsize=SMALL_SIZE)    # fontsize of the tick labels
-    plt.rc('ytick', labelsize=SMALL_SIZE)    # fontsize of the tick labels
-    plt.rc('legend', fontsize=SMALL_SIZE)    # legend fontsize
-    plt.rc('figure', titlesize=BIGGER_SIZE)  # fontsize of the figure title
+    return (x_star, x_star_err)
