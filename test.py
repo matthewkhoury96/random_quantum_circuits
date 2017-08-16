@@ -332,6 +332,59 @@ def test_utils():
                   + str(i) + " with shape = " + str(shape))
             return False
 
+    # Test collision_probability_mean_and_std function for
+    # small values of k
+    for i in range(10):
+        # Initialize some variables
+        m, x = (25, 100)
+        s = 5
+        k_matrix = np.random.randint(20, size=(m, x))
+        p_matrix = np.power(1 / 2, k_matrix)
+        mean_ans = np.zeros(x)
+        std_ans = np.zeros(x)
+        mean_err_ans = np.zeros(x)
+        std_err_ans = np.zeros(x)
+
+        for j in range(x):
+            # p_vec is a set of m samples
+            p_vec = p_matrix[:, j]
+
+            # Divide the m samples into m/s sets of size s
+            p_sets = p_vec.reshape(m // s, s)
+
+            # mu[i] and sigma[i] are the mean and std of the
+            # i^th set in p_sets
+            mu = np.mean(p_sets, axis=1)
+            sigma = np.std(p_sets, axis=1)
+
+            # a is the mean of the values in mu
+            # b is the standard error the values in mu
+            # c is the mean of the values in sigma
+            # d is the standard error of the values in mu
+            # NOTE: standard error = std/sqrt(# samples)
+            a = np.mean(mu)
+            b = np.std(mu) / (np.sqrt(len(mu)))
+            c = np.mean(sigma)
+            d = np.std(sigma) / (np.sqrt(len(sigma)))
+
+            # Convert to the log scale and use propogation of
+            # error formula for the errors of the logs
+            mean_ans[j] = -np.log2(a)
+            std_ans[j] = -np.log2(c)
+            mean_err_ans[j] = b / (a * np.log(2))
+            std_err_ans[j] = c / (d * np.log(2))
+
+        mean, mean_err, std, std_err = (
+            utils.collision_probability_mean_and_std(k_matrix, s))
+        result = ((abs(mean - mean_ans) < 1e-6).all() and
+                  (abs(mean_err - mean_err_ans < 1e-6)).all() and
+                  (abs(std - std_ans) < 1e-6).all() and
+                  (abs(std_err - std_err_ans < 1e-6)).all())
+        if not result:
+            print("Failed: found incorrect values for mean and standard " +
+                  "deviation of the collision probability")
+            return False
+
     print("Passed: utils.py passed all tests\n")
     return True
 

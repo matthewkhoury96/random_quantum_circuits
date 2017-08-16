@@ -7,6 +7,7 @@ import decompose
 import chp_py
 import imp
 from scipy import stats
+plt.rc('font', family='serif')
 
 imp.reload(symplectic)
 imp.reload(decompose)
@@ -241,6 +242,102 @@ def get_lattice_gates(shape, r):
     return gates
 
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
+# These functions are for computing the expected value and standard       #
+# deviation of the collision probability given a list of values for k     #
+# DO NOT MODIFY (unless you have a deep understanding of the code)        #
+# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
+
+
+def collision_probability_mean_and_std(k_matrix, s):
+    """
+    Given an k_matrix where k_matrix[i,j] is k = -log2(collision_probability)
+    for the i^th sample and j^th value of d or N, this function returns four
+    arrays mean_log, mean_err_log, std_log, and std_err_log. These are computed
+    by dividing the m samples into m/s sets of size s, we then take the
+    mean and standard deviation of the m/s sets. We then have mean_log as the
+    -log2 of the mean of the means, mean_log_err as the corresponding standard
+    error, std_log as the -log2 of the mean of the stds, and std_err_log as the
+    corresponding standard error. Calculations here are done to avoid underflow
+    """
+    # Initialize some variables
+    m, x = k_matrix.shape
+    mean_log = np.zeros(x)
+    std_log = np.zeros(x)
+    mean_err_log = np.zeros(x)
+    std_err_log = np.zeros(x)
+
+    for i in range(x):
+        # k_vec is a set of m samples
+        k_vec = k_matrix[:, i]
+
+        # Divide the m samples into m/s sets of size s
+        k_sets = k_vec.reshape(m // s, s)
+        # Add a small perturbation to avoid a set with
+        # zero std to avoid infs and nans
+        k_sets[:, -1] += 1e-3
+
+        # mu[i], and sigma[i] are the -log2 of the mean and std
+        # of the i^th set in k_sets
+        vals = [log_mean_and_std(w) for w in k_sets]
+        mu = np.array([val[0] for val in vals])
+        sigma = np.array([val[1] for val in vals])
+
+        # a is the -log2 of the mean of the values in mu
+        # b is the -log2 of the standard error of the values in mu
+        # c is the -log2 of the mean of the values in sigma
+        # d is the -log2 of the standard error of the values in sigma
+        # NOTE: standard error is std/sqrt(# samples)
+        a, b = log_mean_and_std(mu)
+        b += (1 / 2) * np.log2(len(mu))
+        c, d = log_mean_and_std(sigma)
+        d += (1 / 2) * np.log2(len(sigma))
+
+        # a and c are the final values for mean_log and std_log
+        mean_log[i] = a
+        std_log[i] = c
+
+        # (1/2)^b and (1/2)^d are the errors for the actual
+        # mean and std respectively, to compute the errors
+        # for the -log2(mean) and -log2(std) we must use  the
+        # propogation of uncertainty formula
+        mean_err_log[i] = np.power(1 / 2, b - a) * (1 / np.log(2))
+        std_err_log[i] = np.power(1 / 2, d - c) * (1 / np.log(2))
+
+    return (mean_log, mean_err_log, std_log, std_err_log)
+
+
+def log_mean_and_std(w):
+    """
+    Given a vector w, returns -log2(mean(w)) and -log2(std(w))
+    uses log_sum_exp to avoid underflow
+    """
+    m = len(w)
+    mu = np.log2(m) - log_sum_exp(w)
+    v = np.hstack((2 * w, 2 * mu * np.ones(m), w + mu - 1))
+    c = np.hstack((np.ones(2 * m), -np.ones(m)))
+    sigma = ((1 / 2) * np.log2(m)) - ((1 / 2) * log_sum_exp(v, c))
+
+    return(mu, sigma)
+
+
+def log_sum_exp(v, c=None):
+    """
+    A modified version of the LogSumExponential function
+    Given a vector v = [v_1, v_2, ..., v_n], and returns
+    log2((1/2)^v_1 + (1/2)^(v_2) + ... + (1/2)^(v_n))
+    avoiding undeflow errors by factoring out the max value in v
+    Optional parameter: s is a vector of length n and values of
+    co-efficients, in the sum the i^th term will have sign s[i]
+    """
+    v_star = np.max(v)
+    if c is None:
+        c = np.ones(len(v))
+    result = np.log2(np.sum(c * np.power(1 / 2, v - v_star)))
+    result = result - v_star
+    return result
+
+
+# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
 # Examples of plotting functions, these are subject to change             #
 # NOTE: there are no test cases for these in test.py                      #
 #       some of the functions below will not work unless you have certain #
@@ -249,9 +346,10 @@ def get_lattice_gates(shape, r):
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
 
 
-def plot_k(all_data):
+def plot_collision_probability(all_data, s):
     """
-    Plots k as a function of d or N in all types of circuits
+    Plots collision probability as a function of d or N and also
+    plots collision probability as a function of n
     all_data is a dictionary with keys that are folders and values
     that are data_lists, each data_list is a list of dictionaries,
     each dictionary will provide an entire plot of k as a function of d
@@ -261,44 +359,72 @@ def plot_k(all_data):
     folders = all_data.keys()
 
     for folder in folders:
+        # Each folder corresponds to a different type of circuit
         data_list = all_data[folder]
+
+        # These values collected here are used to plot cp_mean and cp_std
+        # as a function of n for saturated depths
+        cp_mean_log_vals = []
+        cp_mean_err_log_vals = []
+        cp_std_log_vals = []
+        cp_std_err_log_vals = []
+        n_vals = []
+        # The third from the last depth is usually saturated in our simulations
+        d_index = -3
+
         for data in data_list:
-            # Initialize a figure and some variables
-            f_1, ax_1 = plt.subplots(figsize=(8, 4))
+            # data contains the k_matrix for a fixed value of n for the circuit
+            # type specified by the folder
+
+            # Get the values for the collision_probability for a specific
+            # k_matrix, this is used to plot the mean and std of the
+            # collision_probability with error bars as a function of d or N
+            cp_mean_log, cp_mean_err_log, cp_std_log, cp_std_err_log = (
+                collision_probability_mean_and_std(data['k_matrix'], s))
+
+            # Create some helper variables
             n = data['n']
-            m = data['m']
-            k = data['k_mean']
-            k_err = data['k_std']
+            types = ['cp_mean_log', 'cp_std_log']
+            y = [cp_mean_log, cp_std_log]
+            y_err = [cp_mean_err_log,
+                     cp_std_err_log]
+            y_labels = [r"$-\log_2(\langle P_c \rangle)$",
+                        r"$-\log_2(\Delta P_c)$"]
+            sim_labels = [r"$-\log_2(\langle P_c \rangle)$ from Simulations",
+                          r"$-\log_2(\Delta P_c)$ from Simulations"]
+
+            # Add values for cp_mean and cp_std at a saturated depth
+            cp_mean_log_vals.append(cp_mean_log[d_index])
+            cp_mean_err_log_vals.append(cp_mean_err_log[d_index])
+            cp_std_log_vals.append(cp_std_log[d_index])
+            cp_std_err_log_vals.append(cp_std_err_log[d_index])
+            n_vals.append(n)
 
             if folder != "CG":
                 # Create some more variables
                 x = data['d']
                 w = int(folder[0])
-                cutoff = int(np.power(n, 1 / w))
+                cutoff = int(np.rint(np.power(n, 1 / w)))
                 shape = tuple(cutoff for i in range(w))
                 prediction = n * (1 - 1 * np.power(1 / x, w))
 
                 # Create some helper strings for 2D and 3D Lattice
                 if w > 1:
-                    shape_str = "Shape = {}, ".format(shape)
-                    exp_str_pred = "^{}".format(w)
-                    exp_str_cutoff = "^(1/{})".format(w)
+                    shape_str = r"Shape = {}, ".format(shape)
+                    exp_str_pred = r"^{}".format(w)
+                    cutoff_label = r"$n^{(1/" + str(w) + r")}$"
                 else:
-                    shape_str = ""
-                    exp_str_pred = ""
-                    exp_str_cutoff = ""
+                    shape_str = r""
+                    exp_str_pred = r""
+                    cutoff_label = r"$n$"
 
                 # Labels for 1D, 2D, or 3D Lattice
-                x_label = "d = Depth of Circuit"
-                y_label = "k such that Collision Probability = (1/2)^k"
-                title = ("Collision Probability in a " +
+                x_label = r"$d$ = Depth of Circuit"
+                title = (r"Collision Probability in a " +
                          "{} Lattice\n{}".format(folder, shape_str) +
-                         "Number of Qubits = {}, ".format(n) +
-                         "Number of Samples = {}".format(m))
-                sim_label = "k from Simulations"
-                pred_label = ("Prediction: k = " +
-                              "n(1 - 1 / d{})".format(exp_str_pred))
-                cutoff_label = "n{}".format(exp_str_cutoff)
+                         "Number of Qubits = {}".format(n))
+                pred_label = (r"Prediction: $-\log_2(\langle P_c \rangle) " +
+                              "= n(1 - 1 / d{})$".format(exp_str_pred))
 
             else:
                 # Create some more variables
@@ -307,34 +433,70 @@ def plot_k(all_data):
                 prediction = n * (1 - 1 / np.exp(x / n))
 
                 # Labels for a Complete Graph
-                x_label = "N = Number of Gates Applied"
-                y_label = "k such that Collision Probability = (1/2)^k"
-                title = ("Collision Probability in a Complete Graph\n" +
-                         "Number of Qubits = " +
-                         "{}, Number of Samples = {}".format(n, m))
-                sim_label = "k from Simulations"
-                pred_label = "Prediction: k = n(1 - 1 / e^(N/n))"
-                cutoff_label = "n ln(n)"
+                x_label = r"$N$ = Number of Gates Applied"
+                title = (r"Collision Probability in a Complete Graph" + "\n" +
+                         "Number of Qubits = {}".format(n))
+                pred_label = (r"Prediction: $-\log_2( \langle P_c \rangle)" +
+                              " = n(1 - 1 / e^(N/n))$")
+                cutoff_label = r"$n ln(n)$"
 
-            # Add labels to the figures
-            ax_1.set_xlabel(x_label)
-            ax_1.set_ylabel(y_label)
-            ax_1.set_title(title)
+            # Plotting cp_mean and cp_std as a function of d or N
+            f_1, ax_1 = plt.subplots(figsize=(8, 4))
+            for i in range(2):
+                # Add labels to the figures
+                ax_1.set_xlabel(x_label)
+                ax_1.set_ylabel(y_labels[i])
+                ax_1.set_title(title)
 
-            # Add plots to the figure
-            ax_1.errorbar(x, k, yerr=k_err, fmt='--o', color='b',
-                          label=sim_label, ms=4)
-            ax_1.plot(x, prediction, 'r-', label=pred_label)
-            ax_1.axvline(cutoff, color='g', linestyle='--',
-                         label=cutoff_label)
+                # Add plots to the figure
+                ax_1.errorbar(x, y[i], yerr=y_err[i],
+                              fmt='--o', color='b',
+                              label=sim_labels[i],
+                              zorder=1, ms=3)
 
-            # Add the legend and save the plot
-            ax_1.legend(loc=4)
-            f_1.savefig(
-                'plots/plots_{}/k_{}.pdf'.format(folder, n), dpi=200)
+                # Add a prediction and cutoff for the mean
+                if i < 1:
+                    ax_1.plot(x, prediction, 'r-', label=pred_label)
+                    ax_1.axvline(cutoff, color='g', linestyle='--',
+                                 label=cutoff_label)
+
+                # Add the legend and save the plot
+                ax_1.legend(loc=4)
+                f_1.savefig(
+                    'plots/plots_{}/{}/{}.pdf'.format(folder, n,  types[i]),
+                    dpi=200)
+                ax_1.cla()
+
+        # Create a plot that overplots cp_mean and cp_std as a function of n
+        # at a fixed saturated depth with error bars
+        f_1, ax_1 = plt.subplots(figsize=(8, 4))
+        # Add labels to the figure, note that we re-use some of the labels
+        # that we created above
+        ax_1.set_xlabel(r"$n$ = Number of Qubits")
+        ax_1.set_title("Steady State " + title.split("\n")[0])
+        ax_1.errorbar(n_vals, cp_mean_log_vals,
+                      yerr=cp_mean_err_log_vals,
+                      fmt='x', color='b',
+                      label=sim_labels[0],
+                      ms=5, capsize=5)
+        ax_1.errorbar(n_vals, cp_std_log_vals,
+                      yerr=cp_std_err_log_vals,
+                      fmt='x', color='r',
+                      label=sim_labels[1],
+                      ms=5, capsize=5)
+        # Also add the line f(n) = n to the plot
+        ax_1.plot(n_vals, n_vals, color='g', zorder=1,
+                  label=r"$f(n)=n$")
+
+        # Add the legend and save the plot
+        ax_1.legend(loc=4)
+        f_1.savefig(
+            'plots/plots_{}/all_n/steady_state_cp.pdf'.format(
+                folder))
+        ax_1.cla()
 
 
-def plot_x_star(all_data, a):
+def plot_x_star(all_data, a, s):
     """
     Plots x_star as a function of n in all types of circuits
     all_data is a dictionary with keys that are folders and values
@@ -346,34 +508,40 @@ def plot_x_star(all_data, a):
     folders = all_data.keys()
 
     for folder in folders:
-        # Initialize a figure
+        # Each folder corresponds to a different type of circuit
+        # and we will extract data for one plot from each folder
         data_list = all_data[folder]
-        f_1, ax_1 = plt.subplots(figsize=(8, 4))
 
         # The data for the plot will be stored in these lists
         n_vals = []
         x_star_vals = []
         x_star_err_vals = []
 
-        # Extract x_star from the data_list
+        # Extract a single coordinate (n, x_star) from the data_list
         for data in data_list:
-            k = data['k_mean']
-            k_err = data['k_std']
+            # get the cp_mean and its error from a specific k_matrix
+            cp_mean_log, cp_mean_err_log = (collision_probability_mean_and_std(
+                data['k_matrix'], s)[:2])
+
             n = data['n']
             if folder != 'CG':
-                # For a lattice x is d
+                # For a lattice x is d, c = n - a
                 x = data['d']
                 c = n - a
             else:
-                # For a complete graph x is N
+                # For a complete graph x is N, c = n - n/a
                 x = data['N']
                 c = n - (n / a)
-            x_star, x_star_err = get_x_star(x, k, k_err, c)
+
+            # Interpolate the value of x_star from the data, and add it
+            # with its error to the lists
+            x_star, x_star_err = get_x_star(x, cp_mean_log, cp_mean_err_log, c)
             n_vals.append(n)
             x_star_vals.append(x_star)
             x_star_err_vals.append(x_star_err)
 
-        # Create some more variables
+        # Create some more variables, here we are re-using names from
+        # above to make things easier
         n = np.array(n_vals)
         x_star = np.array(x_star_vals)
         x_star_err = np.array(x_star_err_vals)
@@ -390,19 +558,20 @@ def plot_x_star(all_data, a):
 
         if folder != "CG":
             # Labels for the 1D, 2D, 3D Lattice
-            x_label = "ln(n), n = Number of Qubits"
-            y_label = "ln(d*), d* = depth such that k = n - {}".format(a)
-            title = "d* in a {} Lattice".format(folder)
-            sim_label = "ln(d*) from Simulations"
+            x_label = r"$\ln(n), n$ = Number of Qubits"
+            y_label = (r"$\ln(d^*), d^*$ = depth such that" + "\n" +
+                       r"$-\log_2(\langle P_c \rangle) = n - {}$".format(a))
+            title = r"$d^*$ in a {} Lattice".format(folder)
+            sim_label = r"$\ln(d^*)$ from Simulations"
             w = int(folder[0])
 
             # Different prediction labels for 1D lattice
             if w > 1:
-                pred_label = ("Prediction: ln(d*) = " +
-                              "(1/{})(ln(n) - ln({}))".format(w, a))
+                pred_label = (r"Prediction: $\ln(d^*) = " +
+                              r"(1/{})(\ln(n) - \ln({}))$".format(w, a))
             else:
-                pred_label = ("Prediction: ln(d*) = " +
-                              "ln(n) - ln({})".format(a))
+                pred_label = (r"Prediction: $\ln(d^*) = " +
+                              r"\ln(n) - \ln({})$".format(a))
 
             # Create prediction
             prediction = np.power(n / a, 1 / w)
@@ -410,16 +579,20 @@ def plot_x_star(all_data, a):
 
         else:
             # Labels for the Complete Graph
-            x_label = "ln(n), n = Number of Qubits"
-            y_label = ("ln(N*), N* = number of gates such that " +
-                       "k = n - n/{}".format(a))
-            title = "N* in a Complete Graph"
-            sim_label = "ln(N*) from Simulations"
-            pred_label = "Prediction: ln(N*) = ln(n) + ln(ln({}))".format(a)
+            x_label = r"$\ln(n), n$ = Number of Qubits"
+            y_label = (r"$\ln(N^*), N*$ = number of gates such that" + "\n" +
+                       r"$-\log_2(\langle P_c \rangle) = n - n/{}$".format(a))
+            title = r"$N^*$ in a Complete Graph"
+            sim_label = r"$\ln(N^*)$ from Simulations"
+            pred_label = (r"Prediction: $\ln(N^*) = \ln(n) + " +
+                          r"\ln(\ln({}))$".format(a))
 
             # Create Prediction
             prediction = n * np.log(a)
             log_prediction = np.log(prediction)
+
+        # Create a figure to plot x_star as a function of n
+        f_1, ax_1 = plt.subplots(figsize=(8, 4))
 
         # Add labels to the figures
         ax_1.set_xlabel(x_label)
@@ -428,31 +601,34 @@ def plot_x_star(all_data, a):
 
         # Add plots to the figure
         ax_1.errorbar(log_n, log_x_star, yerr=log_x_star_err,
-                      fmt='--o', color='b', label=sim_label, ms=4)
+                      fmt='--o', color='b', label=sim_label,
+                      zorder=1, ms=3)
         ax_1.plot(log_n, log_prediction, 'r-', label=pred_label)
         ax_1.plot(log_n, lin_reg, 'g-',
-                  label=("Linear Regression: (m, b, r) = " +
-                         "({:1.2f}, {:1.2f}, {:1.2f})".format(
+                  label=(r"Linear Regression: $(m, b, r) = " +
+                         r"({:1.2f}, {:1.2f}, {:1.2f})$".format(
                              slope, intercept, r_value)))
 
         # Add the legend and save the figure
         ax_1.legend(loc=4)
-        f_1.savefig('plots/plots_{}/x_star_{}.pdf'.format(folder, a), dpi=200)
+        f_1.savefig(
+            'plots/plots_{}/all_n/x_star_{}.pdf'.format(folder, a), dpi=200)
+        ax_1.cla()
 
 
-def get_x_star(x, k, k_err, c):
+def get_x_star(x, f, f_err, c):
     """
-    Finds x_star such that k = c, where k is a function of x
+    Finds x_star such that f = c, where f is a function of x
     Uses a closed form solution in order to calculate the propogation of error
     Performs a Linear interpolation to find x_star
     """
 
     # First get the smallest index i where k[i] > c
-    i = np.where(k > c)[0][0]
+    i = np.where(f > c)[0][0]
 
     # Get the two points that you will use for the linear interpolation
-    x_1, y_1, y_1_err = (x[i - 1], k[i - 1], k_err[i - 1])
-    x_2, y_2, y_2_err = (x[i], k[i], k_err[i])
+    x_1, y_1, y_1_err = (x[i - 1], f[i - 1], f_err[i - 1])
+    x_2, y_2, y_2_err = (x[i], f[i], f_err[i])
 
     # Find closed form for d_star and d_star_err
     x_star = (((x_2 - x_1) * (c - y_1)) / (y_2 - y_1)) + x_1

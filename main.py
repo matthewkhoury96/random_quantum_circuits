@@ -25,7 +25,8 @@ def simulate_qubit_pairs_1D_lattice(n, m):
     and std in the data dictionary
     """
     # Initialize some variables
-    d = np.linspace(0, 2 * n, 50, dtype=int)
+    x_max = 2 * n
+    d = np.linspace(0, x_max, 50, dtype=int)
     k_matrix = np.zeros((m, len(d)))
 
     # Run the simulation a total of m times
@@ -51,14 +52,9 @@ def simulate_qubit_pairs_1D_lattice(n, m):
         end = time.time()
         print("Time elapsed = {:0.2f}, for sample = {}".format(end - start, i))
 
-    # Average collision_probability over m samples
-    k_mean = np.mean(k_matrix, axis=0)
-    k_std = np.std(k_matrix, axis=0)
-
     # Store everything in data
     data = {"d": d,
-            "k_mean": k_mean,
-            "k_std": k_std,
+            "k_matrix": k_matrix,
             "n": n,
             "m": m}
 
@@ -75,9 +71,9 @@ def simulate_qubit_pairs_2D_lattice(sqrt_n, m):
     """
     # Initialize some variables
     n = np.power(sqrt_n, 2)
-    N = 35
-    d = np.arange(0, N + 1)
-    k_matrix = np.zeros((m, N + 1))
+    x_max = 35
+    d = np.arange(0, x_max + 1)
+    k_matrix = np.zeros((m, x_max + 1))
 
     # Run the simulation a total of m times
     for i in range(m):
@@ -88,7 +84,7 @@ def simulate_qubit_pairs_2D_lattice(sqrt_n, m):
         # Add a sim for depth 0
         sims.append(chp_py.CHP_Simulation(n, sim.state))
 
-        for j in range(N):
+        for j in range(x_max):
             gates = utils.get_lattice_gates((sqrt_n, sqrt_n), j)
             sim.apply_gates(gates)
             sims.append(chp_py.CHP_Simulation(n, sim.state))
@@ -100,14 +96,9 @@ def simulate_qubit_pairs_2D_lattice(sqrt_n, m):
         end = time.time()
         print("Time elapsed = {:0.2f}, for sample = {}".format(end - start, i))
 
-    # Average collision_probability over m samples
-    k_mean = np.mean(k_matrix, axis=0)
-    k_std = np.std(k_matrix, axis=0)
-
     # Store everything in data
     data = {"d": d,
-            "k_mean": k_mean,
-            "k_std": k_std,
+            "k_matrix": k_matrix,
             "n": n,
             "m": m}
 
@@ -124,9 +115,9 @@ def simulate_qubit_pairs_3D_lattice(cbrt_n, m):
     """
     # Initialize some variables
     n = np.power(cbrt_n, 3)
-    N = 20
-    d = np.arange(0, N + 1)
-    k_matrix = np.zeros((m, N + 1))
+    x_max = 20
+    d = np.arange(0, x_max + 1)
+    k_matrix = np.zeros((m, x_max + 1))
 
     # Run the simulation a total of m times
     for i in range(m):
@@ -137,7 +128,7 @@ def simulate_qubit_pairs_3D_lattice(cbrt_n, m):
         # Add a sim for depth 0
         sims.append(chp_py.CHP_Simulation(n, sim.state))
 
-        for j in range(N):
+        for j in range(x_max):
             gates = utils.get_lattice_gates((cbrt_n, cbrt_n, cbrt_n), j)
             sim.apply_gates(gates)
             sims.append(chp_py.CHP_Simulation(n, sim.state))
@@ -149,14 +140,9 @@ def simulate_qubit_pairs_3D_lattice(cbrt_n, m):
         end = time.time()
         print("Time elapsed = {:0.2f}, for sample = {}".format(end - start, i))
 
-    # Average collision_probability over m samples
-    k_mean = np.mean(k_matrix, axis=0)
-    k_std = np.std(k_matrix, axis=0)
-
     # Store everything in data
     data = {"d": d,
-            "k_mean": k_mean,
-            "k_std": k_std,
+            "k_matrix": k_matrix,
             "n": n,
             "m": m}
 
@@ -169,7 +155,8 @@ def simulate_complete_graph(n, m):
     Find k as a function of N = number of gates applied
     Performs simulation a total of m times then returns mean and std
     """
-    N = np.linspace(0, 2 * n * np.log(n), 50, dtype=int)
+    x_max = 2 * n * np.log(n)
+    N = np.linspace(0, x_max, 50, dtype=int)
     k_matrix = np.zeros((m, len(N)))
 
     # Run the simulation a total of m times
@@ -198,15 +185,9 @@ def simulate_complete_graph(n, m):
         end = time.time()
         print("Time elapsed = {:0.2f}, for sample = {}".format(end - start, i))
 
-    # Average collision_probability over m samples
-    k_mean = np.mean(k_matrix, axis=0)
-    k_std = np.std(k_matrix, axis=0)
-
     # Store everything in data
     data = {"N": N,
-            "d": N / n,
-            "k_mean": k_mean,
-            "k_std": k_std,
+            "k_matrix": k_matrix,
             "n": n,
             "m": m}
 
@@ -231,9 +212,11 @@ all_sizes = [[25, 49, 64, 100, 169, 225, 324, 400, 529, 625],
              [25, 49, 64, 100, 169, 225, 324, 400, 529, 625, 784, 900],
              [27, 64, 125, 216, 343, 512, 729, 1000],
              [25, 49, 64, 100, 169, 225, 324, 400, 529, 625]]
+# all_sizes = [[], [], [1000], []]
 modifiers = [np.abs, np.sqrt, np.cbrt, np.abs]
 m = 25
-a_list = [1, 5, 10, 15, 20]
+s = 5
+a_list = [5, 10, 15, 20]
 all_data = dict()
 
 # Run simulations, store and/or load data
@@ -264,7 +247,7 @@ for i in range(0, 4):
 
 # All plotting happens here
 print("\nStarting plotting software")
-utils.plot_k(all_data)
+utils.plot_collision_probability(all_data, s)
 for a in a_list:
-    utils.plot_x_star(all_data, a)
+    utils.plot_x_star(all_data, a, s)
 print("Finished saving all plots")
