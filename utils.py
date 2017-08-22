@@ -271,7 +271,7 @@ def collision_probability_mean_and_std(k_matrix, s):
         k_vec = k_matrix[:, i]
 
         # Divide the m samples into m/s sets of size s
-        k_sets = k_vec.reshape(m // s, s)
+        k_sets = k_vec.reshape(m // s, s).astype(np.float64)
         # Add a small perturbation to avoid a set with
         # zero std to avoid infs and nans
         k_sets[:, -1] += 1e-3
@@ -283,14 +283,11 @@ def collision_probability_mean_and_std(k_matrix, s):
         sigma = np.array([val[1] for val in vals])
 
         # a is the -log2 of the mean of the values in mu
-        # b is the -log2 of the standard error of the values in mu
+        # b is the -log2 of the std of the values in mu
         # c is the -log2 of the mean of the values in sigma
-        # d is the -log2 of the standard error of the values in sigma
-        # NOTE: standard error is std/sqrt(# samples)
+        # d is the -log2 of the std of the values in sigma
         a, b = log_mean_and_std(mu)
-        b += (1 / 2) * np.log2(len(mu))
         c, d = log_mean_and_std(sigma)
-        d += (1 / 2) * np.log2(len(sigma))
 
         # a and c are the final values for mean_log and std_log
         mean_log[i] = a
@@ -308,8 +305,8 @@ def collision_probability_mean_and_std(k_matrix, s):
 
 def log_mean_and_std(w):
     """
-    Given a vector w, returns -log2(mean(w)) and -log2(std(w))
-    uses log_sum_exp to avoid underflow
+    Given a vector w, returns -log2(mean((1/2)^w)) and
+    -log2(std((1/2)^w)), uses log_sum_exp to avoid underflow
     """
     m = len(w)
     mu = np.log2(m) - log_sum_exp(w)
@@ -382,7 +379,7 @@ def plot_collision_probability(all_data, s):
             cp_mean_log, cp_mean_err_log, cp_std_log, cp_std_err_log = (
                 collision_probability_mean_and_std(data['k_matrix'], s))
 
-            # Create some helper variables
+            # Create some helper variables and some labels
             n = data['n']
             types = ['cp_mean_log', 'cp_std_log']
             y = [cp_mean_log, cp_std_log]
@@ -412,7 +409,7 @@ def plot_collision_probability(all_data, s):
                 if w > 1:
                     shape_str = r"Shape = {}, ".format(shape)
                     exp_str_pred = r"^{}".format(w)
-                    cutoff_label = r"$n^{(1/" + str(w) + r")}$"
+                    cutoff_label = r"$n^{1/" + str(w) + r"}$"
                 else:
                     shape_str = r""
                     exp_str_pred = r""
@@ -437,7 +434,7 @@ def plot_collision_probability(all_data, s):
                 title = (r"Collision Probability in a Complete Graph" + "\n" +
                          "Number of Qubits = {}".format(n))
                 pred_label = (r"Prediction: $-\log_2( \langle P_c \rangle)" +
-                              " = n(1 - 1 / e^(N/n))$")
+                              r" = n(1 - 1 / e^{N/n})$")
                 cutoff_label = r"$n ln(n)$"
 
             # Plotting cp_mean and cp_std as a function of d or N
@@ -454,7 +451,7 @@ def plot_collision_probability(all_data, s):
                               label=sim_labels[i],
                               zorder=1, ms=3)
 
-                # Add a prediction and cutoff for the mean
+                # Add a prediction and cutoff for cp_mean
                 if i < 1:
                     ax_1.plot(x, prediction, 'r-', label=pred_label)
                     ax_1.axvline(cutoff, color='g', linestyle='--',
@@ -470,6 +467,7 @@ def plot_collision_probability(all_data, s):
         # Create a plot that overplots cp_mean and cp_std as a function of n
         # at a fixed saturated depth with error bars
         f_1, ax_1 = plt.subplots(figsize=(8, 4))
+
         # Add labels to the figure, note that we re-use some of the labels
         # that we created above
         ax_1.set_xlabel(r"$n$ = Number of Qubits")
@@ -546,50 +544,50 @@ def plot_x_star(all_data, a, s):
         x_star = np.array(x_star_vals)
         x_star_err = np.array(x_star_err_vals)
 
-        # Convert to log-log scales
-        log_n = np.log(n)
-        log_x_star = np.log(x_star)
-        log_x_star_err = x_star_err / x_star
-
-        # Add a linear regression
-        slope, intercept, r_value, p_value, std_err = stats.linregress(
-            log_n, log_x_star)
-        lin_reg = slope * log_n + intercept
-
         if folder != "CG":
             # Labels for the 1D, 2D, 3D Lattice
-            x_label = r"$\ln(n), n$ = Number of Qubits"
-            y_label = (r"$\ln(d^*), d^*$ = depth such that" + "\n" +
+            x_label = r"$n$ = Number of Qubits"
+            y_label = (r"$d^*$ = depth such that" + "\n" +
                        r"$-\log_2(\langle P_c \rangle) = n - {}$".format(a))
             title = r"$d^*$ in a {} Lattice".format(folder)
-            sim_label = r"$\ln(d^*)$ from Simulations"
+            sim_label = r"$d^*$ from Simulations"
             w = int(folder[0])
-
-            # Different prediction labels for 1D lattice
-            if w > 1:
-                pred_label = (r"Prediction: $\ln(d^*) = " +
-                              r"(1/{})(\ln(n) - \ln({}))$".format(w, a))
-            else:
-                pred_label = (r"Prediction: $\ln(d^*) = " +
-                              r"\ln(n) - \ln({})$".format(a))
 
             # Create prediction
             prediction = np.power(n / a, 1 / w)
-            log_prediction = np.log(prediction)
+            # Adjust with best multiplicative constant
+            const = get_best_parameter(x_star, prediction)
+            prediction = const * prediction
+
+            # Create different prediction labels for 1D lattice
+            if w == 1:
+                pred_label = (r"Prediction: $d^* = " +
+                              r"{:1.2f}".format(const) +
+                              r"(n / " + str(a) + r")$")
+            else:
+                pred_label = (r"Prediction: $d^* = " +
+                              r"{:1.2f}".format(const) +
+                              r"(n / " + str(a) +
+                              r")^{1/" + str(w) + r"}$")
 
         else:
             # Labels for the Complete Graph
-            x_label = r"$\ln(n), n$ = Number of Qubits"
-            y_label = (r"$\ln(N^*), N*$ = number of gates such that" + "\n" +
+            x_label = r"$n$ = Number of Qubits"
+            y_label = (r"$N^*$ = number of gates such that" + "\n" +
                        r"$-\log_2(\langle P_c \rangle) = n - n/{}$".format(a))
             title = r"$N^*$ in a Complete Graph"
-            sim_label = r"$\ln(N^*)$ from Simulations"
-            pred_label = (r"Prediction: $\ln(N^*) = \ln(n) + " +
-                          r"\ln(\ln({}))$".format(a))
+            sim_label = r"$N^*$ from Simulations"
 
             # Create Prediction
-            prediction = n * np.log(a)
-            log_prediction = np.log(prediction)
+            prediction = n
+            # Adjust with best multiplicative constant
+            const = get_best_parameter(x_star, prediction)
+            prediction = const * prediction
+
+            # Create prediction label
+            pred_label = (r"Prediction: $N^* = " +
+                          r"{:1.2f}".format(const) +
+                          r"(n)$")
 
         # Create a figure to plot x_star as a function of n
         f_1, ax_1 = plt.subplots(figsize=(8, 4))
@@ -600,14 +598,10 @@ def plot_x_star(all_data, a, s):
         ax_1.set_title(title)
 
         # Add plots to the figure
-        ax_1.errorbar(log_n, log_x_star, yerr=log_x_star_err,
+        ax_1.errorbar(n, x_star, yerr=x_star_err,
                       fmt='--o', color='b', label=sim_label,
                       zorder=1, ms=3)
-        ax_1.plot(log_n, log_prediction, 'r-', label=pred_label)
-        ax_1.plot(log_n, lin_reg, 'g-',
-                  label=(r"Linear Regression: $(m, b, r) = " +
-                         r"({:1.2f}, {:1.2f}, {:1.2f})$".format(
-                             slope, intercept, r_value)))
+        ax_1.plot(n, prediction, 'r-', label=pred_label)
 
         # Add the legend and save the figure
         ax_1.legend(loc=4)
@@ -638,3 +632,31 @@ def get_x_star(x, f, f_err, c):
                          np.power(partial_y_2 * y_2_err, 2))
 
     return (x_star, x_star_err)
+
+
+def get_best_parameter(actual, prediction):
+    """
+    Performs a parameter sweep over the prediction, here
+    actual is an array of data and prediction is the same sized
+    array of the prediction of that data, this function finds the
+    best constant such that const * prediction is the closest
+    to actual, minimizes the mean squared error
+    """
+    # Initialize some variables
+    const = 0
+    min_cost = float("inf")
+    const_vals = np.linspace(0, 3, 10000)
+
+    # Iterate through possible values of the constants
+    for c in const_vals:
+        # Try a constant by multiplying it by the prediction
+        trial = c * prediction
+        cost = np.sum(np.power(actual - trial, 2))
+        # If the cost of the trial is lower than the minimum cost
+        # update the minimum cost and store the constant
+        if cost < min_cost:
+            min_cost = cost
+            const = c
+
+    # Return the constant with the lowest cost
+    return const

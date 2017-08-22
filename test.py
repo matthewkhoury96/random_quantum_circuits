@@ -334,23 +334,28 @@ def test_utils():
 
     # Test collision_probability_mean_and_std function for
     # small values of k
-    for i in range(10):
+    for i in range(100):
         # Initialize some variables
         m, x = (25, 100)
         s = 5
         k_matrix = np.random.randint(20, size=(m, x))
-        p_matrix = np.power(1 / 2, k_matrix)
         mean_ans = np.zeros(x)
         std_ans = np.zeros(x)
         mean_err_ans = np.zeros(x)
         std_err_ans = np.zeros(x)
 
         for j in range(x):
-            # p_vec is a set of m samples
-            p_vec = p_matrix[:, j]
+            # k_vec is a set of m samples
+            k_vec = k_matrix[:, j]
 
             # Divide the m samples into m/s sets of size s
-            p_sets = p_vec.reshape(m // s, s)
+            k_sets = k_vec.reshape(m // s, s).astype(np.float64)
+            # Add a small perturbation to avoid a set with
+            # zero std to avoid infs and nans
+            k_sets[:, -1] += 1e-3
+
+            # Exponentiate the k_sets
+            p_sets = np.power(1 / 2, k_sets)
 
             # mu[i] and sigma[i] are the mean and std of the
             # i^th set in p_sets
@@ -358,21 +363,20 @@ def test_utils():
             sigma = np.std(p_sets, axis=1)
 
             # a is the mean of the values in mu
-            # b is the standard error the values in mu
+            # b is the std of the values in mu
             # c is the mean of the values in sigma
-            # d is the standard error of the values in mu
-            # NOTE: standard error = std/sqrt(# samples)
+            # d is the std of the values in mu
             a = np.mean(mu)
-            b = np.std(mu) / (np.sqrt(len(mu)))
+            b = np.std(mu)
             c = np.mean(sigma)
-            d = np.std(sigma) / (np.sqrt(len(sigma)))
+            d = np.std(sigma)
 
             # Convert to the log scale and use propogation of
             # error formula for the errors of the logs
             mean_ans[j] = -np.log2(a)
             std_ans[j] = -np.log2(c)
             mean_err_ans[j] = b / (a * np.log(2))
-            std_err_ans[j] = c / (d * np.log(2))
+            std_err_ans[j] = d / (c * np.log(2))
 
         mean, mean_err, std, std_err = (
             utils.collision_probability_mean_and_std(k_matrix, s))

@@ -208,15 +208,14 @@ sim_funcs = [simulate_qubit_pairs_1D_lattice,
              simulate_qubit_pairs_2D_lattice,
              simulate_qubit_pairs_3D_lattice,
              simulate_complete_graph]
-all_sizes = [[25, 49, 64, 100, 169, 225, 324, 400, 529, 625],
-             [25, 49, 64, 100, 169, 225, 324, 400, 529, 625, 784, 900],
-             [27, 64, 125, 216, 343, 512, 729, 1000],
-             [25, 49, 64, 100, 169, 225, 324, 400, 529, 625]]
-# all_sizes = [[], [], [1000], []]
+all_sizes = [[49, 64, 100, 169, 225, 324, 400, 529, 625],
+             [49, 64, 100, 169, 225, 324, 400, 529, 625, 784, 900],
+             [64, 125, 216, 343, 512, 729, 1000],
+             [49, 64, 100, 169, 225, 324, 400, 529, 625]]
 modifiers = [np.abs, np.sqrt, np.cbrt, np.abs]
 m = 25
 s = 5
-a_list = [5, 10, 15, 20]
+a_list = [10, 15, 20, 25, 30, 35]
 all_data = dict()
 
 # Run simulations, store and/or load data
