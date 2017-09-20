@@ -1,0 +1,654 @@
+\message{ !name(report_1.tex)}\documentclass[11pt]{article}
+\usepackage[margin = 1in]{geometry}
+\usepackage{amsmath,amsthm,amsfonts,amssymb}
+\usepackage{mathtools} 
+\usepackage{color,graphicx,overpic}
+\usepackage{mathrsfs}
+\usepackage{enumitem}
+\usepackage{braket}
+\usepackage{parskip}
+\usepackage[numbers]{natbib}
+\usepackage[colorlinks,allcolors=blue]{hyperref}
+\bibliographystyle{hyperabbrv}
+\usepackage{caption}
+\captionsetup[figure]{labelfont=bf}
+% \bibliographystyle{plainnat}
+
+
+\newtheorem{thm}{Theorem}
+\newtheorem*{thm*}{Theorem}
+\newtheorem{claim}[thm]{Claim}
+\newtheorem{algorithm}{Algorithm}
+\newtheorem{cor}[thm]{Corollary}
+\newtheorem{lem}[thm]{Lemma}
+\newtheorem{prop}[thm]{Proposition}
+\newtheorem{proto}{Protocol}
+\newtheorem{con}[thm]{Conjecture}
+\theoremstyle{definition}
+\newtheorem{remark}{Remark}
+\newtheorem{observation}{Observation}
+\newtheorem{example}{Example}
+\newtheorem{conjecture}{Conjecture}
+\newtheorem{dfn}[thm]{Definition}
+\theoremstyle{plain}
+
+% \newtheoremstyle{dotless}{}{}{\itshape}{}{\bfseries}{}{ }{}
+% \theoremstyle{dotless}
+
+
+
+% \newtheorem{theorem}{Theorem}[section]
+% \newtheorem{corollary}{Corollary}[theorem]
+% \newtheorem{claim}{Claim}[section]
+
+
+\allowdisplaybreaks{}
+
+\begin{document}
+
+\message{ !name(report_1.tex) !offset(-3) }
+
+
+\title{\bf Collision Probability in Pseudo-Random Quantum Circuits}
+\date{July 27, 2017}
+\author{Matthew Khoury} 
+\maketitle
+
+\noindent\makebox[\linewidth]{\rule{\textwidth}{1pt}} 
+\numberwithin{equation}{section}
+
+% \section{test}
+% what do I want to write in this section This is how you cite something or someone {\cite{matthewkhoury96_2017}}, here is\cite{aaronson}, here is\cite{random_clifford}, this is\cite{n_and_c} \\
+% \\
+% Here is a figure
+
+  
+% \begin{figure}[!htp]
+% \centering
+% \includegraphics[width=.75\textwidth]{1D_circuit.pdf}
+% \caption{Put a caption here}
+% \end{figure} 
+
+\section{Introduction}
+Current research suggests that quantum computers may be able to outperform classical computers in certain classes of algorithms. For example, as described in {\cite{supremacy_1}} and {\cite{supremacy_2}}, certain sampling tasks may be more efficient on small quantum computers than on current classical computers. Specifically, apply a set of random gates to $n$ qubits in the state $\ket{0}^{\otimes n}$, then measure the qubits in the computational basis.
+
+One feasable way to accompish this task is to lay the $n$ qubits out onto a 1D, 2D, or 3D lattice and then apply a polynomial number of random two qubit gates. We will refer to such a set of gates as a \emph{pseudo-random quantum circuit}. In this paper, we will describe numerical simulations that we have used to test one of the statistical properties of these pseudo-random quantum circuits. 
+
+
+\section{Statistical Property of Pseudo-Random Quantum Circuits}
+
+\subsection{Definition of Collision Probability}
+Imagine we prepare two identical quantum states of $n$ qubits represented as $\ket{\psi} \in \mathbb{C}^{2^n}$. We then measure both states in the computational basis, letting random variables $M_1$ and $M_2$ denote the outcome of the two measurements. We then define the \emph{collision probability} $P_c$ as the probability of measuring the same state twice, so we have
+\begin{equation}
+P_c = P(M_1 = M_2) 
+\end{equation}
+Using the basic rules of probability along with the fact that the two measurements are independent, we can simplify $P_c$ by writing
+\begin{align}
+  P_c &= P(M_1 = M_2) \\
+      &= P \bigl( \bigl\{ \{M_1 = z_1\} \cap \{M_2 = z_1\} \bigr\} \cup \cdots \cup 
+        \bigl\{ \{M_1 = z_{2^n}\} \cap \{M_2 = z_{2^n}\} \bigr\} \bigr) \\
+      &= \sum\limits_{z \in \mathbb{F}_2^n} P(\{M_1 = z\} \cap \{M_2 = z\}) \\
+      &= \sum\limits_{z \in \mathbb{F}_2^n} P(M_1 = z) P(M_2 = z) \\
+      &= \sum\limits_{z \in \mathbb{F}_2^n} {(p(z))}^2        
+\end{align}
+Where $p(z)$ is the probability of measuring state $\ket{z}$ from $\ket{\psi}$. We know that we can write this probability as
+\begin{equation}
+  p(z) = |\braket{z | \psi}|^2 = \braket{z | \psi} \braket{z | \psi}^*
+  = \braket{z | \psi} \braket{\psi | z} 
+\end{equation}
+Likewise, we can rewrite the collision probability as 
+\begin{equation}\label{collision_probability}
+  P_c = \sum\limits_{z \in \mathbb{F}_2^n} {(p(z))}^2
+  = \sum\limits_{z \in \mathbb{F}_2^n} {\left( \braket{z | \psi} \braket{\psi | z} \right)}^2
+\end{equation}
+
+\subsection{Collision Probability in Pseudo-Random Quantum Circuits}\label{cp_conjecture}
+If we have applied a total of $N = O(\text{poly}(n))$ gates in a psuedo-random quantum circuit, then the \emph{depth} $d$ of the circuit is defined as $d \sim N / n$. The statistical property of pseudo-random quantum circuits we are interested in testing is how the collision probability changes as a function of the depth of the circuit.Specifically, we would like test the following conjecture. \\
+\begin{conjecture}\label{conjecture_1}
+  A pseudo-random quantum circuit arranged in a $w$-dimensional lattice will have a collision probability
+  \begin{equation}
+    P_c = \frac{2^{O(n/d^w)}}{2^n}
+  \end{equation}
+  Equivalently, if we let $k = - \log_2(P_c)$, then we will have
+  \begin{equation}
+    k = - \log_2(P_c) = n - O\left( \frac{n}{d^w} \right)
+    = n \left(1 - O\left( \frac{1}{d^w} \right) \right)
+  \end{equation}
+\end{conjecture}
+We also say that the collision probability is \emph{saturated} once $k = n - 1$. Thus, the conjecture also predicts that collision probabiliy saturates when
+\begin{equation}
+  O\left(\frac{1}{d^w} \right) = \frac{1}{n} \quad \Rightarrow \quad
+  d \sim n^{1/w} 
+\end{equation}
+
+
+\section{The Stabilizer Formalism}
+
+\subsection{Motivation}
+In general, simulating a pseudo-random quantum circuit on a classical computer will take both exponentially large storage and an exponentially large runtime. Thus, in order to simulate a psuedo-random quantum circuit to numerically test Conjecture {\ref{conjecture_1}}, we make use of the Gottesman-Knill Theorem.
+
+The Gottesman-Knill Theorem states that a quantum circuit composed only of Clifford Gates can be efficiently simulated on a classical computer. In this section, we review some of the mathematical principles underlying the Gottesman-Knill Theorem, as they will be necessary for explaining how our simulations work. Many concepts in this section can be found more thoroughly described in Chapter 10.5 of {\cite{nc}}. 
+
+\subsection{The Pauli Group}
+We let $G_n$ denote the Pauli Group on $n$ qubits. Formally, we define \begin{equation}
+  G_1 = \{ \pm I, \pm i I, \pm X, \pm iX, \pm Y, \pm i Y, \pm Z, \pm i Z \}
+\end{equation}
+Where 
+\begin{equation}
+I = 
+\begin{bmatrix}
+  1 & 0 \\
+  0 & 1 \\ 
+\end{bmatrix} \quad 
+X = 
+\begin{bmatrix}
+  0 & 1 \\
+  1 & 0 \\ 
+\end{bmatrix} \quad 
+Y =   
+\begin{bmatrix}
+  0 & -i \\
+  i & 0 \\ 
+\end{bmatrix} \quad 
+Z =  
+\begin{bmatrix}
+  1 & 0 \\
+  0 & -1 \\ 
+\end{bmatrix}
+\end{equation}
+Likewise, the set $G_n$ consists of all the $n$-fold tensor product of the matrices in $G_1$. We see that the Pauli Group is closed under matrix multiplication, as these matrices satisfy 
+\begin{align}
+  & X^2 = Y^2 = Z^2 = I \label{pauli_1}\\
+  & XY = iZ \quad YX = -iZ \\
+  & YZ = iX \quad ZY = -iX \\
+  & ZX = iY \quad XZ = -iY \label{pauli_3}
+\end{align}
+From this we also see that all of the elements in $P_n$ either commute or anti-commute. We also note that any $g \in G_n$ can be written as
+\begin{equation}\label{pauli_2}
+  g = {(-1)}^a \ i^b \ g_1 \otimes g_2 \otimes \cdots \otimes
+  g_n \quad \text{for} \quad a, b \in \mathbb{F}_2 \quad \text{and} \quad
+  g_j \in \{ I, X, Y, Z \} 
+\end{equation}
+
+\subsection{Isomorphism to $\mathbb{F}_2$}
+We use $\mathbb{F}_2$ to refer to the finite field $\mathbb{F}_2 \in \{0, 1\}$. All operations are done modulo 2, so we will have $1 + 1 = 0$ and $x = -x$. We can also see that $\mathbb{F}_2$ defines a group closed under addition modulo 2.
+
+We define the map $M: \mathbb{F}_2^2 \rightarrow \{I, X, Y, Z\}$ as
+\begin{equation}
+  00 \rightarrow I, \quad 01 \rightarrow Z, \quad 10 \rightarrow X, \quad
+  11 \rightarrow Y 
+\end{equation}
+Likewise, from {\ref{pauli_2}}, if we let $u = (u_s, u_i, u_{x_1}, \ldots, u_{x_n}, u_{z_1}, \ldots, u_{z_n}) \in \mathbb{F}_2^{2n+2}$, we can write any element $g \in G_n$ as
+\begin{equation}
+  g = {(-1)}^{u_s} \ i^{u_i} \ M(u_{x_1}, u_{z_1}) \otimes \cdots \otimes
+  M(u_{x_n}, u_{z_n}) 
+\end{equation}
+In shorthand, we will write that $v = (v_{x_1}, \ldots, v_{x_n}, v_{z_1}, \ldots, v_{z_n}) = (v_x, v_z) \in \mathbb{F}_2^{2n}$ and that
+\begin{equation}\label{shorthand_1}
+  M(v) = M(v_x, v_z) = M(v_{x_1}, v_{z_1}) \otimes \cdots \otimes
+  M(v_{x_n}, v_{z_n}) 
+\end{equation}
+
+We also let $[A]$ be the set of operators that are the same up to a global phase so that
+\begin{equation}
+  [A] = \{\beta A : \beta \in \mathbb{C} , |\beta| = 1 \}
+\end{equation}
+Using {\ref{pauli_1}} {--} {\ref{pauli_3}}, we can see that the map $M$ induces an isomorphism $[M]: \mathbb{F}_2^{2n} \rightarrow [G_n]$ because addition of vectors in $\mathbb{F}_2^{2n}$ corresponds to the multiplication of matrices in $G_n$ up to a global phase
+\begin{equation}\label{isomorphism} 
+  [M(u + v)] = [M(u)][M(v)] \quad \text{for} \quad u, v \in \mathbb{F}_2^{2n}
+\end{equation}
+
+\subsection{The Stabilizer Group}
+A quantum state $\ket{\psi}$ is said to be \emph{stabilized} by a unitary operator $g$ if and only if $g \ket{\psi} = \ket{\psi}$. The \emph{stabilizer group} $S$ is a subgroup of $G_n$, which we denote as $S \leq G_n$. We then define a \emph{stabilizer subspace} $V_S$ to be the set of states that is stabilized by $S$, or more formally
+\begin{equation}
+  V_S = \left\{ \ket{\psi} : g \ket{\psi} = \ket{\psi} , \forall g \in S \right\}  
+\end{equation}
+Here we note that if $g, h \in S$, then we must also have $gh \in S$ and $g^{-1} \in S$ because
+\begin{equation}\label{stab_1}
+  gh \ket{\psi} = g \ket{\psi} = \ket{\psi} \quad \text{and} \quad
+  \ket{\psi} = g^{-1} g \ket{\psi} = g^{-1} \ket{\psi}
+\end{equation} 
+We also note that if we would like $V_S$ to be a non-trivial vector space\footnote{The trivial vector space is $V_s = \{0 \}$}, $S$ must satisfy two conditions
+\begin{enumerate}[label = (\arabic*)]
+\item\label{cond_1} The elements of $S$ must commute
+\item\label{cond_2} $-I$ cannot be an element of $S$ 
+\end{enumerate} 
+We see that condition {\ref{cond_1}} must hold because if $-I \in S$, then we will have that $-I \ket{\psi} = \ket{\psi}$, which can only be satisfied by $\ket{\psi} = 0$. We see that condition {\ref{cond_2}} must also hold because all of the elements in $S$ either commute or anti-commute, as $S \leq P_n$. This means that if two elements $g, h \in S$ do not commute, then they must anti-commute so that $gh = -hg$. But if this is the case, then $-\ket{\psi} = -hg \ket{\psi} = gh \ket{\psi} = \ket{\psi}$, which can also only satisfied if $\ket{\psi} = 0$.
+
+Moreover, if $g \in S$, then $g$ cannot have an overall phase of $\pm i$. This follows because if we let
+\begin{equation}
+  g = \pm i \ g_1 \otimes g_2 \otimes \cdots \otimes g_n
+  \quad \text{for} \quad g_j \in \{I, X, Y, Z \} 
+\end{equation}
+Then using {\ref{pauli_1}} and {\ref{stab_1}}, we see that 
+\begin{equation}
+  \ket{\psi} = g \ket{\psi} = g^2 \ket{\psi} = {(\pm i)}^2 I^{\otimes n} \ket{\psi}
+  = -\ket{\psi}
+\end{equation}
+Again, this is only satisfied when $\ket{\psi} = 0$. Thus, if $S$ stabilizes a non-trivial vector space, then we can write any element $g \in S$ as
+\begin{equation}
+  g = \pm 1 \ g_1 \otimes g_2 \otimes \cdots \otimes g_n
+  \quad \text{for} \quad g_j \in \{I, X, Y, Z \} 
+\end{equation}
+In terms of the $\mathbb{F}_2$ linear algebra perspective, this means that we can represent any $g \in S$ as a vector $u = (u_s, u_x, u_z) \in \mathbb{F}_2^{2n+1}$ where using the shorthand notation in {\ref{shorthand_1}} we have
+\begin{equation}\label{stab_shorthand}
+  g = {(-1)}^{u_s} M(u_x, u_z) 
+\end{equation}
+
+\subsection{Clifford Gates}\label{clifford_gates}
+It has been shown in {\cite{nc}} and {\cite{aaronson}} that we can actually make use of the $\mathbb{F}_2$ linear algebra perspective to efficiently simulate quantum circuits composed of the following gates 
+\begin{align}
+  H \left( \alpha \ket{0} + \beta \ket{1} \right) &= (\alpha + \beta) \ket{0}
+    + (\alpha - \beta) \ket{1} \\
+  P \left( \alpha \ket{0} + \beta \ket{1} \right) &= \alpha \ket{0}
+    + i \beta \ket{1} \\
+  C_{a,b}\left( \ket{a} \otimes \ket{b} \right) &= \ket{a} \otimes \ket{a + b}
+    \quad \text{for} \quad a, b \in \mathbb{F}_2 
+\end{align}
+In order to do this, we keep track of the generators of the stabilizer group of $\ket{\psi}$, which we initialize as $\ket{0}^{\otimes n}$. We then update the generators as described in {\cite{aaronson}} each time we apply one of the gates above. Moreover, it has been shown that $\ket{\psi}$ is uniquely determined by a stabilizer group $S \leq P_n$ that contains $2^n$ elements. Likewise, we only need a total of $n$ generators, or vectors in $\mathbb{F}_2^{2n+1}$, in order to uniquely determine state $\ket{\psi}$.\footnote{If $G$ is a group closed under multiplication, then a set of elements $g_1, \ldots, g_l \in G$ is said to generate a group $G$ if every element in $G$ can be written as a product of the elements in $g_1, \ldots, g_l$. Moreover, it is a known fact from Group Theory that a finite group $G$ of size $|G|$ has a set of $\log |G|$ generators. }
+
+\subsection{Projectors}
+If $W \subseteq \mathbb{C}^{2^n}$ is a $w$-dimensional vector subspace, then a \emph{projector} $\Pi_W$ onto the vector subspace $W$ is a linear operator that satisfies two conditions
+\begin{enumerate}[label = (\arabic*)]
+\item\label{p_cond_1}
+  For all $\ket{\phi} \in \mathbb{C}^{2^n}$, $\Pi_W \ket{\phi} \in W$ 
+\item\label{p_cond_2} $\Pi_W^2 = \Pi_W$ 
+\end{enumerate} 
+Likewise, if $W$ has an orthonormal basis $\ket{1}, \ket{2}, \ldots, \ket{w}$, then
+\begin{equation}\label{proj_1}
+  \Pi_W = \sum\limits_{j=1}^w \ket{j}\bra{j}
+\end{equation}
+
+\begin{claim}
+$\Pi_S$ given by 
+\begin{equation}\label{proj_2}
+  \Pi_S = \frac{1}{|S|} \sum\limits_{g \in S} g 
+\end{equation}
+is a projector onto the stabilizer subspace $V_S$. 
+\begin{proof} First we note that if $g \in S$, then using {\ref{stab_1}}
+\begin{equation}
+  g \Pi_S = g \frac{1}{|S|} \sum\limits_{h \in S} h
+  = \frac{1}{|S|} \sum\limits_{h \in S} gh
+  = \frac{1}{|S|} \sum\limits_{h' = gh \in S} h'
+  = \Pi_s
+\end{equation}
+From this, we see that $\Pi_S$ satisfies condition {\ref{p_cond_1}} because for all $\ket{\phi} \in \mathbb{C}^{2^n}$ and for all $g \in S$ we have $g \Pi_S \ket{\phi} = \Pi_S \ket{\phi}$. By definition, this means that $\Pi_S \ket{\phi} \in V_S$. We also see that $\Pi_S$ satisfies condition {\ref{p_cond_2}} because
+\begin{equation}
+  \Pi_S^2 = \left( \frac{1}{|S|} \sum\limits_{g \in S} g \right) \Pi_S 
+  = \frac{1}{|S|} \sum\limits_{g \in S} g \Pi_S
+  = \frac{1}{|S|} \sum\limits_{g \in S} \Pi_S
+  = \frac{1}{|S|} \ |S| \ \Pi_S = \Pi_S 
+\end{equation}
+\end{proof}
+\end{claim}
+
+Here we also note that if $V_S$ contains only one vector so that $V_S = \{ \ket{\psi} \}$, then combining {\ref{proj_1}} and {\ref{proj_2}}, we see that
+\begin{equation}\label{proj_3}
+    \Pi_S = \frac{1}{|S|} \sum\limits_{g \in S} g = \ket{\psi} \bra{\psi} 
+\end{equation}
+
+
+\section{Efficiently Computing Collision Probability}
+
+\subsection{Preliminaries}
+As described in Section {\ref{clifford_gates}}, we can efficiently simulate psuedo-random quantum circuits composed only of Clifford Gates by keeping track of the $n$ generators of the stabilizer group $S$ that uniquely determine a stabilizer state $V_S = \{ \ket{\psi} \}$. Moreover, keeping track of these $n$ generators is equivalent to keeping track of $n$ vectors in $\mathbb{F}_2^{2n+1}$. In this section, we will present an algorithm to compute the collision probability of a stabilizer state $V_S = \{ \ket{\psi} \}$ given the $n$ vectors in $\mathbb{F}_2^{2n+1}$ corresponding to the $n$ generators of $S$.
+
+Throughout this section we will always let $\ket{\psi}$ be a state that has been created by applying a set of Clifford Gates to the initial state $\ket{0}^{\otimes n}$. Equivalently, we let $\ket{\psi}$ be the state uniquely determined by the stabilizer group $S$ so that $V_S = \{ \ket{\psi} \}$. Moreover, we let $S = \langle g^{(1)}, \ldots, g^{(n)} \rangle$, meaning $S$ is generated by the $n$ Pauli Matrices $g^{(1)}, \ldots, g^{(n)}$. For every element $g \in S$, we also let $u = (u_s, u_x, u_z) \in \mathbb{F}_2^{2n+1}$ be the vector representation of $g$ as written in {\ref{stab_shorthand}}.
+
+By construction, we can use the fact that $|S| = 2^n$ along with {\ref{proj_3}} to write
+\begin{equation}\label{prelim_1} 
+  \ket{\psi} \bra{\psi} = \Pi_S = \frac{1}{2^n} \sum\limits_{g \in S} g
+\end{equation}
+Here, we also note some properties of the trace of a matrix. Specifically for a vector $\ket{\phi}$ and matrices $A, B$ of the appropriate shape, we will have
+\begin{align}
+  \text{tr}(A \ket{\phi} \bra{\phi}) &=  \braket{\phi | A | \phi} \\
+  \text{tr}(A + B) &= \text{tr}(A) + \text{tr}(B) \\ 
+  \text{tr}(A \otimes B) &= \text{tr}(A) \text{tr}(B)
+\end{align}
+The last tool we need is the following:\\
+\begin{claim}
+If $a \in \mathbb{F}_2^n$ and we let $Z^a = Z^{a_1} \otimes \cdots \otimes Z^{a_n}$, then 
+\begin{equation}\label{prelim_2}
+  \sum\limits_{z \in \mathbb{F}_2^n} \ket{z} \bra{z} \otimes \ket{z} \bra{z}
+  = \frac{1}{2^n} \ \sum\limits_{a \in \mathbb{F}_2^n} Z^a \otimes Z^a
+\end{equation}
+\begin{proof}
+First, we note that
+\begin{equation}
+  \ket{0} \bra{0} =
+  \begin{bmatrix}
+    1 & 0 \\
+    0 & 0 \\ 
+  \end{bmatrix} = \frac{I + Z}{2} \qquad
+  \ket{1} \bra{1} =
+  \begin{bmatrix}
+    0 & 0 \\
+    0 & 1 \\ 
+  \end{bmatrix} = \frac{I - Z}{2} 
+\end{equation}
+As a result, we can write that for $z \in \mathbb{F}_2^n$
+\begin{align}
+  \ket{z} \bra{z} &= \ket{z_1} \bra{z_1} \otimes \cdots \otimes 
+                    \ket{z_n} \bra{z_n} \\
+                  &= \frac{I + {(-1)}^{z_1} Z}{2} \otimes \cdots \otimes
+                    \frac{I + {(-1)}^{z_n}Z}{2} \\
+                  &= \frac{1}{2^n} \biggl(I \otimes I \otimes \cdots \otimes I
+                    \ + \ {(-1)}^{z_1} Z \otimes I \otimes \ldots \otimes I
+                    \ + \ I \otimes {(-1)}^{z_2} Z \otimes \cdots \otimes I
+                    \nonumber \\
+                  & \qquad \qquad
+                    \ + \ \cdots \ + \
+                    {(-1)}^{z_1} Z \otimes {(-1)}^{z_2} Z \otimes \cdots
+                    \otimes {(-1)}^{z_n} Z \biggr) \\
+                  &= \frac{1}{2^n} \sum\limits_{a \in \mathbb{F}_2^n}
+                    {(-1)}^{\braket{a, z}} Z^a \label{prelim_4}
+\end{align}
+Second, we also note that for $w \in \mathbb{F}_2^n$
+\begin{equation}\label{prelim_5}
+  \sum\limits_{z \in \mathbb{F}_2^n} {(-1)}^{\braket{w, z}} = 2^n \ \delta_{w = 0} 
+\end{equation}
+We see this is the case whenever $w = 0$ because $\braket{0, z} = 0$ for all values of $z$.\footnote{In these notes, the function $\delta_{v}$ evaluates to 1 if $v$ is true and evaluates to 0 if $v$ is false} However, if $w$ has a $1$ in one or more entries, then for every $z$ such that $\braket{w, z} = 1$, there will be a $z'$ such that $\braket{w, z'} = 0$ that can be constructed by flipping one bit in $z$ that is in the same entry as a $1$ in $w$. Likewise, it follows that half of the values in the sum will evaluate to $(-1)$ while the other half evaluate to $1$, meaning the whole sum is just $0$.
+
+Using {\ref{prelim_4}} and {\ref{prelim_5}}, we can now prove the original claim by writing
+\begin{align}
+  \sum\limits_{z \in \mathbb{F}_2^n} \ket{z}\bra{z} \otimes \ket{z}\bra{z}
+  &= \sum\limits_{z \in \mathbb{F}_2^n}
+    \left( \frac{1}{2^n} \sum\limits_{a \in \mathbb{F}_2^n}
+    {(-1)}^{\braket{a,z}} Z^a \right)  \ \otimes \
+    \left( \frac{1}{2^n} \sum\limits_{b \in \mathbb{F}_2^n}
+    {(-1)}^{\braket{b,z}} Z^b \right) \\
+  &= \frac{1}{4^n} \ \sum\limits_{a \in \mathbb{F}_2^n}
+    \sum\limits_{b \in \mathbb{F}_2^n} \sum\limits_{z \in \mathbb{F}_2^n}
+    {(-1)}^{\braket{a,z} + \braket{b, z}} \ Z^a \otimes Z^b  \\
+  &= \frac{1}{4^n} \ \sum\limits_{a \in \mathbb{F}_2^n}
+    \sum\limits_{b \in \mathbb{F}_2^n} \left( \sum\limits_{z \in \mathbb{F}_2^n}
+    {(-1)}^{\braket{a + b,z}} \right) \ Z^a \otimes Z^b  \\
+  &= \frac{1}{4^n} \ \sum\limits_{a \in \mathbb{F}_2^n}
+    \sum\limits_{b \in \mathbb{F}_2^n} \left( 2^n \ \delta_{a+b = 0} \right)
+    \ Z^a \otimes Z^b  \\
+  &= \frac{1}{2^n} \  \sum\limits_{a \in \mathbb{F}_2^n}
+    \sum\limits_{b \in \mathbb{F}_2^^n} \ \delta_{a = b} \
+    \ Z^a \otimes Z^b \\ 
+  &= \frac{1}{2^n} \sum\limits_{a \in \mathbb{F}_2^n} \ Z^a \otimes Z^a
+\end{align}
+\end{proof}
+\end{claim}
+
+\subsection{Simplifying Collision Probability}\label{simplifying_cp}
+We now use {\ref{prelim_1}} {--} {\ref{prelim_2}} to simplify the expression for $P_c$ given in {\ref{collision_probability}} by writing
+\begin{align}
+  P_c &= \sum\limits_{z \in \mathbb{F}_2^n}
+        {\left( \braket{z | \psi} \braket{\psi | z} \right)}^2 \\
+      &= \sum\limits_{z \in \mathbb{F}_2^n}
+        {\left( \braket{z | \Pi_S | z} \right)}^2 \\ 
+      &= \sum\limits_{z \in \mathbb{F}_2^n}
+        {\left( \text{tr}\left(\Pi_S \ket{z} \bra{z}\right) \right)}^2 \\
+      &= \sum\limits_{z \in \mathbb{F}_2^n}
+        \text{tr}\left( \left(\Pi_S \otimes \Pi_S \right)
+        \left(\ket{z} \bra{z} \otimes \ket{z} \bra{z} \right) \right)  \\
+      &= \text{tr}\left( \left(\Pi_S \otimes \Pi_S \right)
+        \sum\limits_{z \in \mathbb{F}_2^n}
+        \ket{z} \bra{z} \otimes \ket{z} \bra{z} \right)  \\
+      &= \frac{1}{2^n} \ \text{tr}\left( \left(\Pi_S \otimes \Pi_S \right)
+        \sum\limits_{a \in \mathbb{F}_2^n}
+        Z^a \otimes Z^a \right)  \\
+      &= \frac{1}{2^n} \  \sum\limits_{a \in \mathbb{F}_2^n}
+        \text{tr}\left( \left(\Pi_S \otimes \Pi_S \right)
+        \left(Z^a \otimes Z^a \right) \right) \\
+      &= \frac{1}{2^n} \  \sum\limits_{a \in \mathbb{F}_2^n}
+        {\left( \text{tr} \left(\Pi_S \ Z^a \right) \right)}^2 \\
+      &= \frac{1}{2^n} \  \sum\limits_{a \in \mathbb{F}_2^n}
+        {\left( \text{tr} \left(\frac{1}{2^n} \
+        \sum\limits_{g \in S} g \ Z^a \right) \right)}^2 \\
+      &= \frac{1}{2^{n}} \  \sum\limits_{a \in \mathbb{F}_2^n}
+        {\left( \frac{1}{2^n} \ \sum\limits_{g \in S}
+        \text{tr} \left(  g \ Z^a \right) \right)}^2 \label{simplify_1}
+\end{align}
+We now find an expression for the trace in {\ref{simplify_1}} by writing that for any $g \in S$ and $a \in \mathbb{F}_2^n$ we have
+\begin{align}
+  \text{tr} \left( g \ Z^a \right)
+  &= \text{tr} \left({(-1)}^{u_s} M(u_x, u_z) Z^a \right) \\ 
+  &= {(-1)}^{u_s} \prod\limits_{j=1}^n
+    \text{tr} \left(M(u_{x_j}, u_{z_j}) Z^{a_j} \right) \label{simplify_2}\\
+  &= {(-1)}^{u_s} \prod\limits_{j=1}^n
+    ( 2 \ \delta_{u_{x_j}= 0} \ \delta_{u_{z_j}=a_j} ) \label{simplify_3}\\
+  &= {(-1)}^{u_s} \ (2^n) \ \delta_{u_x = 0} \ \delta_{u_z = a} \label{simplify_4}
+\end{align} 
+Where in {\ref{simplify_3}} we have used that the trace in {\ref{simplify_2}} is 2 only when the inner term evaluates to $I$. Otherwise, the trace in {\ref{simplify_2}} is just 0.
+
+We now combine {\ref{simplify_1}} with {\ref{simplify_4}} to write
+\begin{align}
+P_c &= \frac{1}{2^{n}} \  \sum\limits_{a \in \mathbb{F}_2^n}
+        {\left( \frac{1}{2^n} \ \sum\limits_{g \in S}
+      {(-1)}^{u_s} \ (2^n) \ \delta_{u_x = 0} \ \delta_{u_z = a}  \right)}^2 \\
+    &=  \frac{1}{2^{n}} \  \sum\limits_{a \in \mathbb{F}_2^n}
+      {\left( \ \sum\limits_{g \in S}
+      {(-1)}^{u_s} \ \delta_{u_x = 0} \ \delta_{u_z = a}  \right)}^2 \\
+    &=  \frac{1}{2^{n}} \  \sum\limits_{a \in \mathbb{F}_2^n}
+      {\left( \delta_{(0, 0, a) \in S} -
+      \delta_{(1, 0, a)\in S} \right)}^2 \label{simplify_5}
+\end{align}
+Where in {\ref{simplify_5}} we use the shorthand notation $(u_s, u_x, u_z) \in S$ to mean that the matrix $g = {(-1)}^{u_s} M(u_x, u_z) \in S$. We now note that we cannot have both $(0, u_x, u_z) \in S$ and $(1, u_x, u_z) \in S$ because $V_S = \{ \ket{\psi} \}$, which is a non-trivial vector space. We see this is true because if both $(0, u_x, u_z) \in S$ and $(1, u_x, u_z) \in S$, then both $g \in S$ and $-g \in S$. As a result this would require that
+\begin{equation}
+  \ket{\psi} = g \ket{\psi} = -g \ket{\psi} = - \ket{\psi}
+\end{equation}
+And this can only be satisfied by the trivial vector space. Thus, we can further simplify {\ref{simplify_5}} by writing
+\begin{align}
+  P_c &=  \frac{1}{2^{n}} \  \sum\limits_{a \in \mathbb{F}_2^n}
+      {\left( \pm \delta_{(0, 0, a) \in S \ \text{or} \ (1, 0, a) \in S } \right)}^2 \\
+      &= \frac{1}{2^{n}} \  \sum\limits_{a \in \mathbb{F}_2^n}
+        \delta_{(0, 0, a) \in S \ \text{or} \ (1, 0, a) \in S} \\ 
+      &= \frac{ |\{(u_s, u_x, u_z) \in S : u_x = 0 \}| } {2^n} 
+\end{align}
+We now define $U, V, W$ as
+\begin{align}
+  U &= \{(u_x, u_z) \in \mathbb{F}_2^{2n} : (0, u_x, u_z) \in S \text{ or }
+  (1, u_x, u_z) \in S \} \label{simplify_6}\\
+  V &= \{(v_x, v_z) \in \mathbb{F}_2^{2n} : v_x = 0 \} \label{simplify_7}\\
+  W &= U \cap V \label{simplify_8}
+\end{align}
+Again, because only $(0, u_x, u_z) \in S$ or $(1, u_x, u_z) \in S$, we will have that $|U| = |S|$. Moreover, it has been shown in Chapter 10.5 of {\cite{nc}} that the $n$ vectors $u^{(1)}, \ldots, u^{(n)} \in U$ corresponding to the $n$ generators $g^{(1)}, \ldots, g^{(n)}$ of $S$ are linearly independent. Using this along with {\ref{isomorphism}}, we see that taking linear combinations of basis vectors in $U$ is isomorphic to matrix multiplying the generators of $S$. Thus, $U, V, W$ are actually all subspaces of $\mathbb{F}_2^{2n}$, which we write as $U, V, W \subseteq \mathbb{F}_2^{2n}$.
+
+If we let $\text{dim}(W)$ be the number of basis vectors of $W$, then we see that $|W| = 2^{\text{dim}(W)}$, meaning we can write
+\begin{equation}\label{simplify_9}
+  P_c = \frac{|W|}{2^n} = \frac{2^{\text{dim}(W)}}{2^n} = \frac{1}{2^{n - \text{dim}(W)}}
+\end{equation}
+
+\subsection{An Algorithm to Efficiently Compute Collision Probability}
+Assume we are given a set of basis vectors for the subspace $U$, which we denote as $u^{(1)}, \ldots, u^{(n)}$. To re-iterate, these $n$ basis vectors correspond to the $n$ generators $g^{(1)}, \ldots, g^{(n)}$ of the stabilizer group $S$ that uniquely determines the stabilizer state $V_S = \ket{\psi}$ so that $g^{(j)} = \pm M(u_x^{(j)}, u_z^{(j)})$. We now provide an algorithm to efficiently compute the collision probability of the state $\ket{\psi}$\\
+\begin{algorithm}\label{algo_1}
+  Given the vectors $u^{(1)}, \ldots, u^{(n)}$, do the following
+  \begin{enumerate}[label = (\arabic*)]
+  \item Define the following vectors where each $v^{(j)} \in \mathbb{F}_2^{2n}$ 
+    \begin{align}
+      v^{(1)} &= (0, \ldots, 0, 1, 0, \ldots, 0) \\
+      v^{(2)} &= (0, \ldots, 0, 0, 1, \ldots, 0) \\
+              & \vdotswithin{=} \nonumber \\
+      v^{(n)} &= (0, \ldots, 0, 0, 0, \ldots, 1) 
+    \end{align}
+    Note that these form a basis for the vector space $V$ as defined in {\ref{simplify_7}} while $u^{(1)}, \ldots, u^{(n)}$ form a basis for the vector space $U$ as defined in {\ref{simplify_6}}
+  \item Define the following matrices $A, B \in \mathbb{F}_2^{2n \times n}$ and $C \in \mathbb{F}_2^{2n \times 2n}$ 
+    \begin{align}
+      A &= \begin{bmatrix} {u^{(1)}}^T & {u^{(2)}}^T & \cdots & {u^{(n)}}^T
+      \end{bmatrix} \\
+      B &= \begin{bmatrix} {v^{(1)}}^T & {v^{(2)}}^T & \cdots & {v^{(n)}}^T
+      \end{bmatrix} \\ 
+      C &= \begin{bmatrix} A & B \end{bmatrix} 
+    \end{align}
+  \item\label{algo_step}
+    Let $r$ be the number of pivot columns in $\text{REF}(C)$. We then have $\text{dim}(W) = \text{dim}(\text{Ker}(C)) = 2n - r$, so return
+    \begin{equation}\label{algo_cp}
+      P_c = \frac{1}{2^{n - \text{dim}(W)}}
+      = \frac{1}{2^{n - (2n - r)}} = \frac{1}{2^{r-n}}
+    \end{equation}
+  \end{enumerate}
+\begin{proof}
+  As shown in Section {\ref{simplifying_cp}}, the column vectors of matrices $A$ and $B$ are the basis vectors of the respective subspaces $U$ and $V$. Moreover, the expression for the collision probability in {\ref{algo_cp}} was also derived in section {\ref{simplifying_cp}}. Likewise, the only thing left to justify is the claim that $\text{dim}(W) = \text{dim}(\text{Ker}(C)) = 2n - r$.
+  
+  To see this, we note that the Kernel of $C = \begin{bmatrix} A & B \end{bmatrix}$ will be given by the vectors $(x, y) = \\(x_1, x_2, \ldots, x_n, y_1, y_2, \ldots, y_n) \in \mathbb{F}_2^{2n}$ such that
+\begin{equation}
+  \begin{bmatrix}
+    A & B 
+  \end{bmatrix}
+  \begin{bmatrix}
+    x^T \\ 
+    y^T \\ 
+  \end{bmatrix}
+  = 0 
+\end{equation}
+Thus, all vectors ${(x, y)}^T \in \text{Ker}(C)$ will have 
+\begin{equation}\label{ker_1}
+  Ax^T + By^T = 0 \quad \Rightarrow \quad Ax^T = By^T 
+\end{equation}
+Where we have used that $y^T = -y^T$ when working in $\mathbb{F}_2^n$. Equivalently, this means that every vector in the $\text{Ker}(C)$ forms a simultaneous linear combination of the basis vectors in $U$ and $V$ because expanding {\ref{ker_1}} gives us
+\begin{equation}
+  x_1 u^{(1)} + x_2 u^{(2)} + \cdots + x_n u^{(n)} =
+  y_1 v^{(1)} + y_2 v^{(2)} + \cdots + y_n v^{(n)} 
+\end{equation}
+Likewise, we see that by definition ${(x, y)}^T \in \text{Ker}(C)$ if and only if $Ax^T = By^T \in U \cap V$. We also see that if ${(x^{(1)}, y^{(1)})}^T, {(x^{(2)}, y^{(2)})}^T \in \text{Ker}(C)$, then 
+\begin{equation}
+\alpha (A x^{(1)} + B y^{(1)}) + \beta (A x^{(2)} + B y^{(2)}) = 0
+\end{equation}
+And we can rewrite this as
+\begin{equation}
+A (\alpha {x^{(1)}}^T + \beta {x^{(2)}}^T) = B (\alpha {y^{(1)}}^T + \beta {y^{(2)}}^T) 
+\end{equation}
+From this we see that taking linear combinations of vectors in $\text{Ker}(C)$ is equivalent to taking linear combinations of vectors in $U \cap V = W$. Thus, the basis vectors of the $\text{Ker}(C)$ will also form a basis for the vectors in $W$. As a result, we will have
+\begin{equation}\label{algo_proof_1}
+  \text{dim}(\text{Ker}(C)) = \text{dim}(W)
+\end{equation}
+Lastly, by the Rank-Nullity Theorem, for the $2n \times 2n$ matrix $C$, we will have
+\begin{equation}\label{algo_proof_2}
+\text{dim}({\text{Im}(C)}) + \text{dim}(\text{Ker}(C)) = 2n
+\end{equation}
+In step {\ref{algo_step}} of the algorithm, we set $r$ equal to the number of pivot columns in $\text{REF}(C)$, which is the same as the $\text{dim}(\text{Im}(C))$. Thus, combining {\ref{algo_proof_1}} and {\ref{algo_proof_2}} we see 
+\begin{equation}
+  \text{dim}(W) = \text{dim}(\text{Ker}(C)) = 2n - \text{dim}({\text{Im}(C)})
+  = 2n - r
+\end{equation}
+\end{proof}
+\end{algorithm}
+
+
+\section{Simulations and Numerical Results}
+
+\subsection{Simulation Protocol}
+As described in Section {\ref{cp_conjecture}}, we are specifically interested in the relationship between the collision probability as a function of the depth of the circuit. In order to explore this relationship, we simulate pseudo-random quantum circuits in 1D, 2D, and 3D lattices. Likewise, we restrict our simulations to stabilizer states that are created by applying Clifford Gates to the computational basis $\ket{0}^{\otimes n}$, as described in Section {\ref{clifford_gates}}
+
+Our simulations use a tableau as described in {\cite{aaronson}} to keep track of the vector representations of the generators of the stabilizer group $S$ of the stabilizer state $V_S = \{ \ket{\psi} \}$. However, we do not keep track of the phase bits, as they will not be necessary in order to compute the collision probability of the state $\ket{\psi}$. See {\cite{aaronson}} for details on how to initialize and update the tableau. 
+
+In order to generate random Clifford Gates, we use the algorithm described in {\cite{random_clifford}}. Again, we ignore the phase bits as they will not affect the collision probability. Likewise, in order to generate a random Clifford Gate that acts on two qubits, we can equivalently generate a $4 \times 4$ Symplectic Matrix. We then decompose these Symplectic Matrices into Clifford Gates using the algorithm described in {\cite{aaronson}}.
+
+Lastly, we use Algorithm {\ref{algo_1}} in order to efficiently compute the collision probability of the stabilizer state $\ket{\psi}$ using the tableau that keeps track of the generators of the stabilizer group.
+
+Using these algorithms, all of our simulations use the following protocol to collect data in order to test Conjecture {\ref{conjecture_1}}. \\
+\begin{proto}\label{proto_1} Our simulations perform the following steps 
+  \begin{enumerate}[label = (\arabic*)]
+  \item\label{protocol_1}
+    Initialize a tableau to keep track of the generators of our stabilizer state $\ket{\psi}$. This tableau corresponds to the state $\ket{0}^{\otimes n }$. Initialize the depth $d = 0$. Initialize a list of coordinates $K = [(d_1 = 0, k_1 = 0)]$ 
+  \item\label{protocol_2}
+    Based on the geometry of the circuit, create a list $L$ that contains pairs of qubits. We construct $L$ so that after applying two qubit gates to all pairs of qubits in $L$ the depth of the circuit with increase by one. 
+  \item For every pair of qubits in $L$, do the following. Pick a uniformly random $4 \times 4$ Symplectic Matrix and decompose it into Clifford Gates. Apply these two qubit gates to the pair of qubits by appropriately modifying the tableau.
+  \item\label{protocol_3}
+    Compute the collision probability of the state using the tableau. Update the depth so that $d \leftarrow d + 1$. If we let $k = -\log_2 (P_c)$, then append the pair $(d, k)$ to the list $K$. 
+  \item\label{protocol_4}
+    Repeat steps {\ref{protocol_2}} {--} {\ref{protocol_3}} a on the order of $O(n^{1/w})$ times for a $w$-dimensional grid.
+  \item Repeat steps {\ref{protocol_1}} {--} {\ref{protocol_4}} a total of $m$ times, storing all $m$ lists of coordinates. Compute the mean and standard deviation across the $m$ lists of coordinates, creating another list $[(d_1, k_1, \Delta k_1), (d_2, k_2, \Delta k_2), \ldots ]$. 
+  \end{enumerate}
+\end{proto}
+
+We have written code in Python 3.5 to implement the steps in Protocol {\ref{proto_1}}, which can be found online at {\cite{matthewkhoury96}}. This code also includes implementations of the algorithms described in {\cite{aaronson}} and {\cite{random_clifford}} as well as an implementation of Algorithm {\ref{algo_1}}. In order to enhance performance, our code includes some methods to parallelize some of the steps in Protocol {\ref{proto_1}}. This implementation also precomputes the decomposition of all $4 \times 4$ Symplectic Matrices in order to save time.
+
+In the following sections, we describe how to obtain $L$ for 1D, 2D, and 3D lattices. We also provide some of our numerical results obtained using the implementation of Protocol {\ref{proto_1}} on 1D, 2D, and 3D lattices.
+
+\subsection{1D Lattice}
+The pairs of qubits in a 1D lattice that correspond to depth of $1$ can be seen in Figure {\ref{fig_1d}}. Specifically, we simply alternate between two lists of pairs of qubits, which we refer to as two seperate rounds. Likewise, each round corresponds to a depth of 1. Figures {\ref{plot_1d_1}} and {\ref{plot_1d_2}} show our results for a 1D letattice for $n = 100$ and $n = 625$ respectively. In both simulations we let $m = 25$, meaning we collected a total of $25$ samples, which we used to compute the mean and standard deviation of the values of $k$ as a function of $d$.
+
+\begin{figure}[!htp]
+\centering
+\includegraphics[width=.75\textwidth]{figures/1D_circuit.pdf}
+\caption{Qubits in a 1D Lattice. We alternate between the two rounds and each round corresponds to a depth of 1. Black dots represent qubits, black lines represent random two qubit gates, grey lines represent inactive gates. }
+\label{fig_1d}
+\end{figure}
+\begin{figure}[!htp]
+\centering
+\includegraphics[width=.75\textwidth]{figures/plot_100_1D.pdf}
+\caption{$k$ as a function of $d$ in a 1D lattice with $n = 100$ qubits and $m = 25$ samples.}
+\label{plot_1d_1}
+\end{figure}
+\begin{figure}[!htp]
+\centering
+\includegraphics[width=.75\textwidth]{figures/plot_625_1D.pdf}
+\caption{$k$ as a function of $d$ in a 1D lattice with $n = 625$ qubits and $m =25$ samples.}
+\label{plot_1d_2} 
+\end{figure}
+
+We would like to note here that we slightly deviated from Protocol {\ref{proto_1}} for the 1D lattice, as we did not compute the collision probability at each depth. Rather, we only computed the collision probability for 50 different values of the depth, which were approximately evenly spaced. The reasoning for this is two-fold. First, computing the collision probability given a tableau is the most expensive operation in our simulations. Second, in the 1D lattice, we needed to compute the collision probability for large values of depth on the order of $O(n)$. Likewise, limiting the number of data points we collected to $50$ saved a significant amount of time while running our simulations.
+
+Looking that Figures {\ref{plot_1d_1}} and {\ref{plot_1d_2}}, we see that our numerical results obtained from our simulations support Conjecture {\ref{conjecture_1}}. Specifically, for a 1D lattice, the Conjecture predicts that
+\begin{equation}
+k = n \left( 1 - O\left(\frac{1}{d} \right) \right) 
+\end{equation}
+Moreover, for a 1D lattice, we would expect the circuit to saturate at a depth of $d \sim n$. Likewise, looking at the figures above, it is clear that we will have $k = O(n - n/d)$ and the circuits in the clearly saturate well before $d = n$. Thus, the results of our simulations seem to support Conjecture {\ref{conjecture_1}} for a 1D lattice. 
+
+\subsection{2D Lattice}
+The pairs of qubits in a 2D lattice that correspond to a depth of $1$ can be seen in Figure {\ref{fig_2d}}. Similar to the 1D lattice, we simply perform a round robin throughout the four different rounds when applying our sets of two qubit gates. Each round in this round robin increases the depth of the circuit by $1$. Figures {\ref{plot_2d_1}} and 
+
+\begin{figure}[!htp]
+\centering
+\includegraphics[width=.9\textwidth]{figures/2D_circuit.pdf}
+\caption{Qubits in a 2D Lattice. We alternate between the four rounds and each round corresponds to a depth of 1. Black dots represent qubits, black lines represent random two qubit gates, grey lines represent inactive gates. }
+\label{fig_2d}
+\end{figure}
+
+\begin{figure}[!htp]
+\centering
+\includegraphics[width=.75\textwidth]{figures/plot_100_1D.pdf}
+\caption{$k$ as a function of $d$ in a 2D lattice with $n = 100$ qubits and $m = 25$ samples.}
+\label{plot_2d_1}
+\end{figure}
+
+\begin{figure}[!htp]
+\centering
+\includegraphics[width=.75\textwidth]{figures/plot_900_2D.pdf}
+\caption{$k$ as a function of $d$ in a 2D lattice with $n = 900$ qubits and $m =25$ samples.}
+\label{plot_2d_2} 
+\end{figure}  
+
+
+\clearpage 
+
+\subsection{3D Lattice}
+
+\begin{figure}[!htp]
+\centering
+\includegraphics[width=.75\textwidth]{figures/3D_circuit.pdf}
+\caption{Qubits in a 3D Lattice. We alternate between the six rounds and each round corresponds to a depth of 1. Black dots represent qubits, black lines represent random two qubit gates, grey lines represent inactive gates. }
+\label{fig_3d}
+\end{figure}
+
+\begin{figure}[!htp]
+\centering
+\includegraphics[width=.75\textwidth]{figures/plot_125_3D.pdf}
+\caption{$k$ as a function of $d$ in a 3D lattice with $n = 125$ qubits and $m = 25$ samples.}
+\label{plot_3d_1}
+\end{figure}
+
+\begin{figure}[!htp]
+\centering
+\includegraphics[width=.75\textwidth]{figures/plot_1000_3D.pdf}
+\caption{$k$ as a function of $d$ in a 3D lattice with $n = 1000$ qubits and $m =25$ samples.}
+\label{plot_3d_2} 
+\end{figure} 
+
+\clearpage 
+
+\bibliography{mybib}
+
+\end{document}
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: t
+%%% End:
+
+\message{ !name(report_1.tex) !offset(-654) }

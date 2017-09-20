@@ -1,0 +1,6688 @@
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  27 JUL 2017 11:49
+entering extended mode
+ restricted \write18 enabled.
+ file:line:error style messages enabled.
+ %&-line parsing enabled.
+**\nonstopmode\nofiles\PassOptionsToPackage{active,tightpage,auctex}{preview}\A
+tBeginDocument{\ifx\ifPreview\undefined\RequirePackage[displaymath,floats,graph
+ics,textmath,sections,footnotes]{preview}[2004/11/05]\fi} \input _region_.tex
+(./_region_.tex  !name(report_1.tex)
+(/usr/local/texlive/2015/texmf-dist/tex/latex/base/article.cls
+Document Class: article 2014/09/29 v1.4h Standard LaTeX document class
+(/usr/local/texlive/2015/texmf-dist/tex/latex/base/size11.clo
+File: size11.clo 2014/09/29 v1.4h Standard LaTeX file (size option)
+)
+\c@part=\count79
+\c@section=\count80
+\c@subsection=\count81
+\c@subsubsection=\count82
+\c@paragraph=\count83
+\c@subparagraph=\count84
+\c@figure=\count85
+\c@table=\count86
+\abovecaptionskip=\skip41
+\belowcaptionskip=\skip42
+\bibindent=\dimen102
+)
+(/usr/local/texlive/2015/texmf-dist/tex/latex/geometry/geometry.sty
+Package: geometry 2010/09/12 v5.6 Page Geometry
+
+(/usr/local/texlive/2015/texmf-dist/tex/latex/graphics/keyval.sty
+Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
+\KV@toks@=\toks14
+)
+(/usr/local/texlive/2015/texmf-dist/tex/generic/oberdiek/ifpdf.sty
+Package: ifpdf 2011/01/30 v2.3 Provides the ifpdf switch (HO)
+Package ifpdf Info: pdfTeX in PDF mode is detected.
+)
+(/usr/local/texlive/2015/texmf-dist/tex/generic/oberdiek/ifvtex.sty
+Package: ifvtex 2010/03/01 v1.5 Detect VTeX and its facilities (HO)
+Package ifvtex Info: VTeX not detected.
+)
+(/usr/local/texlive/2015/texmf-dist/tex/generic/ifxetex/ifxetex.sty
+Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
+)
+\Gm@cnth=\count87
+\Gm@cntv=\count88
+\c@Gm@tempcnt=\count89
+\Gm@bindingoffset=\dimen103
+\Gm@wd@mp=\dimen104
+\Gm@odd@mp=\dimen105
+\Gm@even@mp=\dimen106
+\Gm@layoutwidth=\dimen107
+\Gm@layoutheight=\dimen108
+\Gm@layouthoffset=\dimen109
+\Gm@layoutvoffset=\dimen110
+\Gm@dimlist=\toks15
+)
+(/usr/local/texlive/2015/texmf-dist/tex/latex/amsmath/amsmath.sty
+Package: amsmath 2013/01/14 v2.14 AMS math features
+\@mathmargin=\skip43
+
+For additional information on amsmath, use the `?' option.
+(/usr/local/texlive/2015/texmf-dist/tex/latex/amsmath/amstext.sty
+Package: amstext 2000/06/29 v2.01
+
+(/usr/local/texlive/2015/texmf-dist/tex/latex/amsmath/amsgen.sty
+File: amsgen.sty 1999/11/30 v2.0
+\@emptytoks=\toks16
+\ex@=\dimen111
+))
+(/usr/local/texlive/2015/texmf-dist/tex/latex/amsmath/amsbsy.sty
+Package: amsbsy 1999/11/29 v1.2d
+\pmbraise@=\dimen112
+)
+(/usr/local/texlive/2015/texmf-dist/tex/latex/amsmath/amsopn.sty
+Package: amsopn 1999/12/14 v2.01 operator names
+)
+\inf@bad=\count90
+LaTeX Info: Redefining \frac on input line 210.
+\uproot@=\count91
+\leftroot@=\count92
+LaTeX Info: Redefining \overline on input line 306.
+\classnum@=\count93
+\DOTSCASE@=\count94
+LaTeX Info: Redefining \ldots on input line 378.
+LaTeX Info: Redefining \dots on input line 381.
+LaTeX Info: Redefining \cdots on input line 466.
+\Mathstrutbox@=\box26
+\strutbox@=\box27
+\big@size=\dimen113
+LaTeX Font Info:    Redeclaring font encoding OML on input line 566.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 567.
+\macc@depth=\count95
+\c@MaxMatrixCols=\count96
+\dotsspace@=\muskip10
+\c@parentequation=\count97
+\dspbrk@lvl=\count98
+\tag@help=\toks17
+\row@=\count99
+\column@=\count100
+\maxfields@=\count101
+\andhelp@=\toks18
+\eqnshift@=\dimen114
+\alignsep@=\dimen115
+\tagshift@=\dimen116
+\tagwidth@=\dimen117
+\totwidth@=\dimen118
+\lineht@=\dimen119
+\@envbody=\toks19
+\multlinegap=\skip44
+\multlinetaggap=\skip45
+\mathdisplay@stack=\toks20
+LaTeX Info: Redefining \[ on input line 2665.
+LaTeX Info: Redefining \] on input line 2666.
+)
+(/usr/local/texlive/2015/texmf-dist/tex/latex/amscls/amsthm.sty
+Package: amsthm 2015/03/04 v2.20.2
+\thm@style=\toks21
+\thm@bodyfont=\toks22
+\thm@headfont=\toks23
+\thm@notefont=\toks24
+\thm@headpunct=\toks25
+\thm@preskip=\skip46
+\thm@postskip=\skip47
+\thm@headsep=\skip48
+\dth@everypar=\toks26
+)
+(/usr/local/texlive/2015/texmf-dist/tex/latex/amsfonts/amsfonts.sty
+Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
+\symAMSa=\mathgroup4
+\symAMSb=\mathgroup5
+LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
+(Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
+)
+(/usr/local/texlive/2015/texmf-dist/tex/latex/amsfonts/amssymb.sty
+Package: amssymb 2013/01/14 v3.01 AMS font symbols
+)
+(/usr/local/texlive/2015/texmf-dist/tex/latex/mathtools/mathtools.sty
+Package: mathtools 2015/05/11 v1.16 mathematical typesetting tools
+
+(/usr/local/texlive/2015/texmf-dist/tex/latex/tools/calc.sty
+Package: calc 2014/10/28 v4.3 Infix arithmetic (KKT,FJ)
+\calc@Acount=\count102
+\calc@Bcount=\count103
+\calc@Adimen=\dimen120
+\calc@Bdimen=\dimen121
+\calc@Askip=\skip49
+\calc@Bskip=\skip50
+LaTeX Info: Redefining \setlength on input line 80.
+LaTeX Info: Redefining \addtolength on input line 81.
+\calc@Ccount=\count104
+\calc@Cskip=\skip51
+)
+(/usr/local/texlive/2015/texmf-dist/tex/latex/mathtools/mhsetup.sty
+Package: mhsetup 2010/01/21 v1.2a programming setup (MH)
+)
+LaTeX Info: Thecontrolsequence`\('isalreadyrobust on input line 129.
+LaTeX Info: Thecontrolsequence`\)'isalreadyrobust on input line 129.
+LaTeX Info: Thecontrolsequence`\['isalreadyrobust on input line 129.
+LaTeX Info: Thecontrolsequence`\]'isalreadyrobust on input line 129.
+\g_MT_multlinerow_int=\count105
+\l_MT_multwidth_dim=\dimen122
+\origjot=\skip52
+\l_MT_shortvdotswithinadjustabove_dim=\dimen123
+\l_MT_shortvdotswithinadjustbelow_dim=\dimen124
+\l_MT_above_intertext_sep=\dimen125
+\l_MT_below_intertext_sep=\dimen126
+\l_MT_above_shortintertext_sep=\dimen127
+\l_MT_below_shortintertext_sep=\dimen128
+)
+(/usr/local/texlive/2015/texmf-dist/tex/latex/graphics/color.sty
+Package: color 2014/10/28 v1.1a Standard LaTeX Color (DPC)
+
+(/usr/local/texlive/2015/texmf-dist/tex/latex/latexconfig/color.cfg
+File: color.cfg 2007/01/18 v1.5 color configuration of teTeX/TeXLive
+)
+Package color Info: Driver file: pdftex.def on input line 142.
+
+(/usr/local/texlive/2015/texmf-dist/tex/latex/pdftex-def/pdftex.def
+File: pdftex.def 2011/05/27 v0.06d Graphics/color for pdfTeX
+
+(/usr/local/texlive/2015/texmf-dist/tex/generic/oberdiek/infwarerr.sty
+Package: infwarerr 2010/04/08 v1.3 Providing info/warning/error messages (HO)
+)
+(/usr/local/texlive/2015/texmf-dist/tex/generic/oberdiek/ltxcmds.sty
+Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
+)
+\Gread@gobject=\count106
+))
+(/usr/local/texlive/2015/texmf-dist/tex/latex/graphics/graphicx.sty
+Package: graphicx 2014/10/28 v1.0g Enhanced LaTeX Graphics (DPC,SPQR)
+
+(/usr/local/texlive/2015/texmf-dist/tex/latex/graphics/graphics.sty
+Package: graphics 2014/10/28 v1.0p Standard LaTeX Graphics (DPC,SPQR)
+
+(/usr/local/texlive/2015/texmf-dist/tex/latex/graphics/trig.sty
+Package: trig 1999/03/16 v1.09 sin cos tan (DPC)
+)
+(/usr/local/texlive/2015/texmf-dist/tex/latex/latexconfig/graphics.cfg
+File: graphics.cfg 2010/04/23 v1.9 graphics configuration of TeX Live
+)
+Package graphics Info: Driver file: pdftex.def on input line 94.
+)
+\Gin@req@height=\dimen129
+\Gin@req@width=\dimen130
+)
+(/usr/local/texlive/2015/texmf-dist/tex/latex/overpic/overpic.sty
+Package: overpic 2010/09/13 v0.53  Overwriting graphics
+
+Package: overpic v0.53 <2010/09/13> (RN)
+(/usr/local/texlive/2015/texmf-dist/tex/latex/eepic/epic.sty
+Enhancements to Picture Environment. Version 1.2 - Released June 1, 1986
+\@@multicnt=\count107
+\d@lta=\count108
+\@delta=\dimen131
+\@@delta=\dimen132
+\@gridcnt=\count109
+\@joinkind=\count110
+\@dotgap=\dimen133
+\@ddotgap=\dimen134
+\@x@diff=\count111
+\@y@diff=\count112
+\x@diff=\dimen135
+\y@diff=\dimen136
+\@dotbox=\box28
+\num@segments=\count113
+\num@segmentsi=\count114
+\@datafile=\read1
+)
+overpic: relative positioning in percent
+) (/usr/local/texlive/2015/texmf-dist/tex/latex/jknapltx/mathrsfs.sty
+Package: mathrsfs 1996/01/01 Math RSFS package v1.0 (jk)
+\symrsfs=\mathgroup6
+)
+(/usr/local/texlive/2015/texmf-dist/tex/latex/enumitem/enumitem.sty
+Package: enumitem 2011/09/28 v3.5.2 Customized lists
+\labelindent=\skip53
+\enit@outerparindent=\dimen137
+\enit@toks=\toks27
+\enit@inbox=\box29
+\enitdp@description=\count115
+)
+(/usr/local/texlive/2015/texmf-dist/tex/latex/braket/braket.sty)
+(/usr/local/texlive/2015/texmf-dist/tex/latex/parskip/parskip.sty
+Package: parskip 2001/04/09 non-zero parskip adjustments
+)
+(/usr/local/texlive/2015/texmf-dist/tex/latex/natbib/natbib.sty
+Package: natbib 2010/09/13 8.31b (PWD, AO)
+\bibhang=\skip54
+\bibsep=\skip55
+LaTeX Info: Redefining \cite on input line 694.
+
+
+/usr/local/texlive/2015/texmf-dist/tex/latex/natbib/natbib.sty:795: LaTeX Error
+: \makeindex undefined.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.795 \renewcommand\makeindex
+                             {\NAT@makeindex
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+\c@NAT@ctr=\count116
+) (/usr/local/texlive/2015/texmf-dist/tex/latex/hyperref/hyperref.sty
+Package: hyperref 2012/11/06 v6.83m Hypertext links for LaTeX
+
+(/usr/local/texlive/2015/texmf-dist/tex/generic/oberdiek/hobsub-hyperref.sty
+Package: hobsub-hyperref 2012/05/28 v1.13 Bundle oberdiek, subset hyperref (HO)
+
+
+(/usr/local/texlive/2015/texmf-dist/tex/generic/oberdiek/hobsub-generic.sty
+Package: hobsub-generic 2012/05/28 v1.13 Bundle oberdiek, subset generic (HO)
+Package: hobsub 2012/05/28 v1.13 Construct package bundles (HO)
+Package hobsub Info: Skipping package `infwarerr' (already loaded).
+Package hobsub Info: Skipping package `ltxcmds' (already loaded).
+Package: ifluatex 2010/03/01 v1.3 Provides the ifluatex switch (HO)
+Package ifluatex Info: LuaTeX not detected.
+Package hobsub Info: Skipping package `ifvtex' (already loaded).
+Package: intcalc 2007/09/27 v1.1 Expandable calculations with integers (HO)
+Package hobsub Info: Skipping package `ifpdf' (already loaded).
+Package: etexcmds 2011/02/16 v1.5 Avoid name clashes with e-TeX commands (HO)
+Package etexcmds Info: Could not find \expanded.
+(etexcmds)             That can mean that you are not using pdfTeX 1.50 or
+(etexcmds)             that some package has redefined \expanded.
+(etexcmds)             In the latter case, load this package earlier.
+Package: kvsetkeys 2012/04/25 v1.16 Key value parser (HO)
+Package: kvdefinekeys 2011/04/07 v1.3 Define keys (HO)
+Package: pdftexcmds 2011/11/29 v0.20 Utility functions of pdfTeX for LuaTeX (HO
+)
+Package pdftexcmds Info: LuaTeX not detected.
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode found.
+Package: pdfescape 2011/11/25 v1.13 Implements pdfTeX's escape features (HO)
+Package: bigintcalc 2012/04/08 v1.3 Expandable calculations on big integers (HO
+)
+Package: bitset 2011/01/30 v1.1 Handle bit-vector datatype (HO)
+Package: uniquecounter 2011/01/30 v1.2 Provide unlimited unique counter (HO)
+)
+Package hobsub Info: Skipping package `hobsub' (already loaded).
+Package: letltxmacro 2010/09/02 v1.4 Let assignment for LaTeX macros (HO)
+Package: hopatch 2012/05/28 v1.2 Wrapper for package hooks (HO)
+Package: xcolor-patch 2011/01/30 xcolor patch
+Package: atveryend 2011/06/30 v1.8 Hooks at the very end of document (HO)
+Package atveryend Info: \enddocument detected (standard20110627).
+Package: atbegshi 2011/10/05 v1.16 At begin shipout hook (HO)
+Package: refcount 2011/10/16 v3.4 Data extraction from label references (HO)
+Package: hycolor 2011/01/30 v1.7 Color options for hyperref/bookmark (HO)
+)
+(/usr/local/texlive/2015/texmf-dist/tex/latex/oberdiek/auxhook.sty
+Package: auxhook 2011/03/04 v1.3 Hooks for auxiliary files (HO)
+)
+(/usr/local/texlive/2015/texmf-dist/tex/latex/oberdiek/kvoptions.sty
+Package: kvoptions 2011/06/30 v3.11 Key value format for package options (HO)
+)
+\@linkdim=\dimen138
+\Hy@linkcounter=\count117
+\Hy@pagecounter=\count118
+
+(/usr/local/texlive/2015/texmf-dist/tex/latex/hyperref/pd1enc.def
+File: pd1enc.def 2012/11/06 v6.83m Hyperref: PDFDocEncoding definition (HO)
+)
+\Hy@SavedSpaceFactor=\count119
+
+(/usr/local/texlive/2015/texmf-dist/tex/latex/latexconfig/hyperref.cfg
+File: hyperref.cfg 2002/06/06 v1.2 hyperref configuration of TeXLive
+)
+Package hyperref Info: Option `colorlinks' set `true' on input line 4319.
+Package hyperref Info: Hyper figures OFF on input line 4443.
+Package hyperref Info: Link nesting OFF on input line 4448.
+Package hyperref Info: Hyper index ON on input line 4451.
+Package hyperref Info: Plain pages OFF on input line 4458.
+Package hyperref Info: Backreferencing OFF on input line 4463.
+Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
+Package hyperref Info: Bookmarks ON on input line 4688.
+\c@Hy@tempcnt=\count120
+
+(/usr/local/texlive/2015/texmf-dist/tex/latex/url/url.sty
+\Urlmuskip=\muskip11
+Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
+)
+LaTeX Info: Redefining \url on input line 5041.
+\XeTeXLinkMargin=\dimen139
+\Fld@menulength=\count121
+\Field@Width=\dimen140
+\Fld@charsize=\dimen141
+Package hyperref Info: Hyper figures OFF on input line 6295.
+Package hyperref Info: Link nesting OFF on input line 6300.
+Package hyperref Info: Hyper index ON on input line 6303.
+Package hyperref Info: backreferencing OFF on input line 6310.
+Package hyperref Info: Link coloring ON on input line 6313.
+Package hyperref Info: Link coloring with OCG OFF on input line 6320.
+Package hyperref Info: PDF/A mode OFF on input line 6325.
+LaTeX Info: Redefining \ref on input line 6365.
+LaTeX Info: Redefining \pageref on input line 6369.
+\Hy@abspage=\count122
+\c@Item=\count123
+\c@Hfootnote=\count124
+)
+
+Package hyperref Message: Driver (autodetected): hpdftex.
+
+(/usr/local/texlive/2015/texmf-dist/tex/latex/hyperref/hpdftex.def
+File: hpdftex.def 2012/11/06 v6.83m Hyperref driver for pdfTeX
+\Fld@listcount=\count125
+\c@bookmark@seq@number=\count126
+
+(/usr/local/texlive/2015/texmf-dist/tex/latex/oberdiek/rerunfilecheck.sty
+Package: rerunfilecheck 2011/04/15 v1.7 Rerun checks for auxiliary files (HO)
+Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
+82.
+)
+\Hy@SectionHShift=\skip56
+)
+(/usr/local/texlive/2015/texmf-dist/tex/latex/caption/caption.sty
+Package: caption 2013/05/02 v3.3-89 Customizing captions (AR)
+
+(/usr/local/texlive/2015/texmf-dist/tex/latex/caption/caption3.sty
+Package: caption3 2013/05/02 v1.6-88 caption3 kernel (AR)
+Package caption3 Info: TeX engine: e-TeX on input line 57.
+\captionmargin=\dimen142
+\captionmargin@=\dimen143
+\captionwidth=\dimen144
+\caption@tempdima=\dimen145
+\caption@indent=\dimen146
+\caption@parindent=\dimen147
+\caption@hangindent=\dimen148
+)
+\c@ContinuedFloat=\count127
+Package caption Info: hyperref package is loaded.
+)
+\c@thm=\count128
+\c@algorithm=\count129
+\c@proto=\count130
+\c@remark=\count131
+\c@observation=\count132
+\c@example=\count133
+\c@conjecture=\count134
+
+No file _region_.aux.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 47.
+LaTeX Font Info:    ... okay on input line 47.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 47.
+LaTeX Font Info:    ... okay on input line 47.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 47.
+LaTeX Font Info:    ... okay on input line 47.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 47.
+LaTeX Font Info:    ... okay on input line 47.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 47.
+LaTeX Font Info:    ... okay on input line 47.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 47.
+LaTeX Font Info:    ... okay on input line 47.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 47.
+LaTeX Font Info:    ... okay on input line 47.
+(/Users/MatthewKhoury/.emacs.d/elpa/auctex-11.89.6/latex/preview.sty
+Package: preview 2010/02/14 11.89 (AUCTeX/preview-latex)
+
+(/Users/MatthewKhoury/.emacs.d/elpa/auctex-11.89.6/latex/prtightpage.def
+\PreviewBorder=\dimen149
+)
+(/Users/MatthewKhoury/.emacs.d/elpa/auctex-11.89.6/latex/prauctex.def
+No auxiliary output files.
+
+
+\hbadness=\count135
+\hfuzz=\dimen150
+(/Users/MatthewKhoury/.emacs.d/elpa/auctex-11.89.6/latex/prauctex.cfg))
+(/Users/MatthewKhoury/.emacs.d/elpa/auctex-11.89.6/latex/prfootnotes.def)
+\pr@snippet=\count136
+\pr@box=\box30
+\pr@output=\toks28
+
+Preview: Fontsize 10.95pt
+Preview: PDFoutput 1
+)
+*geometry* driver: auto-detecting
+*geometry* detected driver: pdftex
+*geometry* verbose mode - [ preamble ] result:
+* driver: pdftex
+* paper: <default>
+* layout: <same size as paper>
+* layoutoffset:(h,v)=(0.0pt,0.0pt)
+* modes: 
+* h-part:(L,W,R)=(72.26999pt, 469.75502pt, 72.26999pt)
+* v-part:(T,H,B)=(72.26999pt, 650.43001pt, 72.26999pt)
+* \paperwidth=614.295pt
+* \paperheight=794.96999pt
+* \textwidth=469.75502pt
+* \textheight=650.43001pt
+* \oddsidemargin=0.0pt
+* \evensidemargin=0.0pt
+* \topmargin=-37.0pt
+* \headheight=12.0pt
+* \headsep=25.0pt
+* \topskip=11.0pt
+* \footskip=30.0pt
+* \marginparwidth=59.0pt
+* \marginparsep=10.0pt
+* \columnsep=10.0pt
+* \skip\footins=10.0pt plus 4.0pt minus 2.0pt
+* \hoffset=0.0pt
+* \voffset=0.0pt
+* \mag=1000
+* \@twocolumnfalse
+* \@twosidefalse
+* \@mparswitchfalse
+* \@reversemarginfalse
+* (1in=72.27pt=25.4mm, 1cm=28.453pt)
+
+(/usr/local/texlive/2015/texmf-dist/tex/context/base/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count137
+\scratchdimen=\dimen151
+\scratchbox=\box31
+\nofMPsegments=\count138
+\nofMParguments=\count139
+\everyMPshowfont=\toks29
+\MPscratchCnt=\count140
+\MPscratchDim=\dimen152
+\MPnumerator=\count141
+\makeMPintoPDFobject=\count142
+\everyMPtoPDFconversion=\toks30
+) (/usr/local/texlive/2015/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
+Package: epstopdf-base 2010/02/09 v2.5 Base part for package epstopdf
+
+(/usr/local/texlive/2015/texmf-dist/tex/latex/oberdiek/grfext.sty
+Package: grfext 2010/08/19 v1.1 Manage graphics extensions (HO)
+)
+Package grfext Info: Graphics extension search list:
+(grfext)             [.png,.pdf,.jpg,.mps,.jpeg,.jbig2,.jb2,.PNG,.PDF,.JPG,.JPE
+G,.JBIG2,.JB2,.eps]
+(grfext)             \AppendGraphicsExtensions on input line 452.
+
+(/usr/local/texlive/2015/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
+e
+))
+\AtBeginShipoutBox=\box32
+Package hyperref Info: Link coloring ON on input line 47.
+
+(/usr/local/texlive/2015/texmf-dist/tex/latex/hyperref/nameref.sty
+Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
+
+(/usr/local/texlive/2015/texmf-dist/tex/generic/oberdiek/gettitlestring.sty
+Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
+)
+\c@section@level=\count143
+)
+LaTeX Info: Redefining \ref on input line 47.
+LaTeX Info: Redefining \pageref on input line 47.
+LaTeX Info: Redefining \nameref on input line 47.
+Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: Incompatible package detected (regarding \caption).
+(caption)             \caption = \protected\long macro:->\pr@protect@domacro {}
+{##1{}}\pr@\caption .
+
+
+Package caption Warning: \caption will not be redefined since it's already
+(caption)                redefined by a document class or package which is
+(caption)                unknown to the caption package.
+See the caption package documentation for explanation.
+
+Package caption Info: End \AtBeginDocument code.
+ !name(report_1.tex) !offset(-3) 
+LaTeX Font Info:    Try loading font information for U+msa on input line 56.
+
+(/usr/local/texlive/2015/texmf-dist/tex/latex/amsfonts/umsa.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Try loading font information for U+msb on input line 56.
+
+(/usr/local/texlive/2015/texmf-dist/tex/latex/amsfonts/umsb.fd
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+)
+LaTeX Font Info:    Try loading font information for U+rsfs on input line 56.
+
+(/usr/local/texlive/2015/texmf-dist/tex/latex/jknapltx/ursfs.fd
+File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
+)
+./_region_.tex:72: Preview: Snippet 1 started.
+<-><->
+      
+l.72 \section
+             {Introduction}
+Not a real error.
+
+Preview: Tightpage -32891 -32891 32891 32891
+./_region_.tex:72: Preview: Snippet 1 ended.(655359+0x30785865).
+<-><->
+      
+l.72 \section{Introduction}
+                           
+Not a real error.
+
+[1{/usr/local/texlive/2015/texmf-var/fonts/map/pdftex/updmap/pdftex.map}
+
+]
+
+Package natbib Warning: Citation `supremacy_1' on page 2 undefined on input lin
+e 73.
+
+
+Package natbib Warning: Citation `supremacy_2' on page 2 undefined on input lin
+e 73.
+
+./_region_.tex:73: Preview: Snippet 2 started.
+<-><->
+      
+l.73 ...ifically, apply a set of random gates to $
+                                                  n$ qubits in the state $\k...
+
+Not a real error.
+
+./_region_.tex:73: Preview: Snippet 2 ended.(308974+0x430740).
+<-><->
+      
+l.73 ...ically, apply a set of random gates to $n$
+                                                   qubits in the state $\ket...
+
+Not a real error.
+
+[2]
+./_region_.tex:73: Preview: Snippet 3 started.
+<-><->
+      
+l.73 ... random gates to $n$ qubits in the state $
+                                                  \ket{0}^{\otimes n}$, then...
+
+Not a real error.
+
+./_region_.tex:73: Preview: Snippet 3 ended.(647443+179404x1641264).
+<-><->
+      
+l.73 ... qubits in the state $\ket{0}^{\otimes n}$
+                                                  , then measure the qubits ...
+
+Not a real error.
+
+[3]
+./_region_.tex:75: Preview: Snippet 4 started.
+<-><->
+      
+l.75 ...way to accompish this task is to lay the $
+                                                  n$ qubits out onto a 1D, 2...
+
+Not a real error.
+
+./_region_.tex:75: Preview: Snippet 4 ended.(308974+0x430740).
+<-><->
+      
+l.75 ...y to accompish this task is to lay the $n$
+                                                   qubits out onto a 1D, 2D,...
+
+Not a real error.
+
+[4]
+./_region_.tex:78: Preview: Snippet 5 started.
+<-><->
+      
+l.78 \section
+             {Statistical Property of Pseudo-Random Quantum Circuits}
+Not a real error.
+
+./_region_.tex:78: Preview: Snippet 5 ended.(655359+183500x30785865).
+<-><->
+      
+l.78 ...roperty of Pseudo-Random Quantum Circuits}
+                                                  
+Not a real error.
+
+[5
+
+]
+./_region_.tex:80: Preview: Snippet 6 started.
+<-><->
+      
+l.80 \subsection
+                {Definition of Collision Probability}
+Not a real error.
+
+./_region_.tex:80: Preview: Snippet 6 ended.(546132+152916x30785865).
+<-><->
+      
+l.80 ...ction{Definition of Collision Probability}
+                                                  
+Not a real error.
+
+[6
+
+]
+./_region_.tex:81: Preview: Snippet 7 started.
+<-><->
+      
+l.81 ... prepare two identical quantum states of $
+                                                  n$ qubits represented as $...
+
+Not a real error.
+
+./_region_.tex:81: Preview: Snippet 7 ended.(308974+0x430740).
+<-><->
+      
+l.81 ...repare two identical quantum states of $n$
+                                                   qubits represented as $\k...
+
+Not a real error.
+
+[7]
+./_region_.tex:81: Preview: Snippet 8 started.
+<-><->
+      
+l.81 ...ntum states of $n$ qubits represented as $
+                                                  \ket{\psi} \in \mathbb{C}^...
+
+Not a real error.
+
+./_region_.tex:81: Preview: Snippet 8 ended.(614748+179404x3013692).
+<-><->
+      
+l.81 ...ented as $\ket{\psi} \in \mathbb{C}^{2^n}$
+                                                  . We then measure both sta...
+
+Not a real error.
+
+[8]
+./_region_.tex:81: Preview: Snippet 9 started.
+<-><->
+      
+l.81 ...tational basis, letting random variables $
+                                                  M_1$ and $M_2$ denote the ...
+
+Not a real error.
+
+./_region_.tex:81: Preview: Snippet 9 ended.(490372+107642x1007491).
+<-><->
+      
+l.81 ...onal basis, letting random variables $M_1$
+                                                   and $M_2$ denote the outc...
+
+Not a real error.
+
+[9]
+./_region_.tex:81: Preview: Snippet 10 started.
+<-><->
+      
+l.81 ...asis, letting random variables $M_1$ and $
+                                                  M_2$ denote the outcome of...
+
+Not a real error.
+
+./_region_.tex:81: Preview: Snippet 10 ended.(490372+107642x1007491).
+<-><->
+      
+l.81 ..., letting random variables $M_1$ and $M_2$
+                                                   denote the outcome of the...
+
+Not a real error.
+
+[10]
+./_region_.tex:81: Preview: Snippet 11 started.
+<-><->
+      
+l.81 ... define the \emph{collision probability} $
+                                                  P_c$ as the probability of...
+
+Not a real error.
+
+./_region_.tex:81: Preview: Snippet 11 ended.(490372+107642x734762).
+<-><->
+      
+l.81 ...ine the \emph{collision probability} $P_c$
+                                                   as the probability of mea...
+
+Not a real error.
+
+[11]
+./_region_.tex:82: Preview: Snippet 12 started.
+<-><->
+      
+l.82 \begin{equation}
+                     
+Not a real error.
+
+./_region_.tex:84: Preview: Snippet 12 ended.(717618+0x30785865).
+<-><->
+      
+l.84 \end{equation}
+                   
+Not a real error.
+
+[12]
+./_region_.tex:85: Preview: Snippet 13 started.
+<-><->
+      
+l.85 ...rements are independent, we can simplify $
+                                                  P_c$ by writing
+Not a real error.
+
+./_region_.tex:85: Preview: Snippet 13 ended.(490372+107642x734762).
+<-><->
+      
+l.85 ...nts are independent, we can simplify $P_c$
+                                                   by writing
+Not a real error.
+
+[13]
+./_region_.tex:86: Preview: Snippet 14 started.
+<-><->
+      
+l.86 \begin{align}
+                  
+Not a real error.
+
+./_region_.tex:93: Preview: Snippet 14 ended.(8369406+0x30785865).
+<-><->
+      
+l.93 \end{align}
+                
+Not a real error.
+
+[14]
+./_region_.tex:94: Preview: Snippet 15 started.
+<-><->
+      
+l.94 Where $
+            p(z)$ is the probability of measuring state $\ket{z}$ from $\ket...
+
+Not a real error.
+
+./_region_.tex:94: Preview: Snippet 15 ended.(538214+179404x1284491).
+<-><->
+      
+l.94 Where $p(z)$
+                  is the probability of measuring state $\ket{z}$ from $\ket...
+
+Not a real error.
+
+[15]
+./_region_.tex:94: Preview: Snippet 16 started.
+<-><->
+      
+l.94 ...)$ is the probability of measuring state $
+                                                  \ket{z}$ from $\ket{\psi}$...
+
+Not a real error.
+
+./_region_.tex:94: Preview: Snippet 16 ended.(538214+179404x843703).
+<-><->
+      
+l.94 ...e probability of measuring state $\ket{z}$
+                                                   from $\ket{\psi}$. We kno...
+
+Not a real error.
+
+[16]
+./_region_.tex:94: Preview: Snippet 17 started.
+<-><->
+      
+l.94 ...bility of measuring state $\ket{z}$ from $
+                                                  \ket{\psi}$. We know that ...
+
+Not a real error.
+
+./_region_.tex:94: Preview: Snippet 17 ended.(538214+179404x971612).
+<-><->
+      
+l.94 ...easuring state $\ket{z}$ from $\ket{\psi}$
+                                                  . We know that we can writ...
+
+Not a real error.
+
+[17]
+./_region_.tex:95: Preview: Snippet 18 started.
+<-><->
+      
+l.95 \begin{equation}
+                     
+Not a real error.
+
+./_region_.tex:98: Preview: Snippet 18 ended.(813578+0x30785865).
+<-><->
+      
+l.98 \end{equation}
+                   
+Not a real error.
+
+[18]
+./_region_.tex:100: Preview: Snippet 19 started.
+<-><->
+      
+l.100 \begin{equation}
+                      \label{collision_probability}
+Not a real error.
+
+./_region_.tex:103: Preview: Snippet 19 ended.(1867929+0x30785865).
+<-><->
+      
+l.103 \end{equation}
+                    
+Not a real error.
+
+[19
+
+]
+./_region_.tex:105: Preview: Snippet 20 started.
+<-><->
+      
+l.105 \subsection
+                 {Collision Probability in Pseudo-Random Quantum Circuits}\l...
+
+Not a real error.
+
+./_region_.tex:105: Preview: Snippet 20 ended.(546132+152916x30785865).
+<-><->
+      
+l.105 ...bility in Pseudo-Random Quantum Circuits}
+                                                  \label{cp_conjecture}
+Not a real error.
+
+[20
+
+]
+./_region_.tex:106: Preview: Snippet 21 started.
+<-><->
+      
+l.106 If we have applied a total of $
+                                     N = O(\text{poly}(n))$ gates in a psued...
+
+Not a real error.
+
+./_region_.tex:106: Preview: Snippet 21 ended.(538214+179404x5081508).
+<-><->
+      
+l.106 ...pplied a total of $N = O(\text{poly}(n))$
+                                                   gates in a psuedo-random ...
+
+Not a real error.
+
+[21]
+./_region_.tex:106: Preview: Snippet 22 started.
+<-><->
+      
+l.106 ... quantum circuit, then the \emph{depth} $
+                                                  d$ of the circuit is defin...
+
+Not a real error.
+
+./_region_.tex:106: Preview: Snippet 22 ended.(498346+0x373511).
+<-><->
+      
+l.106 ...uantum circuit, then the \emph{depth} $d$
+                                                   of the circuit is defined...
+
+Not a real error.
+
+[22]
+./_region_.tex:106: Preview: Snippet 23 started.
+<-><->
+      
+l.106 ...depth} $d$ of the circuit is defined as $
+                                                  d \sim N / n$. The statist...
+
+Not a real error.
+
+./_region_.tex:106: Preview: Snippet 23 ended.(538214+179404x2714904).
+<-><->
+      
+l.106 ... the circuit is defined as $d \sim N / n$
+                                                  . The statistical property...
+
+Not a real error.
+
+[23]
+./_region_.tex:108: Preview: Snippet 24 started.
+<-><->
+      
+l.108 ...do-random quantum circuit arranged in a $
+                                                  w$-dimensional lattice wil...
+
+Not a real error.
+
+./_region_.tex:108: Preview: Snippet 24 ended.(308974+0x533066).
+<-><->
+      
+l.108 ...-random quantum circuit arranged in a $w$
+                                                  -dimensional lattice will ...
+
+Not a real error.
+
+[24]
+./_region_.tex:109: Preview: Snippet 25 started.
+<-><->
+      
+l.109   \begin{equation}
+                        
+Not a real error.
+
+./_region_.tex:111: Preview: Snippet 25 ended.(1631359+0x30785865).
+<-><->
+      
+l.111   \end{equation}
+                      
+Not a real error.
+
+[25]
+./_region_.tex:112: Preview: Snippet 26 started.
+<-><->
+      
+l.112   Equivalently, if we let $
+                                 k = - \log_2(P_c)$, then we will have
+Not a real error.
+
+./_region_.tex:112: Preview: Snippet 26 ended.(538214+179404x4561894).
+<-><->
+      
+l.112 ...uivalently, if we let $k = - \log_2(P_c)$
+                                                  , then we will have
+Not a real error.
+
+[26]
+./_region_.tex:113: Preview: Snippet 27 started.
+<-><->
+      
+l.113   \begin{equation}
+                        
+Not a real error.
+
+./_region_.tex:116: Preview: Snippet 27 ended.(1722303+0x30785865).
+<-><->
+      
+l.116   \end{equation}
+                      
+Not a real error.
+
+[27]
+./_region_.tex:118: Preview: Snippet 28 started.
+<-><->
+      
+l.118 ...on probability is \emph{saturated} once $
+                                                  k = n - 1$. Thus, the conj...
+
+Not a real error.
+
+./_region_.tex:118: Preview: Snippet 28 ended.(498346+59802x3019642).
+<-><->
+      
+l.118 ...lity is \emph{saturated} once $k = n - 1$
+                                                  . Thus, the conjecture als...
+
+Not a real error.
+
+[28]
+./_region_.tex:119: Preview: Snippet 29 started.
+<-><->
+      
+l.119 \begin{equation}
+                      
+Not a real error.
+
+./_region_.tex:122: Preview: Snippet 29 ended.(1722303+0x30785865).
+<-><->
+      
+l.122 \end{equation}
+                    
+Not a real error.
+
+[29]
+./_region_.tex:125: Preview: Snippet 30 started.
+<-><->
+      
+l.125 \section
+              {The Stabilizer Formalism}
+Not a real error.
+
+./_region_.tex:125: Preview: Snippet 30 ended.(655359+0x30785865).
+<-><->
+      
+l.125 \section{The Stabilizer Formalism}
+                                        
+Not a real error.
+
+[30
+
+]
+./_region_.tex:127: Preview: Snippet 31 started.
+<-><->
+      
+l.127 \subsection
+                 {Motivation}
+Not a real error.
+
+./_region_.tex:127: Preview: Snippet 31 ended.(546132+0x30785865).
+<-><->
+      
+l.127 \subsection{Motivation}
+                             
+Not a real error.
+
+[31
+
+]
+
+LaTeX Warning: Reference `conjecture_1' on page 2 undefined on input line 128.
+
+
+Package natbib Warning: Citation `nc' on page 2 undefined on input line 130.
+
+./_region_.tex:132: Preview: Snippet 32 started.
+<-><->
+      
+l.132 \subsection
+                 {The Pauli Group}
+Not a real error.
+
+./_region_.tex:132: Preview: Snippet 32 ended.(546132+152916x30785865).
+<-><->
+      
+l.132 \subsection{The Pauli Group}
+                                  
+Not a real error.
+
+[32
+
+]
+./_region_.tex:133: Preview: Snippet 33 started.
+<-><->
+      
+l.133 We let $
+              G_n$ denote the Pauli Group on $n$ qubits. Formally, we define...
+
+Not a real error.
+
+./_region_.tex:133: Preview: Snippet 33 ended.(490372+107642x934995).
+<-><->
+      
+l.133 We let $G_n$
+                   denote the Pauli Group on $n$ qubits. Formally, we define...
+
+Not a real error.
+
+[33]
+./_region_.tex:133: Preview: Snippet 34 started.
+<-><->
+      
+l.133 We let $G_n$ denote the Pauli Group on $
+                                              n$ qubits. Formally, we define...
+
+Not a real error.
+
+./_region_.tex:133: Preview: Snippet 34 ended.(308974+0x430740).
+<-><->
+      
+l.133 We let $G_n$ denote the Pauli Group on $n$
+                                                 qubits. Formally, we define...
+
+Not a real error.
+
+[34]
+./_region_.tex:133: Preview: Snippet 35 started.
+<-><->
+      
+l.133 ...its. Formally, we define \begin{equation}
+                                                  
+Not a real error.
+
+./_region_.tex:135: Preview: Snippet 35 ended.(717618+0x30785865).
+<-><->
+      
+l.135 \end{equation}
+                    
+Not a real error.
+
+[35]
+./_region_.tex:137: Preview: Snippet 36 started.
+<-><->
+      
+l.137 \begin{equation}
+                      
+Not a real error.
+
+./_region_.tex:158: Preview: Snippet 36 ended.(1782578+0x30785865).
+<-><->
+      
+l.158 \end{equation}
+                    
+Not a real error.
+
+[36]
+./_region_.tex:159: Preview: Snippet 37 started.
+<-><->
+      
+l.159 Likewise, the set $
+                         G_n$ consists of all the $n$-fold tensor product of...
+
+Not a real error.
+
+./_region_.tex:159: Preview: Snippet 37 ended.(490372+107642x934995).
+<-><->
+      
+l.159 Likewise, the set $G_n$
+                              consists of all the $n$-fold tensor product of...
+
+Not a real error.
+
+[37]
+./_region_.tex:159: Preview: Snippet 38 started.
+<-><->
+      
+l.159 ...wise, the set $G_n$ consists of all the $
+                                                  n$-fold tensor product of ...
+
+Not a real error.
+
+./_region_.tex:159: Preview: Snippet 38 ended.(308974+0x430740).
+<-><->
+      
+l.159 ...se, the set $G_n$ consists of all the $n$
+                                                  -fold tensor product of th...
+
+Not a real error.
+
+[38]
+./_region_.tex:159: Preview: Snippet 39 started.
+<-><->
+      
+l.159 ...-fold tensor product of the matrices in $
+                                                  G_1$. We see that the Paul...
+
+Not a real error.
+
+./_region_.tex:159: Preview: Snippet 39 ended.(490372+107642x875527).
+<-><->
+      
+l.159 ...d tensor product of the matrices in $G_1$
+                                                  . We see that the Pauli Gr...
+
+Not a real error.
+
+[39]
+./_region_.tex:160: Preview: Snippet 40 started.
+<-><->
+      
+l.160 \begin{align}
+                   
+Not a real error.
+
+./_region_.tex:165: Preview: Snippet 40 ended.(4165257+0x30785865).
+<-><->
+      
+l.165 \end{align}
+                 
+Not a real error.
+
+[40
+
+
+]
+./_region_.tex:166: Preview: Snippet 41 started.
+<-><->
+      
+l.166 ...we also see that all of the elements in $
+                                                  P_n$ either commute or ant...
+
+Not a real error.
+
+./_region_.tex:166: Preview: Snippet 41 ended.(490372+107642x831489).
+<-><->
+      
+l.166 ...lso see that all of the elements in $P_n$
+                                                   either commute or anti-co...
+
+Not a real error.
+
+[41]
+./_region_.tex:166: Preview: Snippet 42 started.
+<-><->
+      
+l.166 ... or anti-commute. We also note that any $
+                                                  g \in G_n$ can be written as
+Not a real error.
+
+./_region_.tex:166: Preview: Snippet 42 ended.(490372+139537x2180107).
+<-><->
+      
+l.166 ...ommute. We also note that any $g \in G_n$
+                                                   can be written as
+Not a real error.
+
+[42]
+./_region_.tex:167: Preview: Snippet 43 started.
+<-><->
+      
+l.167 \begin{equation}
+                      \label{pauli_2}
+Not a real error.
+
+./_region_.tex:171: Preview: Snippet 43 ended.(869975+0x30785865).
+<-><->
+      
+l.171 \end{equation}
+                    
+Not a real error.
+
+[43
+
+]
+./_region_.tex:173: Preview: Snippet 44 started.
+<-><->
+      
+l.173 \subsection
+                 {Isomorphism to $\mathbb{F}_2$}
+Not a real error.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `subscript' on input line 173.
+
+./_region_.tex:173: Preview: Snippet 44 ended.(546132+152916x30785865).
+<-><->
+      
+l.173 \subsection{Isomorphism to $\mathbb{F}_2$}
+                                                
+Not a real error.
+
+[44
+
+]
+./_region_.tex:174: Preview: Snippet 45 started.
+<-><->
+      
+l.174 We use $
+              \mathbb{F}_2$ to refer to the finite field $\mathbb{F}_2 \in \...
+
+Not a real error.
+
+./_region_.tex:174: Preview: Snippet 45 ended.(494359+107642x749846).
+<-><->
+      
+l.174 We use $\mathbb{F}_2$
+                            to refer to the finite field $\mathbb{F}_2 \in \...
+
+Not a real error.
+
+[45]
+./_region_.tex:174: Preview: Snippet 46 started.
+<-><->
+      
+l.174 ...thbb{F}_2$ to refer to the finite field $
+                                                  \mathbb{F}_2 \in \{0, 1\}$...
+
+Not a real error.
+
+./_region_.tex:174: Preview: Snippet 46 ended.(538214+179404x3381110).
+<-><->
+      
+l.174 ... finite field $\mathbb{F}_2 \in \{0, 1\}$
+                                                  . All operations are done ...
+
+Not a real error.
+
+[46]
+./_region_.tex:174: Preview: Snippet 47 started.
+<-><->
+      
+l.174 ...ions are done modulo 2, so we will have $
+                                                  1 + 1 = 0$ and $x = -x$. W...
+
+Not a real error.
+
+./_region_.tex:174: Preview: Snippet 47 ended.(462465+59802x2910336).
+<-><->
+      
+l.174 ...one modulo 2, so we will have $1 + 1 = 0$
+                                                   and $x = -x$. We can also...
+
+Not a real error.
+
+[47]
+./_region_.tex:174: Preview: Snippet 48 started.
+<-><->
+      
+l.174 ...dulo 2, so we will have $1 + 1 = 0$ and $
+                                                  x = -x$. We can also see t...
+
+Not a real error.
+
+./_region_.tex:174: Preview: Snippet 48 ended.(418611+59802x2335248).
+<-><->
+      
+l.174 ... so we will have $1 + 1 = 0$ and $x = -x$
+                                                  . We can also see that $\m...
+
+Not a real error.
+
+[48]
+./_region_.tex:174: Preview: Snippet 49 started.
+<-><->
+      
+l.174 ...= 0$ and $x = -x$. We can also see that $
+                                                  \mathbb{F}_2$ defines a gr...
+
+Not a real error.
+
+./_region_.tex:174: Preview: Snippet 49 ended.(494359+107642x749846).
+<-><->
+      
+l.174 ... -x$. We can also see that $\mathbb{F}_2$
+                                                   defines a group closed un...
+
+Not a real error.
+
+[49]
+./_region_.tex:176: Preview: Snippet 50 started.
+<-><->
+      
+l.176 We define the map $
+                         M: \mathbb{F}_2^2 \rightarrow \{I, X, Y, Z\}$ as
+Not a real error.
+
+./_region_.tex:176: Preview: Snippet 50 ended.(598293+192273x6893443).
+<-><->
+      
+l.176 ...mathbb{F}_2^2 \rightarrow \{I, X, Y, Z\}$
+                                                   as
+Not a real error.
+
+[50]
+./_region_.tex:177: Preview: Snippet 51 started.
+<-><->
+      
+l.177 \begin{equation}
+                      
+Not a real error.
+
+./_region_.tex:180: Preview: Snippet 51 ended.(717618+0x30785865).
+<-><->
+      
+l.180 \end{equation}
+                    
+Not a real error.
+
+[51]
+
+LaTeX Warning: Reference `pauli_2' on page 3 undefined on input line 181.
+
+./_region_.tex:181: Preview: Snippet 52 started.
+<-><->
+      
+l.181 Likewise, from {\ref{pauli_2}}, if we let $
+                                                 u = (u_s, u_i, u_{x_1}, \ld...
+
+Not a real error.
+
+./_region_.tex:181: Preview: Snippet 52 ended.(639670+205512x14219760).
+<-><->
+      
+l.181 ...\ldots, u_{z_n}) \in \mathbb{F}_2^{2n+2}$
+                                                  , we can write any element...
+
+Not a real error.
+
+[52]
+./_region_.tex:181: Preview: Snippet 53 started.
+<-><->
+      
+l.181 ...{F}_2^{2n+2}$, we can write any element $
+                                                  g \in G_n$ as
+Not a real error.
+
+./_region_.tex:181: Preview: Snippet 53 ended.(490372+139537x2180107).
+<-><->
+      
+l.181 ...2}$, we can write any element $g \in G_n$
+                                                   as
+Not a real error.
+
+[53]
+./_region_.tex:182: Preview: Snippet 54 started.
+<-><->
+      
+l.182 \begin{equation}
+                      
+Not a real error.
+
+./_region_.tex:185: Preview: Snippet 54 ended.(736877+0x30785865).
+<-><->
+      
+l.185 \end{equation}
+                    
+Not a real error.
+
+[54]
+./_region_.tex:186: Preview: Snippet 55 started.
+<-><->
+      
+l.186 In shorthand, we will write that $
+                                        v = (v_{x_1}, \ldots, v_{x_n}, v_{z_...
+
+Not a real error.
+
+./_region_.tex:186: Preview: Snippet 55 ended.(598293+192273x14436603).
+<-><->
+      
+l.186 ...z_n}) = (v_x, v_z) \in \mathbb{F}_2^{2n}$
+                                                   and that
+Not a real error.
+
+[55]
+./_region_.tex:187: Preview: Snippet 56 started.
+<-><->
+      
+l.187 \begin{equation}
+                      \label{shorthand_1}
+Not a real error.
+
+./_region_.tex:190: Preview: Snippet 56 ended.(718673+0x30785865).
+<-><->
+      
+l.190 \end{equation}
+                    
+Not a real error.
+
+[56
+
+]
+./_region_.tex:192: Preview: Snippet 57 started.
+<-><->
+      
+l.192 We also let $
+                   [A]$ be the set of operators that are the same up to a gl...
+
+Not a real error.
+
+./_region_.tex:192: Preview: Snippet 57 ended.(538214+179404x936893).
+<-><->
+      
+l.192 We also let $[A]$
+                        be the set of operators that are the same up to a gl...
+
+Not a real error.
+
+[57]
+./_region_.tex:193: Preview: Snippet 58 started.
+<-><->
+      
+l.193 \begin{equation}
+                      
+Not a real error.
+
+./_region_.tex:195: Preview: Snippet 58 ended.(717618+0x30785865).
+<-><->
+      
+l.195 \end{equation}
+                    
+Not a real error.
+
+[58]
+
+LaTeX Warning: Reference `pauli_1' on page 3 undefined on input line 196.
+
+
+LaTeX Warning: Reference `pauli_3' on page 3 undefined on input line 196.
+
+./_region_.tex:196: Preview: Snippet 59 started.
+<-><->
+      
+l.196 ...\ref{pauli_3}}, we can see that the map $
+                                                  M$ induces an isomorphism ...
+
+Not a real error.
+
+./_region_.tex:196: Preview: Snippet 59 ended.(490372+0x774430).
+<-><->
+      
+l.196 ...ef{pauli_3}}, we can see that the map $M$
+                                                   induces an isomorphism $[...
+
+Not a real error.
+
+[59]
+./_region_.tex:196: Preview: Snippet 60 started.
+<-><->
+      
+l.196 ...that the map $M$ induces an isomorphism $
+                                                  [M]: \mathbb{F}_2^{2n} \ri...
+
+Not a real error.
+
+./_region_.tex:196: Preview: Snippet 60 ended.(598293+192273x5308927).
+<-><->
+      
+l.196 ...[M]: \mathbb{F}_2^{2n} \rightarrow [G_n]$
+                                                   because addition of vecto...
+
+Not a real error.
+
+[60]
+./_region_.tex:196: Preview: Snippet 61 started.
+<-><->
+      
+l.196 ...w [G_n]$ because addition of vectors in $
+                                                  \mathbb{F}_2^{2n}$ corresp...
+
+Not a real error.
+
+./_region_.tex:196: Preview: Snippet 61 ended.(598293+192273x1087846).
+<-><->
+      
+l.196 ...ddition of vectors in $\mathbb{F}_2^{2n}$
+                                                   corresponds to the multip...
+
+Not a real error.
+
+[61]
+./_region_.tex:196: Preview: Snippet 62 started.
+<-><->
+      
+l.196 ...ds to the multiplication of matrices in $
+                                                  G_n$ up to a global phase
+Not a real error.
+
+./_region_.tex:196: Preview: Snippet 62 ended.(490372+107642x934995).
+<-><->
+      
+l.196 ...o the multiplication of matrices in $G_n$
+                                                   up to a global phase
+Not a real error.
+
+[62]
+./_region_.tex:197: Preview: Snippet 63 started.
+<-><->
+      
+l.197 \begin{equation}
+                      \label{isomorphism}
+Not a real error.
+
+./_region_.tex:199: Preview: Snippet 63 ended.(813578+0x30785865).
+<-><->
+      
+l.199 \end{equation}
+                    
+Not a real error.
+
+[63
+
+]
+./_region_.tex:201: Preview: Snippet 64 started.
+<-><->
+      
+l.201 \subsection
+                 {The Stabilizer Group}
+Not a real error.
+
+./_region_.tex:201: Preview: Snippet 64 ended.(546132+152916x30785865).
+<-><->
+      
+l.201 \subsection{The Stabilizer Group}
+                                       
+Not a real error.
+
+[64
+
+]
+./_region_.tex:202: Preview: Snippet 65 started.
+<-><->
+      
+l.202 A quantum state $
+                       \ket{\psi}$ is said to be \emph{stabilized} by a unit...
+
+Not a real error.
+
+./_region_.tex:202: Preview: Snippet 65 ended.(538214+179404x971612).
+<-><->
+      
+l.202 A quantum state $\ket{\psi}$
+                                   is said to be \emph{stabilized} by a unit...
+
+Not a real error.
+
+[65]
+./_region_.tex:202: Preview: Snippet 66 started.
+<-><->
+      
+l.202 ...\emph{stabilized} by a unitary operator $
+                                                  g$ if and only if $g \ket{...
+
+Not a real error.
+
+./_region_.tex:202: Preview: Snippet 66 ended.(308974+139537x368028).
+<-><->
+      
+l.202 ...mph{stabilized} by a unitary operator $g$
+                                                   if and only if $g \ket{\p...
+
+Not a real error.
+
+[66]
+./_region_.tex:202: Preview: Snippet 67 started.
+<-><->
+      
+l.202 ...y a unitary operator $g$ if and only if $
+                                                  g \ket{\psi} = \ket{\psi}$...
+
+Not a real error.
+
+./_region_.tex:202: Preview: Snippet 67 ended.(538214+179404x3387673).
+<-><->
+      
+l.202 ...f and only if $g \ket{\psi} = \ket{\psi}$
+                                                  . The \emph{stabilizer gro...
+
+Not a real error.
+
+[67]
+./_region_.tex:202: Preview: Snippet 68 started.
+<-><->
+      
+l.202 ...ket{\psi}$. The \emph{stabilizer group} $
+                                                  S$ is a subgroup of $G_n$,...
+
+Not a real error.
+
+./_region_.tex:202: Preview: Snippet 68 ended.(490372+0x481402).
+<-><->
+      
+l.202 ...t{\psi}$. The \emph{stabilizer group} $S$
+                                                   is a subgroup of $G_n$, w...
+
+Not a real error.
+
+[68]
+./_region_.tex:202: Preview: Snippet 69 started.
+<-><->
+      
+l.202 ...{stabilizer group} $S$ is a subgroup of $
+                                                  G_n$, which we denote as $...
+
+Not a real error.
+
+./_region_.tex:202: Preview: Snippet 69 ended.(490372+107642x934995).
+<-><->
+      
+l.202 ...bilizer group} $S$ is a subgroup of $G_n$
+                                                  , which we denote as $S \l...
+
+Not a real error.
+
+[69]
+./_region_.tex:202: Preview: Snippet 70 started.
+<-><->
+      
+l.202 ...a subgroup of $G_n$, which we denote as $
+                                                  S \leq G_n$. We then defin...
+
+Not a real error.
+
+./_region_.tex:202: Preview: Snippet 70 ended.(490372+107642x2373217).
+<-><->
+      
+l.202 ...of $G_n$, which we denote as $S \leq G_n$
+                                                  . We then define a \emph{s...
+
+Not a real error.
+
+[70]
+./_region_.tex:202: Preview: Snippet 71 started.
+<-><->
+      
+l.202 ...hen define a \emph{stabilizer subspace} $
+                                                  V_S$ to be the set of stat...
+
+Not a real error.
+
+./_region_.tex:202: Preview: Snippet 71 ended.(490372+111084x819477).
+<-><->
+      
+l.202 ...define a \emph{stabilizer subspace} $V_S$
+                                                   to be the set of states t...
+
+Not a real error.
+
+[71]
+./_region_.tex:202: Preview: Snippet 72 started.
+<-><->
+      
+l.202 ...the set of states that is stabilized by $
+                                                  S$, or more formally
+Not a real error.
+
+./_region_.tex:202: Preview: Snippet 72 ended.(490372+0x481402).
+<-><->
+      
+l.202 ...e set of states that is stabilized by $S$
+                                                  , or more formally
+Not a real error.
+
+[72]
+./_region_.tex:203: Preview: Snippet 73 started.
+<-><->
+      
+l.203 \begin{equation}
+                      
+Not a real error.
+
+./_region_.tex:205: Preview: Snippet 73 ended.(717619+0x30785865).
+<-><->
+      
+l.205 \end{equation}
+                    
+Not a real error.
+
+[73]
+./_region_.tex:206: Preview: Snippet 74 started.
+<-><->
+      
+l.206 Here we note that if $
+                            g, h \in S$, then we must also have $gh \in S$ a...
+
+Not a real error.
+
+./_region_.tex:206: Preview: Snippet 74 ended.(498346+139537x2458916).
+<-><->
+      
+l.206 Here we note that if $g, h \in S$
+                                       , then we must also have $gh \in S$ a...
+
+Not a real error.
+
+[74]
+./_region_.tex:206: Preview: Snippet 75 started.
+<-><->
+      
+l.206 ...if $g, h \in S$, then we must also have $
+                                                  gh \in S$ and $g^{-1} \in ...
+
+Not a real error.
+
+./_region_.tex:206: Preview: Snippet 75 ended.(498346+139537x2139976).
+<-><->
+      
+l.206 ...\in S$, then we must also have $gh \in S$
+                                                   and $g^{-1} \in S$ because
+Not a real error.
+
+[75]
+./_region_.tex:206: Preview: Snippet 76 started.
+<-><->
+      
+l.206 ..., then we must also have $gh \in S$ and $
+                                                  g^{-1} \in S$ because
+Not a real error.
+
+./_region_.tex:206: Preview: Snippet 76 ended.(598293+139537x2471086).
+<-><->
+      
+l.206 ...t also have $gh \in S$ and $g^{-1} \in S$
+                                                   because
+Not a real error.
+
+[76]
+./_region_.tex:207: Preview: Snippet 77 started.
+<-><->
+      
+l.207 \begin{equation}
+                      \label{stab_1}
+Not a real error.
+
+./_region_.tex:210: Preview: Snippet 77 ended.(813578+0x30785865).
+<-><->
+      
+l.210 \end{equation}
+                    
+Not a real error.
+
+[77
+
+]
+./_region_.tex:211: Preview: Snippet 78 started.
+<-><->
+      
+l.211 We also note that if we would like $
+                                          V_S$ to be a non-trivial vector sp...
+
+Not a real error.
+
+./_region_.tex:211: Preview: Snippet 78 ended.(490372+111084x819477).
+<-><->
+      
+l.211 We also note that if we would like $V_S$
+                                               to be a non-trivial vector sp...
+
+Not a real error.
+
+[78]
+./_region_.tex:211: Preview: Snippet 79 started.
+<-><->
+      
+l.211 ...to be a non-trivial vector space\footnote
+                                                  {The trivial vector space ...
+
+Not a real error.
+
+./_region_.tex:211: Preview: Snippet 79 ended.(598293+0x311300).
+<-><->
+      
+l.211 ...e trivial vector space is $V_s = \{0 \}$}
+                                                  , $S$ must satisfy two con...
+
+Not a real error.
+
+[79]
+./_region_.tex:211: Preview: Snippet 80 started.
+<-><->
+      
+l.211 ...rivial vector space is $V_s = \{0 \}$}, $
+                                                  S$ must satisfy two condit...
+
+Not a real error.
+
+./_region_.tex:211: Preview: Snippet 80 ended.(490372+0x481402).
+<-><->
+      
+l.211 ...vial vector space is $V_s = \{0 \}$}, $S$
+                                                   must satisfy two conditions
+Not a real error.
+
+[80]
+./_region_.tex:213: Preview: Snippet 81 started.
+<-><->
+      
+l.213 \item\label{cond_1} The elements of $
+                                           S$ must commute
+Not a real error.
+
+./_region_.tex:213: Preview: Snippet 81 ended.(490372+0x481402).
+<-><->
+      
+l.213 \item\label{cond_1} The elements of $S$
+                                              must commute
+Not a real error.
+
+[81]
+./_region_.tex:214: Preview: Snippet 82 started.
+<-><->
+      
+l.214 \item\label{cond_2} $
+                           -I$ cannot be an element of $S$
+Not a real error.
+
+./_region_.tex:214: Preview: Snippet 82 ended.(490372+59802x929916).
+<-><->
+      
+l.214 \item\label{cond_2} $-I$
+                               cannot be an element of $S$
+Not a real error.
+
+[82]
+./_region_.tex:214: Preview: Snippet 83 started.
+<-><->
+      
+l.214 ...el{cond_2} $-I$ cannot be an element of $
+                                                  S$
+Not a real error.
+
+./_region_.tex:214: Preview: Snippet 83 ended.(490372+0x481402).
+<-><->
+      
+l.214 ...{cond_2} $-I$ cannot be an element of $S$
+                                                  
+Not a real error.
+
+[83]
+
+LaTeX Warning: Reference `cond_1' on page 3 undefined on input line 216.
+
+./_region_.tex:216: Preview: Snippet 84 started.
+<-><->
+      
+l.216 ...ion {\ref{cond_1}} must hold because if $
+                                                  -I \in S$, then we will ha...
+
+Not a real error.
+
+./_region_.tex:216: Preview: Snippet 84 ended.(490372+59802x2288402).
+<-><->
+      
+l.216 ...{cond_1}} must hold because if $-I \in S$
+                                                  , then we will have that $...
+
+Not a real error.
+
+[84]
+./_region_.tex:216: Preview: Snippet 85 started.
+<-><->
+      
+l.216 ...e if $-I \in S$, then we will have that $
+                                                  -I \ket{\psi} = \ket{\psi}...
+
+Not a real error.
+
+./_region_.tex:216: Preview: Snippet 85 ended.(538214+179404x3949561).
+<-><->
+      
+l.216 ...ll have that $-I \ket{\psi} = \ket{\psi}$
+                                                  , which can only be satisf...
+
+Not a real error.
+
+[85]
+./_region_.tex:216: Preview: Snippet 86 started.
+<-><->
+      
+l.216 ...{\psi}$, which can only be satisfied by $
+                                                  \ket{\psi} = 0$. We see th...
+
+Not a real error.
+
+./_region_.tex:216: Preview: Snippet 86 ended.(538214+179404x2287242).
+<-><->
+      
+l.216 ...can only be satisfied by $\ket{\psi} = 0$
+                                                  . We see that condition {\...
+
+Not a real error.
+
+[86]
+
+LaTeX Warning: Reference `cond_2' on page 3 undefined on input line 216.
+
+./_region_.tex:216: Preview: Snippet 87 started.
+<-><->
+      
+l.216 ...lso hold because all of the elements in $
+                                                  S$ either commute or anti-...
+
+Not a real error.
+
+./_region_.tex:216: Preview: Snippet 87 ended.(490372+0x481402).
+<-><->
+      
+l.216 ...o hold because all of the elements in $S$
+                                                   either commute or anti-co...
+
+Not a real error.
+
+[87]
+./_region_.tex:216: Preview: Snippet 88 started.
+<-><->
+      
+l.216 ... $S$ either commute or anti-commute, as $
+                                                  S \leq P_n$. This means th...
+
+Not a real error.
+
+./_region_.tex:216: Preview: Snippet 88 ended.(490372+107642x2269711).
+<-><->
+      
+l.216 ... commute or anti-commute, as $S \leq P_n$
+                                                  . This means that if two e...
+
+Not a real error.
+
+[88]
+./_region_.tex:216: Preview: Snippet 89 started.
+<-><->
+      
+l.216 ...q P_n$. This means that if two elements $
+                                                  g, h \in S$ do not commute...
+
+Not a real error.
+
+./_region_.tex:216: Preview: Snippet 89 ended.(498346+139537x2458916).
+<-><->
+      
+l.216 ...s means that if two elements $g, h \in S$
+                                                   do not commute, then they...
+
+Not a real error.
+
+[89]
+./_region_.tex:216: Preview: Snippet 90 started.
+<-><->
+      
+l.216 ...te, then they must anti-commute so that $
+                                                  gh = -hg$. But if this is ...
+
+Not a real error.
+
+./_region_.tex:216: Preview: Snippet 90 ended.(498346+139537x3077950).
+<-><->
+      
+l.216 ...they must anti-commute so that $gh = -hg$
+                                                  . But if this is the case,...
+
+Not a real error.
+
+[90]
+./_region_.tex:216: Preview: Snippet 91 started.
+<-><->
+      
+l.216 ...h = -hg$. But if this is the case, then $
+                                                  -\ket{\psi} = -hg \ket{\ps...
+
+Not a real error.
+
+./_region_.tex:216: Preview: Snippet 91 ended.(538214+179404x9794991).
+<-><->
+      
+l.216 ... \ket{\psi} = gh \ket{\psi} = \ket{\psi}$
+                                                  , which can also only sati...
+
+Not a real error.
+
+[91]
+./_region_.tex:216: Preview: Snippet 92 started.
+<-><->
+      
+l.216 ...psi}$, which can also only satisfied if $
+                                                  \ket{\psi} = 0$.
+Not a real error.
+
+./_region_.tex:216: Preview: Snippet 92 ended.(538214+179404x2287242).
+<-><->
+      
+l.216 ...n also only satisfied if $\ket{\psi} = 0$
+                                                  .
+Not a real error.
+
+[92]
+./_region_.tex:218: Preview: Snippet 93 started.
+<-><->
+      
+l.218 Moreover, if $
+                    g \in S$, then $g$ cannot have an overall phase of $\pm ...
+
+Not a real error.
+
+./_region_.tex:218: Preview: Snippet 93 ended.(490372+139537x1726514).
+<-><->
+      
+l.218 Moreover, if $g \in S$
+                            , then $g$ cannot have an overall phase of $\pm ...
+
+Not a real error.
+
+[93]
+./_region_.tex:218: Preview: Snippet 94 started.
+<-><->
+      
+l.218 Moreover, if $g \in S$, then $
+                                    g$ cannot have an overall phase of $\pm ...
+
+Not a real error.
+
+./_region_.tex:218: Preview: Snippet 94 ended.(308974+139537x368028).
+<-><->
+      
+l.218 Moreover, if $g \in S$, then $g$
+                                       cannot have an overall phase of $\pm ...
+
+Not a real error.
+
+[94]
+./_region_.tex:218: Preview: Snippet 95 started.
+<-><->
+      
+l.218 ...hen $g$ cannot have an overall phase of $
+                                                  \pm i$. This follows becau...
+
+Not a real error.
+
+./_region_.tex:218: Preview: Snippet 95 ended.(473287+59802x805379).
+<-><->
+      
+l.218 ...$ cannot have an overall phase of $\pm i$
+                                                  . This follows because if ...
+
+Not a real error.
+
+[95]
+./_region_.tex:219: Preview: Snippet 96 started.
+<-><->
+      
+l.219 \begin{equation}
+                      
+Not a real error.
+
+./_region_.tex:222: Preview: Snippet 96 ended.(747801+0x30785865).
+<-><->
+      
+l.222 \end{equation}
+                    
+Not a real error.
+
+[96]
+
+LaTeX Warning: Reference `pauli_1' on page 3 undefined on input line 223.
+
+
+LaTeX Warning: Reference `stab_1' on page 3 undefined on input line 223.
+
+./_region_.tex:224: Preview: Snippet 97 started.
+<-><->
+      
+l.224 \begin{equation}
+                      
+Not a real error.
+
+./_region_.tex:227: Preview: Snippet 97 ended.(847962+0x30785865).
+<-><->
+      
+l.227 \end{equation}
+                    
+Not a real error.
+
+[97]
+./_region_.tex:228: Preview: Snippet 98 started.
+<-><->
+      
+l.228 Again, this is only satisfied when $
+                                          \ket{\psi} = 0$. Thus, if $S$ stab...
+
+Not a real error.
+
+./_region_.tex:228: Preview: Snippet 98 ended.(538214+179404x2287242).
+<-><->
+      
+l.228 ...s is only satisfied when $\ket{\psi} = 0$
+                                                  . Thus, if $S$ stabilizes ...
+
+Not a real error.
+
+[98]
+./_region_.tex:228: Preview: Snippet 99 started.
+<-><->
+      
+l.228 ...tisfied when $\ket{\psi} = 0$. Thus, if $
+                                                  S$ stabilizes a non-trivia...
+
+Not a real error.
+
+./_region_.tex:228: Preview: Snippet 99 ended.(490372+0x481402).
+<-><->
+      
+l.228 ...sfied when $\ket{\psi} = 0$. Thus, if $S$
+                                                   stabilizes a non-trivial ...
+
+Not a real error.
+
+[99]
+./_region_.tex:228: Preview: Snippet 100 started.
+<-><->
+      
+l.228 ...or space, then we can write any element $
+                                                  g \in S$ as
+Not a real error.
+
+./_region_.tex:228: Preview: Snippet 100 ended.(490372+139537x1726514).
+<-><->
+      
+l.228 ..., then we can write any element $g \in S$
+                                                   as
+Not a real error.
+
+[100]
+./_region_.tex:229: Preview: Snippet 101 started.
+<-><->
+      
+l.229 \begin{equation}
+                      
+Not a real error.
+
+./_region_.tex:232: Preview: Snippet 101 ended.(747801+0x30785865).
+<-><->
+      
+l.232 \end{equation}
+                    
+Not a real error.
+
+[101]
+./_region_.tex:233: Preview: Snippet 102 started.
+<-><->
+      
+l.233 In terms of the $
+                       \mathbb{F}_2$ linear algebra perspective, this means ...
+
+Not a real error.
+
+./_region_.tex:233: Preview: Snippet 102 ended.(494359+107642x749846).
+<-><->
+      
+l.233 In terms of the $\mathbb{F}_2$
+                                     linear algebra perspective, this means ...
+
+Not a real error.
+
+[102]
+./_region_.tex:233: Preview: Snippet 103 started.
+<-><->
+      
+l.233 ...e, this means that we can represent any $
+                                                  g \in S$ as a vector $u = ...
+
+Not a real error.
+
+./_region_.tex:233: Preview: Snippet 103 ended.(490372+139537x1726514).
+<-><->
+      
+l.233 ...means that we can represent any $g \in S$
+                                                   as a vector $u = (u_s, u_...
+
+Not a real error.
+
+[103]
+./_region_.tex:233: Preview: Snippet 104 started.
+<-><->
+      
+l.233 ...can represent any $g \in S$ as a vector $
+                                                  u = (u_s, u_x, u_z) \in \m...
+
+Not a real error.
+
+./_region_.tex:233: Preview: Snippet 104 ended.(639670+205512x7423545).
+<-><->
+      
+l.233 ... (u_s, u_x, u_z) \in \mathbb{F}_2^{2n+1}$
+                                                   where using the shorthand...
+
+Not a real error.
+
+[104]
+
+LaTeX Warning: Reference `shorthand_1' on page 3 undefined on input line 233.
+
+./_region_.tex:234: Preview: Snippet 105 started.
+<-><->
+      
+l.234 \begin{equation}
+                      \label{stab_shorthand}
+Not a real error.
+
+./_region_.tex:236: Preview: Snippet 105 ended.(735822+0x30785865).
+<-><->
+      
+l.236 \end{equation}
+                    
+Not a real error.
+
+[105
+
+]
+./_region_.tex:238: Preview: Snippet 106 started.
+<-><->
+      
+l.238 \subsection
+                 {Clifford Gates}\label{clifford_gates}
+Not a real error.
+
+./_region_.tex:238: Preview: Snippet 106 ended.(546132+0x30785865).
+<-><->
+      
+l.238 \subsection{Clifford Gates}
+                                 \label{clifford_gates}
+Not a real error.
+
+[106
+
+]
+
+Package natbib Warning: Citation `nc' on page 3 undefined on input line 239.
+
+
+Package natbib Warning: Citation `aaronson' on page 3 undefined on input line 2
+39.
+
+./_region_.tex:239: Preview: Snippet 107 started.
+<-><->
+      
+l.239 ...}} that we can actually make use of the $
+                                                  \mathbb{F}_2$ linear algeb...
+
+Not a real error.
+
+./_region_.tex:239: Preview: Snippet 107 ended.(494359+107642x749846).
+<-><->
+      
+l.239 ...n actually make use of the $\mathbb{F}_2$
+                                                   linear algebra perspectiv...
+
+Not a real error.
+
+[107]
+./_region_.tex:240: Preview: Snippet 108 started.
+<-><->
+      
+l.240 \begin{align}
+                   
+Not a real error.
+
+./_region_.tex:247: Preview: Snippet 108 ended.(3067085+0x30785865).
+<-><->
+      
+l.247 \end{align}
+                 
+Not a real error.
+
+[108]
+./_region_.tex:248: Preview: Snippet 109 started.
+<-><->
+      
+l.248 ...e generators of the stabilizer group of $
+                                                  \ket{\psi}$, which we init...
+
+Not a real error.
+
+./_region_.tex:248: Preview: Snippet 109 ended.(538214+179404x971612).
+<-><->
+      
+l.248 ...s of the stabilizer group of $\ket{\psi}$
+                                                  , which we initialize as $...
+
+Not a real error.
+
+[109]
+./_region_.tex:248: Preview: Snippet 110 started.
+<-><->
+      
+l.248 ...of $\ket{\psi}$, which we initialize as $
+                                                  \ket{0}^{\otimes n}$. We t...
+
+Not a real error.
+
+./_region_.tex:248: Preview: Snippet 110 ended.(647443+179404x1641264).
+<-><->
+      
+l.248 ...ch we initialize as $\ket{0}^{\otimes n}$
+                                                  . We then update the gener...
+
+Not a real error.
+
+[110]
+
+Package natbib Warning: Citation `aaronson' on page 3 undefined on input line 2
+48.
+
+./_region_.tex:248: Preview: Snippet 111 started.
+<-><->
+      
+l.248 ...above. Moreover, it has been shown that $
+                                                  \ket{\psi}$ is uniquely de...
+
+Not a real error.
+
+./_region_.tex:248: Preview: Snippet 111 ended.(538214+179404x971612).
+<-><->
+      
+l.248 ...over, it has been shown that $\ket{\psi}$
+                                                   is uniquely determined by...
+
+Not a real error.
+
+[111]
+./_region_.tex:248: Preview: Snippet 112 started.
+<-><->
+      
+l.248 ...iquely determined by a stabilizer group $
+                                                  S \leq P_n$ that contains ...
+
+Not a real error.
+
+./_region_.tex:248: Preview: Snippet 112 ended.(490372+107642x2269711).
+<-><->
+      
+l.248 ...rmined by a stabilizer group $S \leq P_n$
+                                                   that contains $2^n$ eleme...
+
+Not a real error.
+
+[112]
+./_region_.tex:248: Preview: Snippet 113 started.
+<-><->
+      
+l.248 ...ilizer group $S \leq P_n$ that contains $
+                                                  2^n$ elements. Likewise, w...
+
+Not a real error.
+
+./_region_.tex:248: Preview: Snippet 113 ended.(486153+0x729578).
+<-><->
+      
+l.248 ...er group $S \leq P_n$ that contains $2^n$
+                                                   elements. Likewise, we on...
+
+Not a real error.
+
+[113]
+./_region_.tex:248: Preview: Snippet 114 started.
+<-><->
+      
+l.248 ...ents. Likewise, we only need a total of $
+                                                  n$ generators, or vectors ...
+
+Not a real error.
+
+./_region_.tex:248: Preview: Snippet 114 ended.(308974+0x430740).
+<-><->
+      
+l.248 ...ts. Likewise, we only need a total of $n$
+                                                   generators, or vectors in...
+
+Not a real error.
+
+[114]
+./_region_.tex:248: Preview: Snippet 115 started.
+<-><->
+      
+l.248 ... total of $n$ generators, or vectors in $
+                                                  \mathbb{F}_2^{2n+1}$, in o...
+
+Not a real error.
+
+./_region_.tex:248: Preview: Snippet 115 ended.(639670+205512x1799650).
+<-><->
+      
+l.248 ...tors, or vectors in $\mathbb{F}_2^{2n+1}$
+                                                  , in order to uniquely det...
+
+Not a real error.
+
+[115]
+./_region_.tex:248: Preview: Snippet 116 started.
+<-><->
+      
+l.248 ...$, in order to uniquely determine state $
+                                                  \ket{\psi}$.\footnote{If $...
+
+Not a real error.
+
+./_region_.tex:248: Preview: Snippet 116 ended.(538214+179404x971612).
+<-><->
+      
+l.248 ... to uniquely determine state $\ket{\psi}$
+                                                  .\footnote{If $G$ is a gro...
+
+Not a real error.
+
+[116]
+./_region_.tex:248: Preview: Snippet 117 started.
+<-><->
+      
+l.248 ...ly determine state $\ket{\psi}$.\footnote
+                                                  {If $G$ is a group closed ...
+
+Not a real error.
+
+./_region_.tex:248: Preview: Snippet 117 ended.(598293+0x311300).
+<-><->
+      
+l.248 ...G|$ has a set of $\log |G|$ generators. }
+                                                  
+Not a real error.
+
+[117]
+./_region_.tex:250: Preview: Snippet 118 started.
+<-><->
+      
+l.250 \subsection
+                 {Projectors}
+Not a real error.
+
+./_region_.tex:250: Preview: Snippet 118 ended.(546132+152916x30785865).
+<-><->
+      
+l.250 \subsection{Projectors}
+                             
+Not a real error.
+
+[118
+
+]
+./_region_.tex:251: Preview: Snippet 119 started.
+<-><->
+      
+l.251 If $
+          W \subseteq \mathbb{C}^{2^n}$ is a $w$-dimensional vector subspace...
+
+Not a real error.
+
+./_region_.tex:251: Preview: Snippet 119 ended.(614748+97575x2899238).
+<-><->
+      
+l.251 If $W \subseteq \mathbb{C}^{2^n}$
+                                        is a $w$-dimensional vector subspace...
+
+Not a real error.
+
+[119]
+./_region_.tex:251: Preview: Snippet 120 started.
+<-><->
+      
+l.251 If $W \subseteq \mathbb{C}^{2^n}$ is a $
+                                              w$-dimensional vector subspace...
+
+Not a real error.
+
+./_region_.tex:251: Preview: Snippet 120 ended.(308974+0x533066).
+<-><->
+      
+l.251 If $W \subseteq \mathbb{C}^{2^n}$ is a $w$
+                                                -dimensional vector subspace...
+
+Not a real error.
+
+[120]
+./_region_.tex:251: Preview: Snippet 121 started.
+<-><->
+      
+l.251 ...ector subspace, then a \emph{projector} $
+                                                  \Pi_W$ onto the vector sub...
+
+Not a real error.
+
+./_region_.tex:251: Preview: Snippet 121 ended.(490372+111084x1173923).
+<-><->
+      
+l.251 ...subspace, then a \emph{projector} $\Pi_W$
+                                                   onto the vector subspace ...
+
+Not a real error.
+
+[121]
+./_region_.tex:251: Preview: Snippet 122 started.
+<-><->
+      
+l.251 ...ector} $\Pi_W$ onto the vector subspace $
+                                                  W$ is a linear operator th...
+
+Not a real error.
+
+./_region_.tex:251: Preview: Snippet 122 ended.(490372+0x777422).
+<-><->
+      
+l.251 ...tor} $\Pi_W$ onto the vector subspace $W$
+                                                   is a linear operator that...
+
+Not a real error.
+
+[122]
+./_region_.tex:254: Preview: Snippet 123 started.
+<-><->
+      
+l.254   For all $
+                 \ket{\phi} \in \mathbb{C}^{2^n}$, $\Pi_W \ket{\phi} \in W$
+Not a real error.
+
+./_region_.tex:254: Preview: Snippet 123 ended.(614748+179404x2948076).
+<-><->
+      
+l.254   For all $\ket{\phi} \in \mathbb{C}^{2^n}$
+                                                 , $\Pi_W \ket{\phi} \in W$
+Not a real error.
+
+[123]
+./_region_.tex:254: Preview: Snippet 124 started.
+<-><->
+      
+l.254 ... all $\ket{\phi} \in \mathbb{C}^{2^n}$, $
+                                                  \Pi_W \ket{\phi} \in W$
+Not a real error.
+
+./_region_.tex:254: Preview: Snippet 124 ended.(538214+179404x3854026).
+<-><->
+      
+l.254 ...athbb{C}^{2^n}$, $\Pi_W \ket{\phi} \in W$
+                                                  
+Not a real error.
+
+[124]
+./_region_.tex:255: Preview: Snippet 125 started.
+<-><->
+      
+l.255 \item\label{p_cond_2} $
+                             \Pi_W^2 = \Pi_W$
+Not a real error.
+
+./_region_.tex:255: Preview: Snippet 125 ended.(598293+212661x3304666).
+<-><->
+      
+l.255 \item\label{p_cond_2} $\Pi_W^2 = \Pi_W$
+                                             
+Not a real error.
+
+[125]
+./_region_.tex:257: Preview: Snippet 126 started.
+<-><->
+      
+l.257 Likewise, if $
+                    W$ has an orthonormal basis $\ket{1}, \ket{2}, \ldots, \...
+
+Not a real error.
+
+./_region_.tex:257: Preview: Snippet 126 ended.(490372+0x777422).
+<-><->
+      
+l.257 Likewise, if $W$
+                       has an orthonormal basis $\ket{1}, \ket{2}, \ldots, \...
+
+Not a real error.
+
+[126]
+./_region_.tex:257: Preview: Snippet 127 started.
+<-><->
+      
+l.257 Likewise, if $W$ has an orthonormal basis $
+                                                 \ket{1}, \ket{2}, \ldots, \...
+
+Not a real error.
+
+./_region_.tex:257: Preview: Snippet 127 ended.(538214+179404x4838770).
+<-><->
+      
+l.257 ...basis $\ket{1}, \ket{2}, \ldots, \ket{w}$
+                                                  , then
+Not a real error.
+
+[127]
+./_region_.tex:258: Preview: Snippet 128 started.
+<-><->
+      
+l.258 \begin{equation}
+                      \label{proj_1}
+Not a real error.
+
+./_region_.tex:260: Preview: Snippet 128 ended.(2229129+0x30785865).
+<-><->
+      
+l.260 \end{equation}
+                    
+Not a real error.
+
+[128
+
+]
+./_region_.tex:263: Preview: Snippet 129 started.
+<-><->
+      
+l.263 $
+       \Pi_S$ given by
+Not a real error.
+
+./_region_.tex:263: Preview: Snippet 129 ended.(490372+111084x939081).
+<-><->
+      
+l.263 $\Pi_S$
+              given by
+Not a real error.
+
+[129]
+./_region_.tex:264: Preview: Snippet 130 started.
+<-><->
+      
+l.264 \begin{equation}
+                      \label{proj_2}
+Not a real error.
+
+./_region_.tex:266: Preview: Snippet 130 ended.(1994208+0x30785865).
+<-><->
+      
+l.266 \end{equation}
+                    
+Not a real error.
+
+[130
+
+]
+./_region_.tex:267: Preview: Snippet 131 started.
+<-><->
+      
+l.267 ... projector onto the stabilizer subspace $
+                                                  V_S$.
+Not a real error.
+
+./_region_.tex:267: Preview: Snippet 131 ended.(490372+111084x819477).
+<-><->
+      
+l.267 ...jector onto the stabilizer subspace $V_S$
+                                                  .
+Not a real error.
+
+[131]
+./_region_.tex:268: Preview: Snippet 132 started.
+<-><->
+      
+l.268 \begin{proof} First we note that if $
+                                           g \in S$, then using {\ref{stab_1}}
+Not a real error.
+
+./_region_.tex:268: Preview: Snippet 132 ended.(490372+139537x1726514).
+<-><->
+      
+l.268 ...in{proof} First we note that if $g \in S$
+                                                  , then using {\ref{stab_1}}
+Not a real error.
+
+[132]
+
+LaTeX Warning: Reference `stab_1' on page 4 undefined on input line 268.
+
+./_region_.tex:269: Preview: Snippet 133 started.
+<-><->
+      
+l.269 \begin{equation}
+                      
+Not a real error.
+
+./_region_.tex:274: Preview: Snippet 133 ended.(2003675+0x30785865).
+<-><->
+      
+l.274 \end{equation}
+                    
+Not a real error.
+
+[133]
+./_region_.tex:275: Preview: Snippet 134 started.
+<-><->
+      
+l.275 From this, we see that $
+                              \Pi_S$ satisfies condition {\ref{p_cond_1}} be...
+
+Not a real error.
+
+./_region_.tex:275: Preview: Snippet 134 ended.(490372+111084x939081).
+<-><->
+      
+l.275 From this, we see that $\Pi_S$
+                                     satisfies condition {\ref{p_cond_1}} be...
+
+Not a real error.
+
+[134]
+
+LaTeX Warning: Reference `p_cond_1' on page 4 undefined on input line 275.
+
+./_region_.tex:275: Preview: Snippet 135 started.
+<-><->
+      
+l.275 ...dition {\ref{p_cond_1}} because for all $
+                                                  \ket{\phi} \in \mathbb{C}^...
+
+Not a real error.
+
+./_region_.tex:275: Preview: Snippet 135 ended.(614748+179404x2948076).
+<-><->
+      
+l.275 ...for all $\ket{\phi} \in \mathbb{C}^{2^n}$
+                                                   and for all $g \in S$ we ...
+
+Not a real error.
+
+[135]
+./_region_.tex:275: Preview: Snippet 136 started.
+<-><->
+      
+l.275 ...\phi} \in \mathbb{C}^{2^n}$ and for all $
+                                                  g \in S$ we have $g \Pi_S ...
+
+Not a real error.
+
+./_region_.tex:275: Preview: Snippet 136 ended.(490372+139537x1726514).
+<-><->
+      
+l.275 ...n \mathbb{C}^{2^n}$ and for all $g \in S$
+                                                   we have $g \Pi_S \ket{\ph...
+
+Not a real error.
+
+[136]
+./_region_.tex:275: Preview: Snippet 137 started.
+<-><->
+      
+l.275 ...C}^{2^n}$ and for all $g \in S$ we have $
+                                                  g \Pi_S \ket{\phi} = \Pi_S...
+
+Not a real error.
+
+./_region_.tex:275: Preview: Snippet 137 ended.(538214+179404x5254204).
+<-><->
+      
+l.275 ...e $g \Pi_S \ket{\phi} = \Pi_S \ket{\phi}$
+                                                  . By definition, this mean...
+
+Not a real error.
+
+[137]
+./_region_.tex:275: Preview: Snippet 138 started.
+<-><->
+      
+l.275 ...{\phi}$. By definition, this means that $
+                                                  \Pi_S \ket{\phi} \in V_S$....
+
+Not a real error.
+
+./_region_.tex:275: Preview: Snippet 138 ended.(538214+179404x3661239).
+<-><->
+      
+l.275 ...his means that $\Pi_S \ket{\phi} \in V_S$
+                                                  . We also see that $\Pi_S$...
+
+Not a real error.
+
+[138]
+./_region_.tex:275: Preview: Snippet 139 started.
+<-><->
+      
+l.275 ...S \ket{\phi} \in V_S$. We also see that $
+                                                  \Pi_S$ satisfies condition...
+
+Not a real error.
+
+./_region_.tex:275: Preview: Snippet 139 ended.(490372+111084x939081).
+<-><->
+      
+l.275 ...{\phi} \in V_S$. We also see that $\Pi_S$
+                                                   satisfies condition {\ref...
+
+Not a real error.
+
+[139]
+
+LaTeX Warning: Reference `p_cond_2' on page 4 undefined on input line 275.
+
+./_region_.tex:276: Preview: Snippet 140 started.
+<-><->
+      
+l.276 \begin{equation}
+                      
+Not a real error.
+
+./_region_.tex:281: Preview: Snippet 140 ended.(2583454+0x30785865).
+<-><->
+      
+l.281 \end{equation}
+                    
+Not a real error.
+
+[140]
+./_region_.tex:285: Preview: Snippet 141 started.
+<-><->
+      
+l.285 Here we also note that if $
+                                 V_S$ contains only one vector so that $V_S ...
+
+Not a real error.
+
+./_region_.tex:285: Preview: Snippet 141 ended.(490372+111084x819477).
+<-><->
+      
+l.285 Here we also note that if $V_S$
+                                      contains only one vector so that $V_S ...
+
+Not a real error.
+
+[141]
+./_region_.tex:285: Preview: Snippet 142 started.
+<-><->
+      
+l.285 ... $V_S$ contains only one vector so that $
+                                                  V_S = \{ \ket{\psi} \}$, t...
+
+Not a real error.
+
+./_region_.tex:285: Preview: Snippet 142 ended.(538214+179404x3465529).
+<-><->
+      
+l.285 ...e vector so that $V_S = \{ \ket{\psi} \}$
+                                                  , then combining {\ref{pro...
+
+Not a real error.
+
+[142]
+
+LaTeX Warning: Reference `proj_1' on page 4 undefined on input line 285.
+
+
+LaTeX Warning: Reference `proj_2' on page 4 undefined on input line 285.
+
+./_region_.tex:286: Preview: Snippet 143 started.
+<-><->
+      
+l.286 \begin{equation}
+                      \label{proj_3}
+Not a real error.
+
+./_region_.tex:288: Preview: Snippet 143 ended.(1994208+0x30785865).
+<-><->
+      
+l.288 \end{equation}
+                    
+Not a real error.
+
+[143
+
+]
+./_region_.tex:291: Preview: Snippet 144 started.
+<-><->
+      
+l.291 \section
+              {Efficiently Computing Collision Probability}
+Not a real error.
+
+./_region_.tex:291: Preview: Snippet 144 ended.(655359+183500x30785865).
+<-><->
+      
+l.291 ...iciently Computing Collision Probability}
+                                                  
+Not a real error.
+
+[144
+
+]
+./_region_.tex:293: Preview: Snippet 145 started.
+<-><->
+      
+l.293 \subsection
+                 {Preliminaries}
+Not a real error.
+
+./_region_.tex:293: Preview: Snippet 145 ended.(546132+0x30785865).
+<-><->
+      
+l.293 \subsection{Preliminaries}
+                                
+Not a real error.
+
+[145
+
+]
+
+LaTeX Warning: Reference `clifford_gates' on page 4 undefined on input line 294
+.
+
+./_region_.tex:294: Preview: Snippet 146 started.
+<-><->
+      
+l.294 ... Clifford Gates by keeping track of the $
+                                                  n$ generators of the stabi...
+
+Not a real error.
+
+./_region_.tex:294: Preview: Snippet 146 ended.(308974+0x430740).
+<-><->
+      
+l.294 ...lifford Gates by keeping track of the $n$
+                                                   generators of the stabili...
+
+Not a real error.
+
+[146]
+./_region_.tex:294: Preview: Snippet 147 started.
+<-><->
+      
+l.294 ... $n$ generators of the stabilizer group $
+                                                  S$ that uniquely determine...
+
+Not a real error.
+
+./_region_.tex:294: Preview: Snippet 147 ended.(490372+0x481402).
+<-><->
+      
+l.294 ...n$ generators of the stabilizer group $S$
+                                                   that uniquely determine a...
+
+Not a real error.
+
+[147]
+./_region_.tex:294: Preview: Snippet 148 started.
+<-><->
+      
+l.294 ...t uniquely determine a stabilizer state $
+                                                  V_S = \{ \ket{\psi} \}$. M...
+
+Not a real error.
+
+./_region_.tex:294: Preview: Snippet 148 ended.(538214+179404x3465529).
+<-><->
+      
+l.294 ...stabilizer state $V_S = \{ \ket{\psi} \}$
+                                                  . Moreover, keeping track ...
+
+Not a real error.
+
+[148]
+./_region_.tex:294: Preview: Snippet 149 started.
+<-><->
+      
+l.294 ...} \}$. Moreover, keeping track of these $
+                                                  n$ generators is equivalen...
+
+Not a real error.
+
+./_region_.tex:294: Preview: Snippet 149 ended.(308974+0x430740).
+<-><->
+      
+l.294 ...\}$. Moreover, keeping track of these $n$
+                                                   generators is equivalent ...
+
+Not a real error.
+
+[149]
+./_region_.tex:294: Preview: Snippet 150 started.
+<-><->
+      
+l.294 ...ators is equivalent to keeping track of $
+                                                  n$ vectors in $\mathbb{F}_...
+
+Not a real error.
+
+./_region_.tex:294: Preview: Snippet 150 ended.(308974+0x430740).
+<-><->
+      
+l.294 ...ors is equivalent to keeping track of $n$
+                                                   vectors in $\mathbb{F}_2^...
+
+Not a real error.
+
+[150]
+./_region_.tex:294: Preview: Snippet 151 started.
+<-><->
+      
+l.294 ...lent to keeping track of $n$ vectors in $
+                                                  \mathbb{F}_2^{2n+1}$. In t...
+
+Not a real error.
+
+./_region_.tex:294: Preview: Snippet 151 ended.(639670+205512x1799650).
+<-><->
+      
+l.294 ...k of $n$ vectors in $\mathbb{F}_2^{2n+1}$
+                                                  . In this section, we will...
+
+Not a real error.
+
+[151]
+./_region_.tex:294: Preview: Snippet 152 started.
+<-><->
+      
+l.294 ...ision probability of a stabilizer state $
+                                                  V_S = \{ \ket{\psi} \}$ gi...
+
+Not a real error.
+
+./_region_.tex:294: Preview: Snippet 152 ended.(538214+179404x3465529).
+<-><->
+      
+l.294 ...stabilizer state $V_S = \{ \ket{\psi} \}$
+                                                   given the $n$ vectors in ...
+
+Not a real error.
+
+[152]
+./_region_.tex:294: Preview: Snippet 153 started.
+<-><->
+      
+l.294 ...tate $V_S = \{ \ket{\psi} \}$ given the $
+                                                  n$ vectors in $\mathbb{F}_...
+
+Not a real error.
+
+./_region_.tex:294: Preview: Snippet 153 ended.(308974+0x430740).
+<-><->
+      
+l.294 ...te $V_S = \{ \ket{\psi} \}$ given the $n$
+                                                   vectors in $\mathbb{F}_2^...
+
+Not a real error.
+
+[153]
+./_region_.tex:294: Preview: Snippet 154 started.
+<-><->
+      
+l.294 ...\ket{\psi} \}$ given the $n$ vectors in $
+                                                  \mathbb{F}_2^{2n+1}$ corre...
+
+Not a real error.
+
+./_region_.tex:294: Preview: Snippet 154 ended.(639670+205512x1799650).
+<-><->
+      
+l.294 ... the $n$ vectors in $\mathbb{F}_2^{2n+1}$
+                                                   corresponding to the $n$ ...
+
+Not a real error.
+
+[154]
+./_region_.tex:294: Preview: Snippet 155 started.
+<-><->
+      
+l.294 ...athbb{F}_2^{2n+1}$ corresponding to the $
+                                                  n$ generators of $S$.
+Not a real error.
+
+./_region_.tex:294: Preview: Snippet 155 ended.(308974+0x430740).
+<-><->
+      
+l.294 ...hbb{F}_2^{2n+1}$ corresponding to the $n$
+                                                   generators of $S$.
+Not a real error.
+
+[155]
+./_region_.tex:294: Preview: Snippet 156 started.
+<-><->
+      
+l.294 ... corresponding to the $n$ generators of $
+                                                  S$.
+Not a real error.
+
+./_region_.tex:294: Preview: Snippet 156 ended.(490372+0x481402).
+<-><->
+      
+l.294 ...orresponding to the $n$ generators of $S$
+                                                  .
+Not a real error.
+
+[156]
+./_region_.tex:296: Preview: Snippet 157 started.
+<-><->
+      
+l.296 Throughout this section we will always let $
+                                                  \ket{\psi}$ be a state tha...
+
+Not a real error.
+
+./_region_.tex:296: Preview: Snippet 157 ended.(538214+179404x971612).
+<-><->
+      
+l.296 ...s section we will always let $\ket{\psi}$
+                                                   be a state that has been ...
+
+Not a real error.
+
+[157]
+./_region_.tex:296: Preview: Snippet 158 started.
+<-><->
+      
+l.296 ... of Clifford Gates to the initial state $
+                                                  \ket{0}^{\otimes n}$. Equi...
+
+Not a real error.
+
+./_region_.tex:296: Preview: Snippet 158 ended.(647443+179404x1641264).
+<-><->
+      
+l.296 ...o the initial state $\ket{0}^{\otimes n}$
+                                                  . Equivalently, we let $\k...
+
+Not a real error.
+
+[158]
+./_region_.tex:296: Preview: Snippet 159 started.
+<-><->
+      
+l.296 ...t{0}^{\otimes n}$. Equivalently, we let $
+                                                  \ket{\psi}$ be the state u...
+
+Not a real error.
+
+./_region_.tex:296: Preview: Snippet 159 ended.(538214+179404x971612).
+<-><->
+      
+l.296 ...es n}$. Equivalently, we let $\ket{\psi}$
+                                                   be the state uniquely det...
+
+Not a real error.
+
+[159]
+./_region_.tex:296: Preview: Snippet 160 started.
+<-><->
+      
+l.296 ...uely determined by the stabilizer group $
+                                                  S$ so that $V_S = \{ \ket{...
+
+Not a real error.
+
+./_region_.tex:296: Preview: Snippet 160 ended.(490372+0x481402).
+<-><->
+      
+l.296 ...ly determined by the stabilizer group $S$
+                                                   so that $V_S = \{ \ket{\p...
+
+Not a real error.
+
+[160]
+./_region_.tex:296: Preview: Snippet 161 started.
+<-><->
+      
+l.296 ...ned by the stabilizer group $S$ so that $
+                                                  V_S = \{ \ket{\psi} \}$. M...
+
+Not a real error.
+
+./_region_.tex:296: Preview: Snippet 161 ended.(538214+179404x3465529).
+<-><->
+      
+l.296 ...roup $S$ so that $V_S = \{ \ket{\psi} \}$
+                                                  . Moreover, we let $S = \l...
+
+Not a real error.
+
+[161]
+./_region_.tex:296: Preview: Snippet 162 started.
+<-><->
+      
+l.296 ...S = \{ \ket{\psi} \}$. Moreover, we let $
+                                                  S = \langle g^{(1)}, \ldot...
+
+Not a real error.
+
+./_region_.tex:296: Preview: Snippet 162 ended.(653634+179404x5875740).
+<-><->
+      
+l.296 ...\langle g^{(1)}, \ldots, g^{(n)} \rangle$
+                                                  , meaning $S$ is generated...
+
+Not a real error.
+
+[162]
+./_region_.tex:296: Preview: Snippet 163 started.
+<-><->
+      
+l.296 ...(1)}, \ldots, g^{(n)} \rangle$, meaning $
+                                                  S$ is generated by the $n$...
+
+Not a real error.
+
+./_region_.tex:296: Preview: Snippet 163 ended.(490372+0x481402).
+<-><->
+      
+l.296 ...)}, \ldots, g^{(n)} \rangle$, meaning $S$
+                                                   is generated by the $n$ P...
+
+Not a real error.
+
+[163]
+./_region_.tex:296: Preview: Snippet 164 started.
+<-><->
+      
+l.296 ...angle$, meaning $S$ is generated by the $
+                                                  n$ Pauli Matrices $g^{(1)}...
+
+Not a real error.
+
+./_region_.tex:296: Preview: Snippet 164 ended.(308974+0x430740).
+<-><->
+      
+l.296 ...gle$, meaning $S$ is generated by the $n$
+                                                   Pauli Matrices $g^{(1)}, ...
+
+Not a real error.
+
+[164]
+./_region_.tex:296: Preview: Snippet 165 started.
+<-><->
+      
+l.296 ... is generated by the $n$ Pauli Matrices $
+                                                  g^{(1)}, \ldots, g^{(n)}$....
+
+Not a real error.
+
+./_region_.tex:296: Preview: Snippet 165 ended.(653634+139537x3879368).
+<-><->
+      
+l.296 ...Pauli Matrices $g^{(1)}, \ldots, g^{(n)}$
+                                                  . For every element $g \in...
+
+Not a real error.
+
+[165]
+./_region_.tex:296: Preview: Snippet 166 started.
+<-><->
+      
+l.296 ...)}, \ldots, g^{(n)}$. For every element $
+                                                  g \in S$, we also let $u =...
+
+Not a real error.
+
+./_region_.tex:296: Preview: Snippet 166 ended.(490372+139537x1726514).
+<-><->
+      
+l.296 ...ts, g^{(n)}$. For every element $g \in S$
+                                                  , we also let $u = (u_s, u...
+
+Not a real error.
+
+[166]
+./_region_.tex:296: Preview: Snippet 167 started.
+<-><->
+      
+l.296 ...or every element $g \in S$, we also let $
+                                                  u = (u_s, u_x, u_z) \in \m...
+
+Not a real error.
+
+./_region_.tex:296: Preview: Snippet 167 ended.(639670+205512x7423545).
+<-><->
+      
+l.296 ... (u_s, u_x, u_z) \in \mathbb{F}_2^{2n+1}$
+                                                   be the vector representat...
+
+Not a real error.
+
+[167]
+./_region_.tex:296: Preview: Snippet 168 started.
+<-><->
+      
+l.296 ...{2n+1}$ be the vector representation of $
+                                                  g$ as written in {\ref{sta...
+
+Not a real error.
+
+./_region_.tex:296: Preview: Snippet 168 ended.(308974+139537x368028).
+<-><->
+      
+l.296 ...n+1}$ be the vector representation of $g$
+                                                   as written in {\ref{stab_...
+
+Not a real error.
+
+[168]
+
+LaTeX Warning: Reference `stab_shorthand' on page 4 undefined on input line 296
+.
+
+./_region_.tex:298: Preview: Snippet 169 started.
+<-><->
+      
+l.298 By construction, we can use the fact that $
+                                                 |S| = 2^n$ along with {\ref...
+
+Not a real error.
+
+./_region_.tex:298: Preview: Snippet 169 ended.(538214+179404x2566478).
+<-><->
+      
+l.298 ...ion, we can use the fact that $|S| = 2^n$
+                                                   along with {\ref{proj_3}}...
+
+Not a real error.
+
+[169]
+
+LaTeX Warning: Reference `proj_3' on page 4 undefined on input line 298.
+
+./_region_.tex:299: Preview: Snippet 170 started.
+<-><->
+      
+l.299 \begin{equation}
+                      \label{prelim_1}
+Not a real error.
+
+./_region_.tex:301: Preview: Snippet 170 ended.(1994208+0x30785865).
+<-><->
+      
+l.301 \end{equation}
+                    
+Not a real error.
+
+[170
+
+]
+./_region_.tex:302: Preview: Snippet 171 started.
+<-><->
+      
+l.302 ... of a matrix. Specifically for a vector $
+                                                  \ket{\phi}$ and matrices $...
+
+Not a real error.
+
+./_region_.tex:302: Preview: Snippet 171 ended.(538214+179404x905996).
+<-><->
+      
+l.302 ...x. Specifically for a vector $\ket{\phi}$
+                                                   and matrices $A, B$ of th...
+
+Not a real error.
+
+[171]
+./_region_.tex:302: Preview: Snippet 172 started.
+<-><->
+      
+l.302 ... for a vector $\ket{\phi}$ and matrices $
+                                                  A, B$ of the appropriate s...
+
+Not a real error.
+
+./_region_.tex:302: Preview: Snippet 172 ended.(490372+139537x1437479).
+<-><->
+      
+l.302 ...a vector $\ket{\phi}$ and matrices $A, B$
+                                                   of the appropriate shape,...
+
+Not a real error.
+
+[172]
+./_region_.tex:303: Preview: Snippet 173 started.
+<-><->
+      
+l.303 \begin{align}
+                   
+Not a real error.
+
+./_region_.tex:307: Preview: Snippet 173 ended.(3067085+0x30785865).
+<-><->
+      
+l.307 \end{align}
+                 
+Not a real error.
+
+[173]
+./_region_.tex:310: Preview: Snippet 174 started.
+<-><->
+      
+l.310 If $
+          a \in \mathbb{F}_2^n$ and we let $Z^a = Z^{a_1} \otimes \cdots \ot...
+
+Not a real error.
+
+./_region_.tex:310: Preview: Snippet 174 ended.(494359+192273x2065724).
+<-><->
+      
+l.310 If $a \in \mathbb{F}_2^n$
+                                and we let $Z^a = Z^{a_1} \otimes \cdots \ot...
+
+Not a real error.
+
+[174]
+./_region_.tex:310: Preview: Snippet 175 started.
+<-><->
+      
+l.310 If $a \in \mathbb{F}_2^n$ and we let $
+                                            Z^a = Z^{a_1} \otimes \cdots \ot...
+
+Not a real error.
+
+./_region_.tex:310: Preview: Snippet 175 ended.(490372+59802x6766266).
+<-><->
+      
+l.310 ...= Z^{a_1} \otimes \cdots \otimes Z^{a_n}$
+                                                  , then
+Not a real error.
+
+[175]
+./_region_.tex:311: Preview: Snippet 176 started.
+<-><->
+      
+l.311 \begin{equation}
+                      \label{prelim_2}
+Not a real error.
+
+./_region_.tex:314: Preview: Snippet 176 ended.(2062365+0x30785865).
+<-><->
+      
+l.314 \end{equation}
+                    
+Not a real error.
+
+[176
+
+]
+./_region_.tex:317: Preview: Snippet 177 started.
+<-><->
+      
+l.317 \begin{equation}
+                      
+Not a real error.
+
+./_region_.tex:328: Preview: Snippet 177 ended.(1782578+0x30785865).
+<-><->
+      
+l.328 \end{equation}
+                    
+Not a real error.
+
+[177]
+./_region_.tex:329: Preview: Snippet 178 started.
+<-><->
+      
+l.329 As a result, we can write that for $
+                                          z \in \mathbb{F}_2^n$
+Not a real error.
+
+./_region_.tex:329: Preview: Snippet 178 ended.(494359+192273x2051687).
+<-><->
+      
+l.329 ...can write that for $z \in \mathbb{F}_2^n$
+                                                  
+Not a real error.
+
+[178]
+./_region_.tex:330: Preview: Snippet 179 started.
+<-><->
+      
+l.330 \begin{align}
+                   
+Not a real error.
+
+./_region_.tex:345: Preview: Snippet 179 ended.(8980979+0x30785865).
+<-><->
+      
+l.345 \end{align}
+                 
+Not a real error.
+
+[179
+
+]
+./_region_.tex:346: Preview: Snippet 180 started.
+<-><->
+      
+l.346 Second, we also note that for $
+                                     w \in \mathbb{F}_2^n$
+Not a real error.
+
+./_region_.tex:346: Preview: Snippet 180 ended.(494359+192273x2219464).
+<-><->
+      
+l.346 ...also note that for $w \in \mathbb{F}_2^n$
+                                                  
+Not a real error.
+
+[180]
+./_region_.tex:347: Preview: Snippet 181 started.
+<-><->
+      
+l.347 \begin{equation}
+                      \label{prelim_5}
+Not a real error.
+
+./_region_.tex:349: Preview: Snippet 181 ended.(1867929+0x30785865).
+<-><->
+      
+l.349 \end{equation}
+                    
+Not a real error.
+
+[181
+
+]
+./_region_.tex:350: Preview: Snippet 182 started.
+<-><->
+      
+l.350 We see this is the case whenever $
+                                        w = 0$ because $\braket{0, z} = 0$ f...
+
+Not a real error.
+
+./_region_.tex:350: Preview: Snippet 182 ended.(462465+0x1848696).
+<-><->
+      
+l.350 We see this is the case whenever $w = 0$
+                                               because $\braket{0, z} = 0$ f...
+
+Not a real error.
+
+[182]
+./_region_.tex:350: Preview: Snippet 183 started.
+<-><->
+      
+l.350 ...is is the case whenever $w = 0$ because $
+                                                  \braket{0, z} = 0$ for all...
+
+Not a real error.
+
+./_region_.tex:350: Preview: Snippet 183 ended.(538214+179404x2916819).
+<-><->
+      
+l.350 ...never $w = 0$ because $\braket{0, z} = 0$
+                                                   for all values of $z$.\fo...
+
+Not a real error.
+
+[183]
+./_region_.tex:350: Preview: Snippet 184 started.
+<-><->
+      
+l.350 ...e $\braket{0, z} = 0$ for all values of $
+                                                  z$.\footnote{In these note...
+
+Not a real error.
+
+./_region_.tex:350: Preview: Snippet 184 ended.(308974+0x365289).
+<-><->
+      
+l.350 ...$\braket{0, z} = 0$ for all values of $z$
+                                                  .\footnote{In these notes,...
+
+Not a real error.
+
+[184]
+./_region_.tex:350: Preview: Snippet 185 started.
+<-><->
+      
+l.350 ..., z} = 0$ for all values of $z$.\footnote
+                                                  {In these notes, the funct...
+
+Not a real error.
+
+./_region_.tex:350: Preview: Snippet 185 ended.(598293+0x311300).
+<-><->
+      
+l.350 ... true and evaluates to 0 if $v$ is false}
+                                                   However, if $w$ has a $1$...
+
+Not a real error.
+
+[185]
+./_region_.tex:350: Preview: Snippet 186 started.
+<-><->
+      
+l.350 ...uates to 0 if $v$ is false} However, if $
+                                                  w$ has a $1$ in one or mor...
+
+Not a real error.
+
+./_region_.tex:350: Preview: Snippet 186 ended.(308974+0x533066).
+<-><->
+      
+l.350 ...tes to 0 if $v$ is false} However, if $w$
+                                                   has a $1$ in one or more ...
+
+Not a real error.
+
+[186]
+./_region_.tex:350: Preview: Snippet 187 started.
+<-><->
+      
+l.350 ... if $v$ is false} However, if $w$ has a $
+                                                  1$ in one or more entries,...
+
+Not a real error.
+
+./_region_.tex:350: Preview: Snippet 187 ended.(462465+0x358810).
+<-><->
+      
+l.350 ...f $v$ is false} However, if $w$ has a $1$
+                                                   in one or more entries, t...
+
+Not a real error.
+
+[187]
+./_region_.tex:350: Preview: Snippet 188 started.
+<-><->
+      
+l.350 ... in one or more entries, then for every $
+                                                  z$ such that $\braket{w, z...
+
+Not a real error.
+
+./_region_.tex:350: Preview: Snippet 188 ended.(308974+0x365289).
+<-><->
+      
+l.350 ...n one or more entries, then for every $z$
+                                                   such that $\braket{w, z} ...
+
+Not a real error.
+
+[188]
+./_region_.tex:350: Preview: Snippet 189 started.
+<-><->
+      
+l.350 ...e entries, then for every $z$ such that $
+                                                  \braket{w, z} = 1$, there ...
+
+Not a real error.
+
+./_region_.tex:350: Preview: Snippet 189 ended.(538214+179404x3091075).
+<-><->
+      
+l.350 ...r every $z$ such that $\braket{w, z} = 1$
+                                                  , there will be a $z'$ suc...
+
+Not a real error.
+
+[189]
+./_region_.tex:350: Preview: Snippet 190 started.
+<-><->
+      
+l.350 ...at $\braket{w, z} = 1$, there will be a $
+                                                  z'$ such that $\braket{w, ...
+
+Not a real error.
+
+./_region_.tex:350: Preview: Snippet 190 ended.(551690+0x549154).
+<-><->
+      
+l.350 ...$\braket{w, z} = 1$, there will be a $z'$
+                                                   such that $\braket{w, z'}...
+
+Not a real error.
+
+[190]
+./_region_.tex:350: Preview: Snippet 191 started.
+<-><->
+      
+l.350 ...z} = 1$, there will be a $z'$ such that $
+                                                  \braket{w, z'} = 0$ that c...
+
+Not a real error.
+
+./_region_.tex:350: Preview: Snippet 191 ended.(551690+179404x3274940).
+<-><->
+      
+l.350 ... be a $z'$ such that $\braket{w, z'} = 0$
+                                                   that can be constructed b...
+
+Not a real error.
+
+[191]
+./_region_.tex:350: Preview: Snippet 192 started.
+<-><->
+      
+l.350 ...n be constructed by flipping one bit in $
+                                                  z$ that is in the same ent...
+
+Not a real error.
+
+./_region_.tex:350: Preview: Snippet 192 ended.(308974+0x365289).
+<-><->
+      
+l.350 ...be constructed by flipping one bit in $z$
+                                                   that is in the same entry...
+
+Not a real error.
+
+[192]
+./_region_.tex:350: Preview: Snippet 193 started.
+<-><->
+      
+l.350 ...t in $z$ that is in the same entry as a $
+                                                  1$ in $w$. Likewise, it fo...
+
+Not a real error.
+
+./_region_.tex:350: Preview: Snippet 193 ended.(462465+0x358810).
+<-><->
+      
+l.350 ...in $z$ that is in the same entry as a $1$
+                                                   in $w$. Likewise, it foll...
+
+Not a real error.
+
+[193]
+./_region_.tex:350: Preview: Snippet 194 started.
+<-><->
+      
+l.350 ...$ that is in the same entry as a $1$ in $
+                                                  w$. Likewise, it follows t...
+
+Not a real error.
+
+./_region_.tex:350: Preview: Snippet 194 ended.(308974+0x533066).
+<-><->
+      
+l.350 ...that is in the same entry as a $1$ in $w$
+                                                  . Likewise, it follows tha...
+
+Not a real error.
+
+[194]
+./_region_.tex:350: Preview: Snippet 195 started.
+<-><->
+      
+l.350 ... the values in the sum will evaluate to $
+                                                  (-1)$ while the other half...
+
+Not a real error.
+
+./_region_.tex:350: Preview: Snippet 195 ended.(538214+179404x1475110).
+<-><->
+      
+l.350 ...values in the sum will evaluate to $(-1)$
+                                                   while the other half eval...
+
+Not a real error.
+
+[195]
+./_region_.tex:350: Preview: Snippet 196 started.
+<-><->
+      
+l.350 ...$(-1)$ while the other half evaluate to $
+                                                  1$, meaning the whole sum ...
+
+Not a real error.
+
+./_region_.tex:350: Preview: Snippet 196 ended.(462465+0x358810).
+<-><->
+      
+l.350 ...-1)$ while the other half evaluate to $1$
+                                                  , meaning the whole sum is...
+
+Not a real error.
+
+[196]
+./_region_.tex:350: Preview: Snippet 197 started.
+<-><->
+      
+l.350 ...e to $1$, meaning the whole sum is just $
+                                                  0$.
+Not a real error.
+
+./_region_.tex:350: Preview: Snippet 197 ended.(462465+0x358810).
+<-><->
+      
+l.350 ...to $1$, meaning the whole sum is just $0$
+                                                  .
+Not a real error.
+
+[197]
+
+LaTeX Warning: Reference `prelim_4' on page 4 undefined on input line 352.
+
+
+LaTeX Warning: Reference `prelim_5' on page 4 undefined on input line 352.
+
+./_region_.tex:353: Preview: Snippet 198 started.
+<-><->
+      
+l.353 \begin{align}
+                   
+Not a real error.
+
+./_region_.tex:373: Preview: Snippet 198 ended.(14742946+0x30785865).
+<-><->
+      
+l.373 \end{align}
+                 
+Not a real error.
+
+[198]
+./_region_.tex:377: Preview: Snippet 199 started.
+<-><->
+      
+l.377 \subsection
+                 {Simplifying Collision Probability}\label{simplifying_cp}
+Not a real error.
+
+./_region_.tex:377: Preview: Snippet 199 ended.(546132+152916x30785865).
+<-><->
+      
+l.377 ...ection{Simplifying Collision Probability}
+                                                  \label{simplifying_cp}
+Not a real error.
+
+[199
+
+]
+
+LaTeX Warning: Reference `prelim_1' on page 4 undefined on input line 378.
+
+
+LaTeX Warning: Reference `prelim_2' on page 4 undefined on input line 378.
+
+./_region_.tex:378: Preview: Snippet 200 started.
+<-><->
+      
+l.378 ...elim_2}} to simplify the expression for $
+                                                  P_c$ given in {\ref{collis...
+
+Not a real error.
+
+./_region_.tex:378: Preview: Snippet 200 ended.(490372+107642x734762).
+<-><->
+      
+l.378 ..._2}} to simplify the expression for $P_c$
+                                                   given in {\ref{collision_...
+
+Not a real error.
+
+[200]
+
+LaTeX Warning: Reference `collision_probability' on page 4 undefined on input l
+ine 378.
+
+./_region_.tex:379: Preview: Snippet 201 started.
+<-><->
+      
+l.379 \begin{align}
+                   
+Not a real error.
+
+./_region_.tex:406: Preview: Snippet 201 ended.(24558658+0x30785865).
+<-><->
+      
+l.406 \end{align}
+                 
+Not a real error.
+
+[201
+
+]
+
+LaTeX Warning: Reference `simplify_1' on page 4 undefined on input line 407.
+
+./_region_.tex:407: Preview: Snippet 202 started.
+<-><->
+      
+l.407 ...ef{simplify_1}} by writing that for any $
+                                                  g \in S$ and $a \in \mathb...
+
+Not a real error.
+
+./_region_.tex:407: Preview: Snippet 202 ended.(490372+139537x1726514).
+<-><->
+      
+l.407 ...ify_1}} by writing that for any $g \in S$
+                                                   and $a \in \mathbb{F}_2^n...
+
+Not a real error.
+
+[202]
+./_region_.tex:407: Preview: Snippet 203 started.
+<-><->
+      
+l.407 ...} by writing that for any $g \in S$ and $
+                                                  a \in \mathbb{F}_2^n$ we have
+
+Not a real error.
+
+./_region_.tex:407: Preview: Snippet 203 ended.(494359+192273x2065724).
+<-><->
+      
+l.407 ... any $g \in S$ and $a \in \mathbb{F}_2^n$
+                                                   we have
+Not a real error.
+
+[203]
+./_region_.tex:408: Preview: Snippet 204 started.
+<-><->
+      
+l.408 \begin{align}
+                   
+Not a real error.
+
+./_region_.tex:416: Preview: Snippet 204 ended.(7027268+0x30785865).
+<-><->
+      
+l.416 \end{align}
+                 
+Not a real error.
+
+[204
+
+
+
+]
+
+LaTeX Warning: Reference `simplify_3' on page 4 undefined on input line 417.
+
+
+LaTeX Warning: Reference `simplify_2' on page 4 undefined on input line 417.
+
+./_region_.tex:417: Preview: Snippet 205 started.
+<-><->
+      
+l.417 ...2 only when the inner term evaluates to $
+                                                  I$. Otherwise, the trace i...
+
+Not a real error.
+
+./_region_.tex:417: Preview: Snippet 205 ended.(490372+0x371766).
+<-><->
+      
+l.417 ...only when the inner term evaluates to $I$
+                                                  . Otherwise, the trace in ...
+
+Not a real error.
+
+[205]
+
+LaTeX Warning: Reference `simplify_2' on page 4 undefined on input line 417.
+
+
+LaTeX Warning: Reference `simplify_1' on page 5 undefined on input line 419.
+
+
+LaTeX Warning: Reference `simplify_4' on page 5 undefined on input line 419.
+
+./_region_.tex:420: Preview: Snippet 206 started.
+<-><->
+      
+l.420 \begin{align}
+                   
+Not a real error.
+
+./_region_.tex:430: Preview: Snippet 206 ended.(8018455+0x30785865).
+<-><->
+      
+l.430 \end{align}
+                 
+Not a real error.
+
+[206
+
+]
+
+LaTeX Warning: Reference `simplify_5' on page 5 undefined on input line 431.
+
+./_region_.tex:431: Preview: Snippet 207 started.
+<-><->
+      
+l.431 ...plify_5}} we use the shorthand notation $
+                                                  (u_s, u_x, u_z) \in S$ to ...
+
+Not a real error.
+
+./_region_.tex:431: Preview: Snippet 207 ended.(538214+179404x4737671).
+<-><->
+      
+l.431 ...horthand notation $(u_s, u_x, u_z) \in S$
+                                                   to mean that the matrix $...
+
+Not a real error.
+
+[207]
+./_region_.tex:431: Preview: Snippet 208 started.
+<-><->
+      
+l.431 ..._x, u_z) \in S$ to mean that the matrix $
+                                                  g = {(-1)}^{u_s} M(u_x, u_...
+
+Not a real error.
+
+./_region_.tex:431: Preview: Snippet 208 ended.(556418+179404x7909842).
+<-><->
+      
+l.431 ...trix $g = {(-1)}^{u_s} M(u_x, u_z) \in S$
+                                                  . We now note that we cann...
+
+Not a real error.
+
+[208]
+./_region_.tex:431: Preview: Snippet 209 started.
+<-><->
+      
+l.431 ...$. We now note that we cannot have both $
+                                                  (0, u_x, u_z) \in S$ and $...
+
+Not a real error.
+
+./_region_.tex:431: Preview: Snippet 209 ended.(538214+179404x4395311).
+<-><->
+      
+l.431 ...we cannot have both $(0, u_x, u_z) \in S$
+                                                   and $(1, u_x, u_z) \in S$...
+
+Not a real error.
+
+[209]
+./_region_.tex:431: Preview: Snippet 210 started.
+<-><->
+      
+l.431 ...not have both $(0, u_x, u_z) \in S$ and $
+                                                  (1, u_x, u_z) \in S$ becau...
+
+Not a real error.
+
+./_region_.tex:431: Preview: Snippet 210 ended.(538214+179404x4395311).
+<-><->
+      
+l.431 ..._x, u_z) \in S$ and $(1, u_x, u_z) \in S$
+                                                   because $V_S = \{ \ket{\p...
+
+Not a real error.
+
+[210]
+./_region_.tex:431: Preview: Snippet 211 started.
+<-><->
+      
+l.431 ...in S$ and $(1, u_x, u_z) \in S$ because $
+                                                  V_S = \{ \ket{\psi} \}$, w...
+
+Not a real error.
+
+./_region_.tex:431: Preview: Snippet 211 ended.(538214+179404x3465529).
+<-><->
+      
+l.431 ...) \in S$ because $V_S = \{ \ket{\psi} \}$
+                                                  , which is a non-trivial v...
+
+Not a real error.
+
+[211]
+./_region_.tex:431: Preview: Snippet 212 started.
+<-><->
+      
+l.431 ...ce. We see this is true because if both $
+                                                  (0, u_x, u_z) \in S$ and $...
+
+Not a real error.
+
+./_region_.tex:431: Preview: Snippet 212 ended.(538214+179404x4395311).
+<-><->
+      
+l.431 ...rue because if both $(0, u_x, u_z) \in S$
+                                                   and $(1, u_x, u_z) \in S$...
+
+Not a real error.
+
+[212]
+./_region_.tex:431: Preview: Snippet 213 started.
+<-><->
+      
+l.431 ...cause if both $(0, u_x, u_z) \in S$ and $
+                                                  (1, u_x, u_z) \in S$, then...
+
+Not a real error.
+
+./_region_.tex:431: Preview: Snippet 213 ended.(538214+179404x4395311).
+<-><->
+      
+l.431 ..._x, u_z) \in S$ and $(1, u_x, u_z) \in S$
+                                                  , then both $g \in S$ and ...
+
+Not a real error.
+
+[213]
+./_region_.tex:431: Preview: Snippet 214 started.
+<-><->
+      
+l.431 ...S$ and $(1, u_x, u_z) \in S$, then both $
+                                                  g \in S$ and $-g \in S$. A...
+
+Not a real error.
+
+./_region_.tex:431: Preview: Snippet 214 ended.(490372+139537x1726514).
+<-><->
+      
+l.431 ...(1, u_x, u_z) \in S$, then both $g \in S$
+                                                   and $-g \in S$. As a resu...
+
+Not a real error.
+
+[214]
+./_region_.tex:431: Preview: Snippet 215 started.
+<-><->
+      
+l.431 ...x, u_z) \in S$, then both $g \in S$ and $
+                                                  -g \in S$. As a result thi...
+
+Not a real error.
+
+./_region_.tex:431: Preview: Snippet 215 ended.(490372+139537x2284664).
+<-><->
+      
+l.431 ...in S$, then both $g \in S$ and $-g \in S$
+                                                  . As a result this would r...
+
+Not a real error.
+
+[215]
+./_region_.tex:432: Preview: Snippet 216 started.
+<-><->
+      
+l.432 \begin{equation}
+                      
+Not a real error.
+
+./_region_.tex:434: Preview: Snippet 216 ended.(717618+0x30785865).
+<-><->
+      
+l.434 \end{equation}
+                    
+Not a real error.
+
+[216]
+
+LaTeX Warning: Reference `simplify_5' on page 5 undefined on input line 435.
+
+./_region_.tex:436: Preview: Snippet 217 started.
+<-><->
+      
+l.436 \begin{align}
+                   
+Not a real error.
+
+./_region_.tex:442: Preview: Snippet 217 ended.(6164957+0x30785865).
+<-><->
+      
+l.442 \end{align}
+                 
+Not a real error.
+
+[217]
+./_region_.tex:443: Preview: Snippet 218 started.
+<-><->
+      
+l.443 We now define $
+                     U, V, W$ as
+Not a real error.
+
+./_region_.tex:443: Preview: Snippet 218 ended.(490372+139537x2362257).
+<-><->
+      
+l.443 We now define $U, V, W$
+                              as
+Not a real error.
+
+[218]
+./_region_.tex:444: Preview: Snippet 219 started.
+<-><->
+      
+l.444 \begin{align}
+                   
+Not a real error.
+
+./_region_.tex:449: Preview: Snippet 219 ended.(3153168+0x30785865).
+<-><->
+      
+l.449 \end{align}
+                 
+Not a real error.
+
+[219
+
+
+
+]
+./_region_.tex:450: Preview: Snippet 220 started.
+<-><->
+      
+l.450 Again, because only $
+                           (0, u_x, u_z) \in S$ or $(1, u_x, u_z) \in S$, we...
+
+Not a real error.
+
+./_region_.tex:450: Preview: Snippet 220 ended.(538214+179404x4395311).
+<-><->
+      
+l.450 Again, because only $(0, u_x, u_z) \in S$
+                                                or $(1, u_x, u_z) \in S$, we...
+
+Not a real error.
+
+[220]
+./_region_.tex:450: Preview: Snippet 221 started.
+<-><->
+      
+l.450 ..., because only $(0, u_x, u_z) \in S$ or $
+                                                  (1, u_x, u_z) \in S$, we w...
+
+Not a real error.
+
+./_region_.tex:450: Preview: Snippet 221 ended.(538214+179404x4395311).
+<-><->
+      
+l.450 ...u_x, u_z) \in S$ or $(1, u_x, u_z) \in S$
+                                                  , we will have that $|U| =...
+
+Not a real error.
+
+[221]
+./_region_.tex:450: Preview: Snippet 222 started.
+<-><->
+      
+l.450 ...(1, u_x, u_z) \in S$, we will have that $
+                                                  |U| = |S|$. Moreover, it h...
+
+Not a real error.
+
+./_region_.tex:450: Preview: Snippet 222 ended.(538214+179404x2803791).
+<-><->
+      
+l.450 ..._z) \in S$, we will have that $|U| = |S|$
+                                                  . Moreover, it has been sh...
+
+Not a real error.
+
+[222]
+
+Package natbib Warning: Citation `nc' on page 5 undefined on input line 450.
+
+./_region_.tex:450: Preview: Snippet 223 started.
+<-><->
+      
+l.450 ...in Chapter 10.5 of {\cite{nc}} that the $
+                                                  n$ vectors $u^{(1)}, \ldot...
+
+Not a real error.
+
+./_region_.tex:450: Preview: Snippet 223 ended.(308974+0x430740).
+<-><->
+      
+l.450 ... Chapter 10.5 of {\cite{nc}} that the $n$
+                                                   vectors $u^{(1)}, \ldots,...
+
+Not a real error.
+
+[223]
+./_region_.tex:450: Preview: Snippet 224 started.
+<-><->
+      
+l.450 ...0.5 of {\cite{nc}} that the $n$ vectors $
+                                                  u^{(1)}, \ldots, u^{(n)} \...
+
+Not a real error.
+
+./_region_.tex:450: Preview: Snippet 224 ended.(653634+139537x5410221).
+<-><->
+      
+l.450 ... vectors $u^{(1)}, \ldots, u^{(n)} \in U$
+                                                   corresponding to the $n$ ...
+
+Not a real error.
+
+[224]
+./_region_.tex:450: Preview: Snippet 225 started.
+<-><->
+      
+l.450 ...ts, u^{(n)} \in U$ corresponding to the $
+                                                  n$ generators $g^{(1)}, \l...
+
+Not a real error.
+
+./_region_.tex:450: Preview: Snippet 225 ended.(308974+0x430740).
+<-><->
+      
+l.450 ..., u^{(n)} \in U$ corresponding to the $n$
+                                                   generators $g^{(1)}, \ldo...
+
+Not a real error.
+
+[225]
+./_region_.tex:450: Preview: Snippet 226 started.
+<-><->
+      
+l.450 ... U$ corresponding to the $n$ generators $
+                                                  g^{(1)}, \ldots, g^{(n)}$ ...
+
+Not a real error.
+
+./_region_.tex:450: Preview: Snippet 226 ended.(653634+139537x3879368).
+<-><->
+      
+l.450 ...$n$ generators $g^{(1)}, \ldots, g^{(n)}$
+                                                   of $S$ are linearly indep...
+
+Not a real error.
+
+[226]
+./_region_.tex:450: Preview: Snippet 227 started.
+<-><->
+      
+l.450 ...enerators $g^{(1)}, \ldots, g^{(n)}$ of $
+                                                  S$ are linearly independen...
+
+Not a real error.
+
+./_region_.tex:450: Preview: Snippet 227 ended.(490372+0x481402).
+<-><->
+      
+l.450 ...erators $g^{(1)}, \ldots, g^{(n)}$ of $S$
+                                                   are linearly independent....
+
+Not a real error.
+
+[227]
+
+LaTeX Warning: Reference `isomorphism' on page 5 undefined on input line 450.
+
+./_region_.tex:450: Preview: Snippet 228 started.
+<-><->
+      
+l.450 ...linear combinations of basis vectors in $
+                                                  U$ is isomorphic to matrix...
+
+Not a real error.
+
+./_region_.tex:450: Preview: Snippet 228 ended.(490372+0x568213).
+<-><->
+      
+l.450 ...near combinations of basis vectors in $U$
+                                                   is isomorphic to matrix m...
+
+Not a real error.
+
+[228]
+./_region_.tex:450: Preview: Snippet 229 started.
+<-><->
+      
+l.450 ...to matrix multiplying the generators of $
+                                                  S$. Thus, $U, V, W$ are ac...
+
+Not a real error.
+
+./_region_.tex:450: Preview: Snippet 229 ended.(490372+0x481402).
+<-><->
+      
+l.450 ... matrix multiplying the generators of $S$
+                                                  . Thus, $U, V, W$ are actu...
+
+Not a real error.
+
+[229]
+./_region_.tex:450: Preview: Snippet 230 started.
+<-><->
+      
+l.450 ...ultiplying the generators of $S$. Thus, $
+                                                  U, V, W$ are actually all ...
+
+Not a real error.
+
+./_region_.tex:450: Preview: Snippet 230 ended.(490372+139537x2362257).
+<-><->
+      
+l.450 ...ng the generators of $S$. Thus, $U, V, W$
+                                                   are actually all subspace...
+
+Not a real error.
+
+[230]
+./_region_.tex:450: Preview: Snippet 231 started.
+<-><->
+      
+l.450 ...$U, V, W$ are actually all subspaces of $
+                                                  \mathbb{F}_2^{2n}$, which ...
+
+Not a real error.
+
+./_region_.tex:450: Preview: Snippet 231 ended.(598293+192273x1087846).
+<-><->
+      
+l.450 ...ally all subspaces of $\mathbb{F}_2^{2n}$
+                                                  , which we write as $U, V,...
+
+Not a real error.
+
+[231]
+./_region_.tex:450: Preview: Snippet 232 started.
+<-><->
+      
+l.450 ... $\mathbb{F}_2^{2n}$, which we write as $
+                                                  U, V, W \subseteq \mathbb{...
+
+Not a real error.
+
+./_region_.tex:450: Preview: Snippet 232 ended.(598293+192273x4406923).
+<-><->
+      
+l.450 ... as $U, V, W \subseteq \mathbb{F}_2^{2n}$
+                                                  .
+Not a real error.
+
+[232]
+./_region_.tex:452: Preview: Snippet 233 started.
+<-><->
+      
+l.452 If we let $
+                 \text{dim}(W)$ be the number of basis vectors of $W$, then ...
+
+Not a real error.
+
+./_region_.tex:452: Preview: Snippet 233 ended.(538214+179404x2531606).
+<-><->
+      
+l.452 If we let $\text{dim}(W)$
+                                be the number of basis vectors of $W$, then ...
+
+Not a real error.
+
+[233]
+./_region_.tex:452: Preview: Snippet 234 started.
+<-><->
+      
+l.452 ...}(W)$ be the number of basis vectors of $
+                                                  W$, then we see that $|W| ...
+
+Not a real error.
+
+./_region_.tex:452: Preview: Snippet 234 ended.(490372+0x777422).
+<-><->
+      
+l.452 ...W)$ be the number of basis vectors of $W$
+                                                  , then we see that $|W| = ...
+
+Not a real error.
+
+[234]
+./_region_.tex:452: Preview: Snippet 235 started.
+<-><->
+      
+l.452 ... basis vectors of $W$, then we see that $
+                                                  |W| = 2^{\text{dim}(W)}$, ...
+
+Not a real error.
+
+./_region_.tex:452: Preview: Snippet 235 ended.(653634+179404x4489150).
+<-><->
+      
+l.452 ...hen we see that $|W| = 2^{\text{dim}(W)}$
+                                                  , meaning we can write
+Not a real error.
+
+[235]
+./_region_.tex:453: Preview: Snippet 236 started.
+<-><->
+      
+l.453 \begin{equation}
+                      \label{simplify_9}
+Not a real error.
+
+./_region_.tex:455: Preview: Snippet 236 ended.(1661699+0x30785865).
+<-><->
+      
+l.455 \end{equation}
+                    
+Not a real error.
+
+[236
+
+]
+./_region_.tex:457: Preview: Snippet 237 started.
+<-><->
+      
+l.457 \subsection
+                 {An Algorithm to Efficiently Compute Collision Probability}
+Not a real error.
+
+./_region_.tex:457: Preview: Snippet 237 ended.(546132+152916x30785865).
+<-><->
+      
+l.457 ...fficiently Compute Collision Probability}
+                                                  
+Not a real error.
+
+[237
+
+]
+./_region_.tex:458: Preview: Snippet 238 started.
+<-><->
+      
+l.458 ...a set of basis vectors for the subspace $
+                                                  U$, which we denote as $u^...
+
+Not a real error.
+
+./_region_.tex:458: Preview: Snippet 238 ended.(490372+0x568213).
+<-><->
+      
+l.458 ...set of basis vectors for the subspace $U$
+                                                  , which we denote as $u^{(...
+
+Not a real error.
+
+[238]
+./_region_.tex:458: Preview: Snippet 239 started.
+<-><->
+      
+l.458 ...or the subspace $U$, which we denote as $
+                                                  u^{(1)}, \ldots, u^{(n)}$....
+
+Not a real error.
+
+./_region_.tex:458: Preview: Snippet 239 ended.(653634+139537x3964924).
+<-><->
+      
+l.458 ...h we denote as $u^{(1)}, \ldots, u^{(n)}$
+                                                  . To re-iterate, these $n$...
+
+Not a real error.
+
+[239]
+./_region_.tex:458: Preview: Snippet 240 started.
+<-><->
+      
+l.458 ... \ldots, u^{(n)}$. To re-iterate, these $
+                                                  n$ basis vectors correspon...
+
+Not a real error.
+
+./_region_.tex:458: Preview: Snippet 240 ended.(308974+0x430740).
+<-><->
+      
+l.458 ...ldots, u^{(n)}$. To re-iterate, these $n$
+                                                   basis vectors correspond ...
+
+Not a real error.
+
+[240]
+./_region_.tex:458: Preview: Snippet 241 started.
+<-><->
+      
+l.458 ...ese $n$ basis vectors correspond to the $
+                                                  n$ generators $g^{(1)}, \l...
+
+Not a real error.
+
+./_region_.tex:458: Preview: Snippet 241 ended.(308974+0x430740).
+<-><->
+      
+l.458 ...e $n$ basis vectors correspond to the $n$
+                                                   generators $g^{(1)}, \ldo...
+
+Not a real error.
+
+[241]
+./_region_.tex:458: Preview: Snippet 242 started.
+<-><->
+      
+l.458 ...ectors correspond to the $n$ generators $
+                                                  g^{(1)}, \ldots, g^{(n)}$ ...
+
+Not a real error.
+
+./_region_.tex:458: Preview: Snippet 242 ended.(653634+139537x3879368).
+<-><->
+      
+l.458 ...$n$ generators $g^{(1)}, \ldots, g^{(n)}$
+                                                   of the stabilizer group $...
+
+Not a real error.
+
+[242]
+./_region_.tex:458: Preview: Snippet 243 started.
+<-><->
+      
+l.458 ...ldots, g^{(n)}$ of the stabilizer group $
+                                                  S$ that uniquely determine...
+
+Not a real error.
+
+./_region_.tex:458: Preview: Snippet 243 ended.(490372+0x481402).
+<-><->
+      
+l.458 ...ots, g^{(n)}$ of the stabilizer group $S$
+                                                   that uniquely determines ...
+
+Not a real error.
+
+[243]
+./_region_.tex:458: Preview: Snippet 244 started.
+<-><->
+      
+l.458 ...niquely determines the stabilizer state $
+                                                  V_S = \ket{\psi}$ so that ...
+
+Not a real error.
+
+./_region_.tex:458: Preview: Snippet 244 ended.(538214+179404x2747909).
+<-><->
+      
+l.458 ...s the stabilizer state $V_S = \ket{\psi}$
+                                                   so that $g^{(j)} = \pm M(...
+
+Not a real error.
+
+[244]
+./_region_.tex:458: Preview: Snippet 245 started.
+<-><->
+      
+l.458 ...ilizer state $V_S = \ket{\psi}$ so that $
+                                                  g^{(j)} = \pm M(u_x^{(j)},...
+
+Not a real error.
+
+./_region_.tex:458: Preview: Snippet 245 ended.(771467+179404x6520744).
+<-><->
+      
+l.458 ...t $g^{(j)} = \pm M(u_x^{(j)}, u_z^{(j)})$
+                                                  . We now provide an algori...
+
+Not a real error.
+
+[245]
+./_region_.tex:458: Preview: Snippet 246 started.
+<-><->
+      
+l.458 ... the collision probability of the state $
+                                                  \ket{\psi}$\\
+Not a real error.
+
+./_region_.tex:458: Preview: Snippet 246 ended.(538214+179404x971612).
+<-><->
+      
+l.458 ...ion probability of the state $\ket{\psi}$
+                                                  \\
+Not a real error.
+
+[246]
+./_region_.tex:460: Preview: Snippet 247 started.
+<-><->
+      
+l.460   Given the vectors $
+                           u^{(1)}, \ldots, u^{(n)}$, do the following
+Not a real error.
+
+./_region_.tex:460: Preview: Snippet 247 ended.(653634+139537x3964924).
+<-><->
+      
+l.460 ...en the vectors $u^{(1)}, \ldots, u^{(n)}$
+                                                  , do the following
+Not a real error.
+
+[247]
+./_region_.tex:462: Preview: Snippet 248 started.
+<-><->
+      
+l.462 ...Define the following vectors where each $
+                                                  v^{(j)} \in \mathbb{F}_2^{...
+
+Not a real error.
+
+./_region_.tex:462: Preview: Snippet 248 ended.(653634+192273x3060062).
+<-><->
+      
+l.462 ...here each $v^{(j)} \in \mathbb{F}_2^{2n}$
+                                                  
+Not a real error.
+
+[248]
+./_region_.tex:463: Preview: Snippet 249 started.
+<-><->
+      
+l.463     \begin{align}
+                       
+Not a real error.
+
+./_region_.tex:468: Preview: Snippet 249 ended.(4917785+0x30785865).
+<-><->
+      
+l.468     \end{align}
+                     
+Not a real error.
+
+[249]
+./_region_.tex:469: Preview: Snippet 250 started.
+<-><->
+      
+l.469 ...these form a basis for the vector space $
+                                                  V$ as defined in {\ref{sim...
+
+Not a real error.
+
+./_region_.tex:469: Preview: Snippet 250 ended.(490372+0x578082).
+<-><->
+      
+l.469 ...ese form a basis for the vector space $V$
+                                                   as defined in {\ref{simpl...
+
+Not a real error.
+
+[250]
+
+LaTeX Warning: Reference `simplify_7' on page 5 undefined on input line 469.
+
+./_region_.tex:469: Preview: Snippet 251 started.
+<-><->
+      
+l.469 ... as defined in {\ref{simplify_7}} while $
+                                                  u^{(1)}, \ldots, u^{(n)}$ ...
+
+Not a real error.
+
+./_region_.tex:469: Preview: Snippet 251 ended.(653634+139537x3964924).
+<-><->
+      
+l.469 ...lify_7}} while $u^{(1)}, \ldots, u^{(n)}$
+                                                   form a basis for the vect...
+
+Not a real error.
+
+[251]
+./_region_.tex:469: Preview: Snippet 252 started.
+<-><->
+      
+l.469 ...(n)}$ form a basis for the vector space $
+                                                  U$ as defined in {\ref{sim...
+
+Not a real error.
+
+./_region_.tex:469: Preview: Snippet 252 ended.(490372+0x568213).
+<-><->
+      
+l.469 ...)}$ form a basis for the vector space $U$
+                                                   as defined in {\ref{simpl...
+
+Not a real error.
+
+[252]
+
+LaTeX Warning: Reference `simplify_6' on page 5 undefined on input line 469.
+
+./_region_.tex:470: Preview: Snippet 253 started.
+<-><->
+      
+l.470   \item Define the following matrices $
+                                             A, B \in \mathbb{F}_2^{2n \time...
+
+Not a real error.
+
+./_region_.tex:470: Preview: Snippet 253 ended.(639670+205512x4173681).
+<-><->
+      
+l.470 ...ces $A, B \in \mathbb{F}_2^{2n \times n}$
+                                                   and $C \in \mathbb{F}_2^{...
+
+Not a real error.
+
+[253]
+./_region_.tex:470: Preview: Snippet 254 started.
+<-><->
+      
+l.470 ..., B \in \mathbb{F}_2^{2n \times n}$ and $
+                                                  C \in \mathbb{F}_2^{2n \ti...
+
+Not a real error.
+
+./_region_.tex:470: Preview: Snippet 254 ended.(639670+205512x3578960).
+<-><->
+      
+l.470 ...$ and $C \in \mathbb{F}_2^{2n \times 2n}$
+                                                  
+Not a real error.
+
+[254]
+./_region_.tex:471: Preview: Snippet 255 started.
+<-><->
+      
+l.471     \begin{align}
+                       
+Not a real error.
+
+./_region_.tex:477: Preview: Snippet 255 ended.(4000180+0x30785865).
+<-><->
+      
+l.477     \end{align}
+                     
+Not a real error.
+
+[255]
+./_region_.tex:479: Preview: Snippet 256 started.
+<-><->
+      
+l.479     Let $
+               r$ be the number of pivot columns in $\text{REF}(C)$. We then...
+
+Not a real error.
+
+./_region_.tex:479: Preview: Snippet 256 ended.(308974+0x343694).
+<-><->
+      
+l.479     Let $r$
+                  be the number of pivot columns in $\text{REF}(C)$. We then...
+
+Not a real error.
+
+[256]
+./_region_.tex:479: Preview: Snippet 257 started.
+<-><->
+      
+l.479 ...t $r$ be the number of pivot columns in $
+                                                  \text{REF}(C)$. We then ha...
+
+Not a real error.
+
+./_region_.tex:479: Preview: Snippet 257 ended.(538214+179404x2601060).
+<-><->
+      
+l.479 ...umber of pivot columns in $\text{REF}(C)$
+                                                  . We then have $\text{dim}...
+
+Not a real error.
+
+[257]
+./_region_.tex:479: Preview: Snippet 258 started.
+<-><->
+      
+l.479 ...olumns in $\text{REF}(C)$. We then have $
+                                                  \text{dim}(W) = \text{dim}...
+
+Not a real error.
+
+./_region_.tex:479: Preview: Snippet 258 ended.(538214+179404x10471928).
+<-><->
+      
+l.479 ...(W) = \text{dim}(\text{Ker}(C)) = 2n - r$
+                                                  , so return
+Not a real error.
+
+[258]
+./_region_.tex:480: Preview: Snippet 259 started.
+<-><->
+      
+l.480     \begin{equation}
+                          \label{algo_cp}
+Not a real error.
+
+./_region_.tex:483: Preview: Snippet 259 ended.(1470530+0x30785865).
+<-><->
+      
+l.483     \end{equation}
+                        
+Not a real error.
+
+[259
+
+]
+
+LaTeX Warning: Reference `simplifying_cp' on page 5 undefined on input line 486
+.
+
+./_region_.tex:486: Preview: Snippet 260 started.
+<-><->
+      
+l.486 ...ng_cp}}, the column vectors of matrices $
+                                                  A$ and $B$ are the basis v...
+
+Not a real error.
+
+./_region_.tex:486: Preview: Snippet 260 ended.(490372+0x538215).
+<-><->
+      
+l.486 ..._cp}}, the column vectors of matrices $A$
+                                                   and $B$ are the basis vec...
+
+Not a real error.
+
+[260]
+./_region_.tex:486: Preview: Snippet 261 started.
+<-><->
+      
+l.486 ... the column vectors of matrices $A$ and $
+                                                  B$ are the basis vectors o...
+
+Not a real error.
+
+./_region_.tex:486: Preview: Snippet 261 ended.(490372+0x580324).
+<-><->
+      
+l.486 ...he column vectors of matrices $A$ and $B$
+                                                   are the basis vectors of ...
+
+Not a real error.
+
+[261]
+./_region_.tex:486: Preview: Snippet 262 started.
+<-><->
+      
+l.486 ...sis vectors of the respective subspaces $
+                                                  U$ and $V$. Moreover, the ...
+
+Not a real error.
+
+./_region_.tex:486: Preview: Snippet 262 ended.(490372+0x568213).
+<-><->
+      
+l.486 ...s vectors of the respective subspaces $U$
+                                                   and $V$. Moreover, the ex...
+
+Not a real error.
+
+[262]
+./_region_.tex:486: Preview: Snippet 263 started.
+<-><->
+      
+l.486 ...ors of the respective subspaces $U$ and $
+                                                  V$. Moreover, the expressi...
+
+Not a real error.
+
+./_region_.tex:486: Preview: Snippet 263 ended.(490372+0x578082).
+<-><->
+      
+l.486 ...s of the respective subspaces $U$ and $V$
+                                                  . Moreover, the expression...
+
+Not a real error.
+
+[263]
+
+LaTeX Warning: Reference `algo_cp' on page 5 undefined on input line 486.
+
+
+LaTeX Warning: Reference `simplifying_cp' on page 5 undefined on input line 486
+.
+
+./_region_.tex:486: Preview: Snippet 264 started.
+<-><->
+      
+l.486 ...thing left to justify is the claim that $
+                                                  \text{dim}(W) = \text{dim}...
+
+Not a real error.
+
+./_region_.tex:486: Preview: Snippet 264 ended.(538214+179404x10471928).
+<-><->
+      
+l.486 ...(W) = \text{dim}(\text{Ker}(C)) = 2n - r$
+                                                  .
+Not a real error.
+
+[264]
+./_region_.tex:488: Preview: Snippet 265 started.
+<-><->
+      
+l.488   To see this, we note that the Kernel of $
+                                                 C = \begin{bmatrix} A & B \...
+
+Not a real error.
+
+./_region_.tex:488: Preview: Snippet 265 ended.(625049+266240x3892963).
+<-><->
+      
+l.488 ...$C = \begin{bmatrix} A & B \end{bmatrix}$
+                                                   will be given by the vect...
+
+Not a real error.
+
+[265]
+./_region_.tex:488: Preview: Snippet 266 started.
+<-><->
+      
+l.488 ...{bmatrix}$ will be given by the vectors $
+                                                  (x, y) = \\(x_1, x_2, \ldo...
+
+Not a real error.
+
+./_region_.tex:488: Preview: Snippet 266 ended.(1429504+192273x30785865).
+<-><->
+      
+l.488 ... y_2, \ldots, y_n) \in \mathbb{F}_2^{2n}$
+                                                   such that
+Not a real error.
+
+[266]
+./_region_.tex:489: Preview: Snippet 267 started.
+<-><->
+      
+l.489 \begin{equation}
+                      
+Not a real error.
+
+./_region_.tex:498: Preview: Snippet 267 ended.(1782578+0x30785865).
+<-><->
+      
+l.498 \end{equation}
+                    
+Not a real error.
+
+[267]
+./_region_.tex:499: Preview: Snippet 268 started.
+<-><->
+      
+l.499 Thus, all vectors $
+                         {(x, y)}^T \in \text{Ker}(C)$ will have
+Not a real error.
+
+./_region_.tex:499: Preview: Snippet 268 ended.(688946+179404x5283188).
+<-><->
+      
+l.499 ...ll vectors ${(x, y)}^T \in \text{Ker}(C)$
+                                                   will have
+Not a real error.
+
+[268]
+./_region_.tex:500: Preview: Snippet 269 started.
+<-><->
+      
+l.500 \begin{equation}
+                      \label{ker_1}
+Not a real error.
+
+./_region_.tex:502: Preview: Snippet 269 ended.(833966+0x30785865).
+<-><->
+      
+l.502 \end{equation}
+                    
+Not a real error.
+
+[269
+
+]
+./_region_.tex:503: Preview: Snippet 270 started.
+<-><->
+      
+l.503 Where we have used that $
+                               y^T = -y^T$ when working in $\mathbb{F}_2^n$....
+
+Not a real error.
+
+./_region_.tex:503: Preview: Snippet 270 ended.(618681+139537x3139044).
+<-><->
+      
+l.503 Where we have used that $y^T = -y^T$
+                                           when working in $\mathbb{F}_2^n$....
+
+Not a real error.
+
+[270]
+./_region_.tex:503: Preview: Snippet 271 started.
+<-><->
+      
+l.503 ... used that $y^T = -y^T$ when working in $
+                                                  \mathbb{F}_2^n$. Equivalen...
+
+Not a real error.
+
+./_region_.tex:503: Preview: Snippet 271 ended.(494359+192273x809314).
+<-><->
+      
+l.503 ... = -y^T$ when working in $\mathbb{F}_2^n$
+                                                  . Equivalently, this means...
+
+Not a real error.
+
+[271]
+./_region_.tex:503: Preview: Snippet 272 started.
+<-><->
+      
+l.503 ...ly, this means that every vector in the $
+                                                  \text{Ker}(C)$ forms a sim...
+
+Not a real error.
+
+./_region_.tex:503: Preview: Snippet 272 ended.(538214+179404x2306838).
+<-><->
+      
+l.503 ... that every vector in the $\text{Ker}(C)$
+                                                   forms a simultaneous line...
+
+Not a real error.
+
+[272]
+./_region_.tex:503: Preview: Snippet 273 started.
+<-><->
+      
+l.503 ...ear combination of the basis vectors in $
+                                                  U$ and $V$ because expandi...
+
+Not a real error.
+
+./_region_.tex:503: Preview: Snippet 273 ended.(490372+0x568213).
+<-><->
+      
+l.503 ...r combination of the basis vectors in $U$
+                                                   and $V$ because expanding...
+
+Not a real error.
+
+[273]
+./_region_.tex:503: Preview: Snippet 274 started.
+<-><->
+      
+l.503 ...ination of the basis vectors in $U$ and $
+                                                  V$ because expanding {\ref...
+
+Not a real error.
+
+./_region_.tex:503: Preview: Snippet 274 ended.(490372+0x578082).
+<-><->
+      
+l.503 ...ation of the basis vectors in $U$ and $V$
+                                                   because expanding {\ref{k...
+
+Not a real error.
+
+[274]
+
+LaTeX Warning: Reference `ker_1' on page 5 undefined on input line 503.
+
+./_region_.tex:504: Preview: Snippet 275 started.
+<-><->
+      
+l.504 \begin{equation}
+                      
+Not a real error.
+
+./_region_.tex:507: Preview: Snippet 275 ended.(868919+0x30785865).
+<-><->
+      
+l.507 \end{equation}
+                    
+Not a real error.
+
+[275]
+./_region_.tex:508: Preview: Snippet 276 started.
+<-><->
+      
+l.508 Likewise, we see that by definition $
+                                           {(x, y)}^T \in \text{Ker}(C)$ if ...
+
+Not a real error.
+
+./_region_.tex:508: Preview: Snippet 276 ended.(688946+179404x5283188).
+<-><->
+      
+l.508 ...definition ${(x, y)}^T \in \text{Ker}(C)$
+                                                   if and only if $Ax^T = By...
+
+Not a real error.
+
+[276]
+./_region_.tex:508: Preview: Snippet 277 started.
+<-><->
+      
+l.508 ...y)}^T \in \text{Ker}(C)$ if and only if $
+                                                  Ax^T = By^T \in U \cap V$....
+
+Not a real error.
+
+./_region_.tex:508: Preview: Snippet 277 ended.(618681+139537x6552719).
+<-><->
+      
+l.508 ...if and only if $Ax^T = By^T \in U \cap V$
+                                                  . We also see that if ${(x...
+
+Not a real error.
+
+[277]
+./_region_.tex:508: Preview: Snippet 278 started.
+<-><->
+      
+l.508 ...By^T \in U \cap V$. We also see that if $
+                                                  {(x^{(1)}, y^{(1)})}^T, {(...
+
+Not a real error.
+
+./_region_.tex:508: Preview: Snippet 278 ended.(804366+179404x10679682).
+<-><->
+      
+l.508 ...{(x^{(2)}, y^{(2)})}^T \in \text{Ker}(C)$
+                                                  , then
+Not a real error.
+
+[278]
+./_region_.tex:509: Preview: Snippet 279 started.
+<-><->
+      
+l.509 \begin{equation}
+                      
+Not a real error.
+
+./_region_.tex:511: Preview: Snippet 279 ended.(868919+0x30785865).
+<-><->
+      
+l.511 \end{equation}
+                    
+Not a real error.
+
+[279]
+./_region_.tex:513: Preview: Snippet 280 started.
+<-><->
+      
+l.513 \begin{equation}
+                      
+Not a real error.
+
+./_region_.tex:515: Preview: Snippet 280 ended.(1019651+0x30785865).
+<-><->
+      
+l.515 \end{equation}
+                    
+Not a real error.
+
+[280]
+./_region_.tex:516: Preview: Snippet 281 started.
+<-><->
+      
+l.516 ...aking linear combinations of vectors in $
+                                                  \text{Ker}(C)$ is equivale...
+
+Not a real error.
+
+./_region_.tex:516: Preview: Snippet 281 ended.(538214+179404x2306838).
+<-><->
+      
+l.516 ...ombinations of vectors in $\text{Ker}(C)$
+                                                   is equivalent to taking l...
+
+Not a real error.
+
+[281]
+./_region_.tex:516: Preview: Snippet 282 started.
+<-><->
+      
+l.516 ...aking linear combinations of vectors in $
+                                                  U \cap V = W$. Thus, the b...
+
+Not a real error.
+
+./_region_.tex:516: Preview: Snippet 282 ended.(490372+0x3677887).
+<-><->
+      
+l.516 ...combinations of vectors in $U \cap V = W$
+                                                  . Thus, the basis vectors ...
+
+Not a real error.
+
+[282]
+./_region_.tex:516: Preview: Snippet 283 started.
+<-><->
+      
+l.516 ... V = W$. Thus, the basis vectors of the $
+                                                  \text{Ker}(C)$ will also f...
+
+Not a real error.
+
+./_region_.tex:516: Preview: Snippet 283 ended.(538214+179404x2306838).
+<-><->
+      
+l.516 ... the basis vectors of the $\text{Ker}(C)$
+                                                   will also form a basis fo...
+
+Not a real error.
+
+[283]
+./_region_.tex:516: Preview: Snippet 284 started.
+<-><->
+      
+l.516 ...ll also form a basis for the vectors in $
+                                                  W$. As a result, we will have
+
+Not a real error.
+
+./_region_.tex:516: Preview: Snippet 284 ended.(490372+0x777422).
+<-><->
+      
+l.516 ... also form a basis for the vectors in $W$
+                                                  . As a result, we will have
+Not a real error.
+
+[284]
+./_region_.tex:517: Preview: Snippet 285 started.
+<-><->
+      
+l.517 \begin{equation}
+                      \label{algo_proof_1}
+Not a real error.
+
+./_region_.tex:519: Preview: Snippet 285 ended.(717618+0x30785865).
+<-><->
+      
+l.519 \end{equation}
+                    
+Not a real error.
+
+[285
+
+]
+./_region_.tex:520: Preview: Snippet 286 started.
+<-><->
+      
+l.520 ...y, by the Rank-Nullity Theorem, for the $
+                                                  2n \times 2n$ matrix $C$, ...
+
+Not a real error.
+
+./_region_.tex:520: Preview: Snippet 286 ended.(462465+59802x2456186).
+<-><->
+      
+l.520 ...k-Nullity Theorem, for the $2n \times 2n$
+                                                   matrix $C$, we will have
+Not a real error.
+
+[286]
+./_region_.tex:520: Preview: Snippet 287 started.
+<-><->
+      
+l.520 ... Theorem, for the $2n \times 2n$ matrix $
+                                                  C$, we will have
+Not a real error.
+
+./_region_.tex:520: Preview: Snippet 287 ended.(490372+0x564226).
+<-><->
+      
+l.520 ...heorem, for the $2n \times 2n$ matrix $C$
+                                                  , we will have
+Not a real error.
+
+[287]
+./_region_.tex:521: Preview: Snippet 288 started.
+<-><->
+      
+l.521 \begin{equation}
+                      \label{algo_proof_2}
+Not a real error.
+
+./_region_.tex:523: Preview: Snippet 288 ended.(717618+0x30785865).
+<-><->
+      
+l.523 \end{equation}
+                    
+Not a real error.
+
+[288
+
+]
+
+LaTeX Warning: Reference `algo_step' on page 5 undefined on input line 524.
+
+./_region_.tex:524: Preview: Snippet 289 started.
+<-><->
+      
+l.524 ...ef{algo_step}} of the algorithm, we set $
+                                                  r$ equal to the number of ...
+
+Not a real error.
+
+./_region_.tex:524: Preview: Snippet 289 ended.(308974+0x343694).
+<-><->
+      
+l.524 ...{algo_step}} of the algorithm, we set $r$
+                                                   equal to the number of pi...
+
+Not a real error.
+
+[289]
+./_region_.tex:524: Preview: Snippet 290 started.
+<-><->
+      
+l.524 ...equal to the number of pivot columns in $
+                                                  \text{REF}(C)$, which is t...
+
+Not a real error.
+
+./_region_.tex:524: Preview: Snippet 290 ended.(538214+179404x2601060).
+<-><->
+      
+l.524 ...umber of pivot columns in $\text{REF}(C)$
+                                                  , which is the same as the...
+
+Not a real error.
+
+[290]
+./_region_.tex:524: Preview: Snippet 291 started.
+<-><->
+      
+l.524 ...text{REF}(C)$, which is the same as the $
+                                                  \text{dim}(\text{Im}(C))$....
+
+Not a real error.
+
+./_region_.tex:524: Preview: Snippet 291 ended.(538214+179404x3717755).
+<-><->
+      
+l.524 ...he same as the $\text{dim}(\text{Im}(C))$
+                                                  . Thus, combining {\ref{al...
+
+Not a real error.
+
+[291]
+
+LaTeX Warning: Reference `algo_proof_1' on page 5 undefined on input line 524.
+
+
+LaTeX Warning: Reference `algo_proof_2' on page 5 undefined on input line 524.
+
+./_region_.tex:525: Preview: Snippet 292 started.
+<-><->
+      
+l.525 \begin{equation}
+                      
+Not a real error.
+
+./_region_.tex:528: Preview: Snippet 292 ended.(717618+0x30785865).
+<-><->
+      
+l.528 \end{equation}
+                    
+Not a real error.
+
+[292]
+./_region_.tex:533: Preview: Snippet 293 started.
+<-><->
+      
+l.533 \section
+              {Simulations and Numerical Results}
+Not a real error.
+
+./_region_.tex:533: Preview: Snippet 293 ended.(655359+0x30785865).
+<-><->
+      
+l.533 \section{Simulations and Numerical Results}
+                                                 
+Not a real error.
+
+[293
+
+]
+./_region_.tex:535: Preview: Snippet 294 started.
+<-><->
+      
+l.535 \subsection
+                 {Simulation Protocol}
+Not a real error.
+
+./_region_.tex:535: Preview: Snippet 294 ended.(546132+0x30785865).
+<-><->
+      
+l.535 \subsection{Simulation Protocol}
+                                      
+Not a real error.
+
+[294
+
+]
+
+LaTeX Warning: Reference `cp_conjecture' on page 6 undefined on input line 536.
+
+
+./_region_.tex:536: Preview: Snippet 295 started.
+<-><->
+      
+l.536 ...ifford Gates to the computational basis $
+                                                  \ket{0}^{\otimes n}$, as d...
+
+Not a real error.
+
+./_region_.tex:536: Preview: Snippet 295 ended.(647443+179404x1641264).
+<-><->
+      
+l.536 ...computational basis $\ket{0}^{\otimes n}$
+                                                  , as described in Section ...
+
+Not a real error.
+
+[295]
+
+LaTeX Warning: Reference `clifford_gates' on page 6 undefined on input line 536
+.
+
+
+Package natbib Warning: Citation `aaronson' on page 6 undefined on input line 5
+38.
+
+./_region_.tex:538: Preview: Snippet 296 started.
+<-><->
+      
+l.538 ... the generators of the stabilizer group $
+                                                  S$ of the stabilizer state...
+
+Not a real error.
+
+./_region_.tex:538: Preview: Snippet 296 ended.(490372+0x481402).
+<-><->
+      
+l.538 ...he generators of the stabilizer group $S$
+                                                   of the stabilizer state $...
+
+Not a real error.
+
+[296]
+./_region_.tex:538: Preview: Snippet 297 started.
+<-><->
+      
+l.538 ...lizer group $S$ of the stabilizer state $
+                                                  V_S = \{ \ket{\psi} \}$. H...
+
+Not a real error.
+
+./_region_.tex:538: Preview: Snippet 297 ended.(538214+179404x3465529).
+<-><->
+      
+l.538 ...stabilizer state $V_S = \{ \ket{\psi} \}$
+                                                  . However, we do not keep ...
+
+Not a real error.
+
+[297]
+./_region_.tex:538: Preview: Snippet 298 started.
+<-><->
+      
+l.538 ... the collision probability of the state $
+                                                  \ket{\psi}$. See {\cite{aa...
+
+Not a real error.
+
+./_region_.tex:538: Preview: Snippet 298 ended.(538214+179404x971612).
+<-><->
+      
+l.538 ...ion probability of the state $\ket{\psi}$
+                                                  . See {\cite{aaronson}} fo...
+
+Not a real error.
+
+[298]
+
+Package natbib Warning: Citation `aaronson' on page 6 undefined on input line 5
+38.
+
+
+Package natbib Warning: Citation `random_clifford' on page 6 undefined on input
+ line 540.
+
+./_region_.tex:540: Preview: Snippet 299 started.
+<-><->
+      
+l.540 ... qubits, we can equivalently generate a $
+                                                  4 \times 4$ Symplectic Mat...
+
+Not a real error.
+
+./_region_.tex:540: Preview: Snippet 299 ended.(462465+59802x1594706).
+<-><->
+      
+l.540 ... can equivalently generate a $4 \times 4$
+                                                   Symplectic Matrix. We the...
+
+Not a real error.
+
+[299]
+
+Package natbib Warning: Citation `aaronson' on page 6 undefined on input line 5
+40.
+
+
+LaTeX Warning: Reference `algo_1' on page 6 undefined on input line 542.
+
+./_region_.tex:542: Preview: Snippet 300 started.
+<-><->
+      
+l.542 ...ion probability of the stabilizer state $
+                                                  \ket{\psi}$ using the tabl...
+
+Not a real error.
+
+./_region_.tex:542: Preview: Snippet 300 ended.(538214+179404x971612).
+<-><->
+      
+l.542 ...lity of the stabilizer state $\ket{\psi}$
+                                                   using the tableau that ke...
+
+Not a real error.
+
+[300]
+
+LaTeX Warning: Reference `conjecture_1' on page 6 undefined on input line 544.
+
+./_region_.tex:548: Preview: Snippet 301 started.
+<-><->
+      
+l.548 ... the generators of our stabilizer state $
+                                                  \ket{\psi}$. This tableau ...
+
+Not a real error.
+
+./_region_.tex:548: Preview: Snippet 301 ended.(538214+179404x971612).
+<-><->
+      
+l.548 ...tors of our stabilizer state $\ket{\psi}$
+                                                  . This tableau corresponds...
+
+Not a real error.
+
+[301]
+./_region_.tex:548: Preview: Snippet 302 started.
+<-><->
+      
+l.548 .... This tableau corresponds to the state $
+                                                  \ket{0}^{\otimes n }$. Ini...
+
+Not a real error.
+
+./_region_.tex:548: Preview: Snippet 302 ended.(647443+179404x1641264).
+<-><->
+      
+l.548 ...ponds to the state $\ket{0}^{\otimes n }$
+                                                  . Initialize the depth $d ...
+
+Not a real error.
+
+[302]
+./_region_.tex:548: Preview: Snippet 303 started.
+<-><->
+      
+l.548 ...{0}^{\otimes n }$. Initialize the depth $
+                                                  d = 0$. Initialize a list ...
+
+Not a real error.
+
+./_region_.tex:548: Preview: Snippet 303 ended.(498346+0x1689141).
+<-><->
+      
+l.548 ...otimes n }$. Initialize the depth $d = 0$
+                                                  . Initialize a list of coo...
+
+Not a real error.
+
+[303]
+./_region_.tex:548: Preview: Snippet 304 started.
+<-><->
+      
+l.548 ... = 0$. Initialize a list of coordinates $
+                                                  K = [(d_1 = 0, k_1 = 0)]$
+Not a real error.
+
+./_region_.tex:548: Preview: Snippet 304 ended.(538214+179404x6894361).
+<-><->
+      
+l.548 ...of coordinates $K = [(d_1 = 0, k_1 = 0)]$
+                                                  
+Not a real error.
+
+[304]
+./_region_.tex:550: Preview: Snippet 305 started.
+<-><->
+      
+l.550 ... geometry of the circuit, create a list $
+                                                  L$ that contains pairs of ...
+
+Not a real error.
+
+./_region_.tex:550: Preview: Snippet 305 ended.(490372+0x488380).
+<-><->
+      
+l.550 ...eometry of the circuit, create a list $L$
+                                                   that contains pairs of qu...
+
+Not a real error.
+
+[305]
+./_region_.tex:550: Preview: Snippet 306 started.
+<-><->
+      
+l.550 ... contains pairs of qubits. We construct $
+                                                  L$ so that after applying ...
+
+Not a real error.
+
+./_region_.tex:550: Preview: Snippet 306 ended.(490372+0x488380).
+<-><->
+      
+l.550 ...ontains pairs of qubits. We construct $L$
+                                                   so that after applying tw...
+
+Not a real error.
+
+[306]
+./_region_.tex:550: Preview: Snippet 307 started.
+<-><->
+      
+l.550 ...o qubit gates to all pairs of qubits in $
+                                                  L$ the depth of the circui...
+
+Not a real error.
+
+./_region_.tex:550: Preview: Snippet 307 ended.(490372+0x488380).
+<-><->
+      
+l.550 ...qubit gates to all pairs of qubits in $L$
+                                                   the depth of the circuit ...
+
+Not a real error.
+
+[307]
+./_region_.tex:551: Preview: Snippet 308 started.
+<-><->
+      
+l.551   \item For every pair of qubits in $
+                                           L$, do the following. Pick a unif...
+
+Not a real error.
+
+./_region_.tex:551: Preview: Snippet 308 ended.(490372+0x488380).
+<-><->
+      
+l.551   \item For every pair of qubits in $L$
+                                             , do the following. Pick a unif...
+
+Not a real error.
+
+[308]
+./_region_.tex:551: Preview: Snippet 309 started.
+<-><->
+      
+l.551 ... the following. Pick a uniformly random $
+                                                  4 \times 4$ Symplectic Mat...
+
+Not a real error.
+
+./_region_.tex:551: Preview: Snippet 309 ended.(462465+59802x1594706).
+<-><->
+      
+l.551 ...ing. Pick a uniformly random $4 \times 4$
+                                                   Symplectic Matrix and dec...
+
+Not a real error.
+
+[309]
+./_region_.tex:553: Preview: Snippet 310 started.
+<-><->
+      
+l.553 ...g the tableau. Update the depth so that $
+                                                  d \leftarrow d + 1$. If we...
+
+Not a real error.
+
+./_region_.tex:553: Preview: Snippet 310 ended.(498346+59802x3099209).
+<-><->
+      
+l.553 ...te the depth so that $d \leftarrow d + 1$
+                                                  . If we let $k = -\log_2 (...
+
+Not a real error.
+
+[310]
+./_region_.tex:553: Preview: Snippet 311 started.
+<-><->
+      
+l.553 ...so that $d \leftarrow d + 1$. If we let $
+                                                  k = -\log_2 (P_c)$, then a...
+
+Not a real error.
+
+./_region_.tex:553: Preview: Snippet 311 ended.(538214+179404x4561894).
+<-><->
+      
+l.553 ...row d + 1$. If we let $k = -\log_2 (P_c)$
+                                                  , then append the pair $(d...
+
+Not a real error.
+
+[311]
+./_region_.tex:553: Preview: Snippet 312 started.
+<-><->
+      
+l.553 ... = -\log_2 (P_c)$, then append the pair $
+                                                  (d, k)$ to the list $K$.
+Not a real error.
+
+./_region_.tex:553: Preview: Snippet 312 ended.(538214+179404x1646787).
+<-><->
+      
+l.553 ...g_2 (P_c)$, then append the pair $(d, k)$
+                                                   to the list $K$.
+Not a real error.
+
+[312]
+./_region_.tex:553: Preview: Snippet 313 started.
+<-><->
+      
+l.553 ...en append the pair $(d, k)$ to the list $
+                                                  K$.
+Not a real error.
+
+./_region_.tex:553: Preview: Snippet 313 ended.(490372+0x660807).
+<-><->
+      
+l.553 ... append the pair $(d, k)$ to the list $K$
+                                                  .
+Not a real error.
+
+[313]
+
+LaTeX Warning: Reference `protocol_2' on page 6 undefined on input line 555.
+
+
+LaTeX Warning: Reference `protocol_3' on page 6 undefined on input line 555.
+
+./_region_.tex:555: Preview: Snippet 314 started.
+<-><->
+      
+l.555 ...-} {\ref{protocol_3}} a on the order of $
+                                                  O(n^{1/w})$ times for a $w...
+
+Not a real error.
+
+./_region_.tex:555: Preview: Snippet 314 ended.(653634+179404x2559891).
+<-><->
+      
+l.555 ...otocol_3}} a on the order of $O(n^{1/w})$
+                                                   times for a $w$-dimension...
+
+Not a real error.
+
+[314]
+./_region_.tex:555: Preview: Snippet 315 started.
+<-><->
+      
+l.555 ...n the order of $O(n^{1/w})$ times for a $
+                                                  w$-dimensional grid.
+Not a real error.
+
+./_region_.tex:555: Preview: Snippet 315 ended.(308974+0x533066).
+<-><->
+      
+l.555 ...the order of $O(n^{1/w})$ times for a $w$
+                                                  -dimensional grid.
+Not a real error.
+
+[315]
+
+LaTeX Warning: Reference `protocol_1' on page 6 undefined on input line 556.
+
+
+LaTeX Warning: Reference `protocol_4' on page 6 undefined on input line 556.
+
+./_region_.tex:556: Preview: Snippet 316 started.
+<-><->
+      
+l.556 ..._1}} {--} {\ref{protocol_4}} a total of $
+                                                  m$ times, storing all $m$ ...
+
+Not a real error.
+
+./_region_.tex:556: Preview: Snippet 316 ended.(308974+0x630079).
+<-><->
+      
+l.556 ...}} {--} {\ref{protocol_4}} a total of $m$
+                                                   times, storing all $m$ li...
+
+Not a real error.
+
+[316]
+./_region_.tex:556: Preview: Snippet 317 started.
+<-><->
+      
+l.556 ...l_4}} a total of $m$ times, storing all $
+                                                  m$ lists of coordinates. C...
+
+Not a real error.
+
+./_region_.tex:556: Preview: Snippet 317 ended.(308974+0x630079).
+<-><->
+      
+l.556 ...4}} a total of $m$ times, storing all $m$
+                                                   lists of coordinates. Com...
+
+Not a real error.
+
+[317]
+./_region_.tex:556: Preview: Snippet 318 started.
+<-><->
+      
+l.556 ... mean and standard deviation across the $
+                                                  m$ lists of coordinates, c...
+
+Not a real error.
+
+./_region_.tex:556: Preview: Snippet 318 ended.(308974+0x630079).
+<-><->
+      
+l.556 ...ean and standard deviation across the $m$
+                                                   lists of coordinates, cre...
+
+Not a real error.
+
+[318]
+./_region_.tex:556: Preview: Snippet 319 started.
+<-><->
+      
+l.556 ...s of coordinates, creating another list $
+                                                  [(d_1, k_1, \Delta k_1), (...
+
+Not a real error.
+
+./_region_.tex:556: Preview: Snippet 319 ended.(538214+179404x9571073).
+<-><->
+      
+l.556 ...a k_1), (d_2, k_2, \Delta k_2), \ldots ]$
+                                                  .
+Not a real error.
+
+[319]
+
+LaTeX Warning: Reference `proto_1' on page 6 undefined on input line 560.
+
+
+Package natbib Warning: Citation `matthewkhoury96' on page 6 undefined on input
+ line 560.
+
+
+Package natbib Warning: Citation `aaronson' on page 6 undefined on input line 5
+60.
+
+
+Package natbib Warning: Citation `random_clifford' on page 6 undefined on input
+ line 560.
+
+
+LaTeX Warning: Reference `algo_1' on page 6 undefined on input line 560.
+
+
+LaTeX Warning: Reference `proto_1' on page 6 undefined on input line 560.
+
+./_region_.tex:560: Preview: Snippet 320 started.
+<-><->
+      
+l.560 ...so precomputes the decomposition of all $
+                                                  4 \times 4$ Symplectic Mat...
+
+Not a real error.
+
+./_region_.tex:560: Preview: Snippet 320 ended.(462465+59802x1594706).
+<-><->
+      
+l.560 ...tes the decomposition of all $4 \times 4$
+                                                   Symplectic Matrices in or...
+
+Not a real error.
+
+[320]
+./_region_.tex:562: Preview: Snippet 321 started.
+<-><->
+      
+l.562 ...ing sections, we describe how to obtain $
+                                                  L$ for 1D, 2D, and 3D latt...
+
+Not a real error.
+
+./_region_.tex:562: Preview: Snippet 321 ended.(490372+0x488380).
+<-><->
+      
+l.562 ...g sections, we describe how to obtain $L$
+                                                   for 1D, 2D, and 3D lattic...
+
+Not a real error.
+
+[321]
+
+LaTeX Warning: Reference `proto_1' on page 7 undefined on input line 562.
+
+./_region_.tex:564: Preview: Snippet 322 started.
+<-><->
+      
+l.564 \subsection
+                 {1D Lattice}
+Not a real error.
+
+./_region_.tex:564: Preview: Snippet 322 ended.(546132+0x30785865).
+<-><->
+      
+l.564 \subsection{1D Lattice}
+                             
+Not a real error.
+
+[322
+
+]
+./_region_.tex:565: Preview: Snippet 323 started.
+<-><->
+      
+l.565 ... 1D lattice that correspond to depth of $
+                                                  1$ can be seen in Figure {...
+
+Not a real error.
+
+./_region_.tex:565: Preview: Snippet 323 ended.(462465+0x358810).
+<-><->
+      
+l.565 ...D lattice that correspond to depth of $1$
+                                                   can be seen in Figure {\r...
+
+Not a real error.
+
+[323]
+
+LaTeX Warning: Reference `fig_1d' on page 7 undefined on input line 565.
+
+
+LaTeX Warning: Reference `plot_1d_1' on page 7 undefined on input line 565.
+
+
+LaTeX Warning: Reference `plot_1d_2' on page 7 undefined on input line 565.
+
+./_region_.tex:565: Preview: Snippet 324 started.
+<-><->
+      
+l.565 ...show our results for a 1D letattice for $
+                                                  n = 100$ and $n = 625$ res...
+
+Not a real error.
+
+./_region_.tex:565: Preview: Snippet 324 ended.(462465+0x2463990).
+<-><->
+      
+l.565 ... results for a 1D letattice for $n = 100$
+                                                   and $n = 625$ respectivel...
+
+Not a real error.
+
+[324]
+./_region_.tex:565: Preview: Snippet 325 started.
+<-><->
+      
+l.565 ...ts for a 1D letattice for $n = 100$ and $
+                                                  n = 625$ respectively. In ...
+
+Not a real error.
+
+./_region_.tex:565: Preview: Snippet 325 ended.(462465+0x2463990).
+<-><->
+      
+l.565 ... 1D letattice for $n = 100$ and $n = 625$
+                                                   respectively. In both sim...
+
+Not a real error.
+
+[325]
+./_region_.tex:565: Preview: Snippet 326 started.
+<-><->
+      
+l.565 ...espectively. In both simulations we let $
+                                                  m = 25$, meaning we collec...
+
+Not a real error.
+
+./_region_.tex:565: Preview: Snippet 326 ended.(462465+0x2304519).
+<-><->
+      
+l.565 ...vely. In both simulations we let $m = 25$
+                                                  , meaning we collected a t...
+
+Not a real error.
+
+[326]
+./_region_.tex:565: Preview: Snippet 327 started.
+<-><->
+      
+l.565 ... = 25$, meaning we collected a total of $
+                                                  25$ samples, which we used...
+
+Not a real error.
+
+./_region_.tex:565: Preview: Snippet 327 ended.(462465+0x717620).
+<-><->
+      
+l.565 ...25$, meaning we collected a total of $25$
+                                                   samples, which we used to...
+
+Not a real error.
+
+[327]
+./_region_.tex:565: Preview: Snippet 328 started.
+<-><->
+      
+l.565 ...and standard deviation of the values of $
+                                                  k$ as a function of $d$.
+Not a real error.
+
+./_region_.tex:565: Preview: Snippet 328 ended.(498346+0x396186).
+<-><->
+      
+l.565 ...d standard deviation of the values of $k$
+                                                   as a function of $d$.
+Not a real error.
+
+[328]
+./_region_.tex:565: Preview: Snippet 329 started.
+<-><->
+      
+l.565 ...n of the values of $k$ as a function of $
+                                                  d$.
+Not a real error.
+
+./_region_.tex:565: Preview: Snippet 329 ended.(498346+0x373511).
+<-><->
+      
+l.565 ...of the values of $k$ as a function of $d$
+                                                  .
+Not a real error.
+
+[329]
+./_region_.tex:567: Preview: Snippet 330 started.
+<-><->
+      
+l.567 \begin{figure}
+                    [!htp]
+Not a real error.
+
+<figures/1D_circuit.pdf, id=1184, 566.115pt x 96.36pt>
+File: figures/1D_circuit.pdf Graphic file (type pdf)
+
+<use figures/1D_circuit.pdf>
+Package pdftex.def Info: figures/1D_circuit.pdf used on input line 569.
+(pdftex.def)             Requested size: 352.31625pt x 59.97046pt.
+
+./_region_.tex:572: Preview: Snippet 330 ended.(7259453+0x30785865).
+<-><->
+      
+l.572 \end{figure}
+                  
+Not a real error.
+
+[330
+
+
+
+ <./figures/1D_circuit.pdf>]
+./_region_.tex:573: Preview: Snippet 331 started.
+<-><->
+      
+l.573 \begin{figure}
+                    [!htp]
+Not a real error.
+
+<figures/plot_100_1D.pdf, id=1201, 1734.48pt x 867.24pt>
+File: figures/plot_100_1D.pdf Graphic file (type pdf)
+
+<use figures/plot_100_1D.pdf>
+Package pdftex.def Info: figures/plot_100_1D.pdf used on input line 575.
+(pdftex.def)             Requested size: 352.31625pt x 176.15768pt.
+
+./_region_.tex:578: Preview: Snippet 331 ended.(13091319+0x30785865).
+<-><->
+      
+l.578 \end{figure}
+                  
+Not a real error.
+
+[331
+
+
+ <./figures/plot_100_1D.pdf>]
+./_region_.tex:579: Preview: Snippet 332 started.
+<-><->
+      
+l.579 \begin{figure}
+                    [!htp]
+Not a real error.
+
+<figures/plot_625_1D.pdf, id=1217, 1734.48pt x 867.24pt>
+File: figures/plot_625_1D.pdf Graphic file (type pdf)
+
+<use figures/plot_625_1D.pdf>
+Package pdftex.def Info: figures/plot_625_1D.pdf used on input line 581.
+(pdftex.def)             Requested size: 352.31625pt x 176.15768pt.
+
+./_region_.tex:584: Preview: Snippet 332 ended.(13091319+0x30785865).
+<-><->
+      
+l.584 \end{figure}
+                  
+Not a real error.
+
+[332
+
+
+ <./figures/plot_625_1D.pdf>]
+
+LaTeX Warning: Reference `proto_1' on page 7 undefined on input line 586.
+
+./_region_.tex:586: Preview: Snippet 333 started.
+<-><->
+      
+l.586 ...r large values of depth on the order of $
+                                                  O(n)$. Likewise, limiting ...
+
+Not a real error.
+
+./_region_.tex:586: Preview: Snippet 333 ended.(538214+179404x1556206).
+<-><->
+      
+l.586 ...ge values of depth on the order of $O(n)$
+                                                  . Likewise, limiting the n...
+
+Not a real error.
+
+[333]
+./_region_.tex:586: Preview: Snippet 334 started.
+<-><->
+      
+l.586 ...e number of data points we collected to $
+                                                  50$ saved a significant am...
+
+Not a real error.
+
+./_region_.tex:586: Preview: Snippet 334 ended.(462465+0x717620).
+<-><->
+      
+l.586 ...umber of data points we collected to $50$
+                                                   saved a significant amoun...
+
+Not a real error.
+
+[334]
+
+LaTeX Warning: Reference `plot_1d_1' on page 7 undefined on input line 588.
+
+
+LaTeX Warning: Reference `plot_1d_2' on page 7 undefined on input line 588.
+
+
+LaTeX Warning: Reference `conjecture_1' on page 7 undefined on input line 588.
+
+./_region_.tex:589: Preview: Snippet 335 started.
+<-><->
+      
+l.589 \begin{equation}
+                      
+Not a real error.
+
+./_region_.tex:591: Preview: Snippet 335 ended.(1722303+0x30785865).
+<-><->
+      
+l.591 \end{equation}
+                    
+Not a real error.
+
+[335]
+./_region_.tex:592: Preview: Snippet 336 started.
+<-><->
+      
+l.592 ...t the circuit to saturate at a depth of $
+                                                  d \sim n$. Likewise, looki...
+
+Not a real error.
+
+./_region_.tex:592: Preview: Snippet 336 ended.(498346+0x1761071).
+<-><->
+      
+l.592 ...cuit to saturate at a depth of $d \sim n$
+                                                  . Likewise, looking at the...
+
+Not a real error.
+
+[336]
+./_region_.tex:592: Preview: Snippet 337 started.
+<-><->
+      
+l.592 ...es above, it is clear that we will have $
+                                                  k = O(n - n/d)$ and the ci...
+
+Not a real error.
+
+./_region_.tex:592: Preview: Snippet 337 ended.(538214+179404x4949359).
+<-><->
+      
+l.592 ... clear that we will have $k = O(n - n/d)$
+                                                   and the circuits in the c...
+
+Not a real error.
+
+[337]
+./_region_.tex:592: Preview: Snippet 338 started.
+<-><->
+      
+l.592 ...its in the clearly saturate well before $
+                                                  d = n$. Thus, the results ...
+
+Not a real error.
+
+./_region_.tex:592: Preview: Snippet 338 ended.(498346+0x1761071).
+<-><->
+      
+l.592 ... the clearly saturate well before $d = n$
+                                                  . Thus, the results of our...
+
+Not a real error.
+
+[338]
+
+LaTeX Warning: Reference `conjecture_1' on page 7 undefined on input line 592.
+
+./_region_.tex:594: Preview: Snippet 339 started.
+<-><->
+      
+l.594 \subsection
+                 {2D Lattice}
+Not a real error.
+
+./_region_.tex:594: Preview: Snippet 339 ended.(546132+0x30785865).
+<-><->
+      
+l.594 \subsection{2D Lattice}
+                             
+Not a real error.
+
+[339
+
+]
+./_region_.tex:595: Preview: Snippet 340 started.
+<-><->
+      
+l.595 ...D lattice that correspond to a depth of $
+                                                  1$ can be seen in Figure {...
+
+Not a real error.
+
+./_region_.tex:595: Preview: Snippet 340 ended.(462465+0x358810).
+<-><->
+      
+l.595 ...lattice that correspond to a depth of $1$
+                                                   can be seen in Figure {\r...
+
+Not a real error.
+
+[340]
+
+LaTeX Warning: Reference `fig_2d' on page 7 undefined on input line 595.
+
+./_region_.tex:595: Preview: Snippet 341 started.
+<-><->
+      
+l.595 ...n increases the depth of the circuit by $
+                                                  1$. Figures {\ref{plot_2d_...
+
+Not a real error.
+
+./_region_.tex:595: Preview: Snippet 341 ended.(462465+0x358810).
+<-><->
+      
+l.595 ...increases the depth of the circuit by $1$
+                                                  . Figures {\ref{plot_2d_1}...
+
+Not a real error.
+
+[341]
+
+LaTeX Warning: Reference `plot_2d_1' on page 7 undefined on input line 595.
+
+./_region_.tex:597: Preview: Snippet 342 started.
+<-><->
+      
+l.597 \begin{figure}
+                    [!htp]
+Not a real error.
+
+<figures/2D_circuit.pdf, id=1263, 846.16125pt x 164.615pt>
+File: figures/2D_circuit.pdf Graphic file (type pdf)
+
+<use figures/2D_circuit.pdf>
+Package pdftex.def Info: figures/2D_circuit.pdf used on input line 599.
+(pdftex.def)             Requested size: 422.77664pt x 82.24701pt.
+
+./_region_.tex:602: Preview: Snippet 342 ended.(8719369+0x30785865).
+<-><->
+      
+l.602 \end{figure}
+                  
+Not a real error.
+
+[342
+
+
+ <./figures/2D_circuit.pdf>]
+./_region_.tex:604: Preview: Snippet 343 started.
+<-><->
+      
+l.604 \begin{figure}
+                    [!htp]
+Not a real error.
+
+File: figures/plot_100_1D.pdf Graphic file (type pdf)
+<use figures/plot_100_1D.pdf>
+Package pdftex.def Info: figures/plot_100_1D.pdf used on input line 606.
+(pdftex.def)             Requested size: 352.31625pt x 176.15768pt.
+
+./_region_.tex:609: Preview: Snippet 343 ended.(13091319+0x30785865).
+<-><->
+      
+l.609 \end{figure}
+                  
+Not a real error.
+
+[343
+
+
+]
+./_region_.tex:611: Preview: Snippet 344 started.
+<-><->
+      
+l.611 \begin{figure}
+                    [!htp]
+Not a real error.
+
+<figures/plot_900_2D.pdf, id=1284, 1734.48pt x 867.24pt>
+File: figures/plot_900_2D.pdf Graphic file (type pdf)
+
+<use figures/plot_900_2D.pdf>
+Package pdftex.def Info: figures/plot_900_2D.pdf used on input line 613.
+(pdftex.def)             Requested size: 352.31625pt x 176.15768pt.
+
+./_region_.tex:616: Preview: Snippet 344 ended.(13091319+0x30785865).
+<-><->
+      
+l.616 \end{figure}
+                  
+Not a real error.
+
+[344
+
+
+ <./figures/plot_900_2D.pdf>]
+./_region_.tex:621: Preview: Snippet 345 started.
+<-><->
+      
+l.621 \subsection
+                 {3D Lattice}
+Not a real error.
+
+./_region_.tex:621: Preview: Snippet 345 ended.(546132+0x30785865).
+<-><->
+      
+l.621 \subsection{3D Lattice}
+                             
+Not a real error.
+
+[345
+
+]
+./_region_.tex:623: Preview: Snippet 346 started.
+<-><->
+      
+l.623 \begin{figure}
+                    [!htp]
+Not a real error.
+
+<figures/3D_circuit.pdf, id=1303, 616.3025pt x 360.34625pt>
+File: figures/3D_circuit.pdf Graphic file (type pdf)
+
+<use figures/3D_circuit.pdf>
+Package pdftex.def Info: figures/3D_circuit.pdf used on input line 625.
+(pdftex.def)             Requested size: 352.31625pt x 205.99883pt.
+
+./_region_.tex:628: Preview: Snippet 346 ended.(16829568+0x30785865).
+<-><->
+      
+l.628 \end{figure}
+                  
+Not a real error.
+
+[346
+
+
+ <./figures/3D_circuit.pdf>]
+./_region_.tex:630: Preview: Snippet 347 started.
+<-><->
+      
+l.630 \begin{figure}
+                    [!htp]
+Not a real error.
+
+<figures/plot_125_3D.pdf, id=1319, 1734.48pt x 867.24pt>
+File: figures/plot_125_3D.pdf Graphic file (type pdf)
+
+<use figures/plot_125_3D.pdf>
+Package pdftex.def Info: figures/plot_125_3D.pdf used on input line 632.
+(pdftex.def)             Requested size: 352.31625pt x 176.15768pt.
+
+./_region_.tex:635: Preview: Snippet 347 ended.(13091319+0x30785865).
+<-><->
+      
+l.635 \end{figure}
+                  
+Not a real error.
+
+[347
+
+
+ <./figures/plot_125_3D.pdf>]
+./_region_.tex:637: Preview: Snippet 348 started.
+<-><->
+      
+l.637 \begin{figure}
+                    [!htp]
+Not a real error.
+
+<figures/plot_1000_3D.pdf, id=1334, 1734.48pt x 867.24pt>
+File: figures/plot_1000_3D.pdf Graphic file (type pdf)
+
+<use figures/plot_1000_3D.pdf>
+Package pdftex.def Info: figures/plot_1000_3D.pdf used on input line 639.
+(pdftex.def)             Requested size: 352.31625pt x 176.15768pt.
+
+./_region_.tex:642: Preview: Snippet 348 ended.(13091319+0x30785865).
+<-><->
+      
+l.642 \end{figure}
+                  
+Not a real error.
+
+[348
+
+
+ <./figures/plot_1000_3D.pdf>]
+No file _region_.bbl.
+
+Package natbib Warning: There were undefined citations.
+
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 648.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 648.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 648.
+Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 648.
+
+LaTeX Warning: There were undefined references.
+
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 648.
+ ) 
+Here is how much of TeX's memory you used:
+ 9248 strings out of 493089
+ 138858 string characters out of 6134842
+ 243449 words of memory out of 5000000
+ 12463 multiletter control sequences out of 15000+600000
+ 15577 words of font info for 61 fonts, out of 8000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 36i,17n,38p,1123b,465s stack positions out of 5000i,500n,10000p,200000b,80000s
+pdfTeX warning (dest): name{Hfootnote.3} has been referenced but does not exi
+st, replaced by a fixed one
+
+pdfTeX warning (dest): name{Hfootnote.2} has been referenced but does not exist
+, replaced by a fixed one
+
+pdfTeX warning (dest): name{Hfootnote.1} has been referenced but does not exist
+, replaced by a fixed one
+
+</usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb><
+/usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></
+usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></u
+sr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></us
+r/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/
+local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/lo
+cal/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/loca
+l/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/t
+exlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texl
+ive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texli
+ve/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/texlive
+/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2
+015/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/20
+15/texmf-dist/fonts/type1/public/amsfonts/cm/cmti8.pfb></usr/local/texlive/2015
+/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
+Output written on _region_.pdf (348 pages, 2367379 bytes).
+PDF statistics:
+ 1439 PDF objects out of 1440 (max. 8388607)
+ 1034 compressed objects within 11 object streams
+ 127 named destinations out of 1000 (max. 500000)
+ 41 words of extra memory for PDF output out of 10000 (max. 10000000)
+

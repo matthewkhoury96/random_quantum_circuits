@@ -1,0 +1,42 @@
+\begin{thebibliography}{1}
+
+\bibitem{supremacy_2}
+S.~{Aaronson} and L.~{Chen}.
+\newblock {Complexity-Theoretic Foundations of Quantum Supremacy Experiments}.
+\newblock {\em ArXiv e-prints}, Dec. 2016,
+  \href{http://arxiv.org/abs/1612.05903}{{\ttfamily arXiv:1612.05903}}.
+
+\bibitem{aaronson}
+S.~{Aaronson} and D.~{Gottesman}.
+\newblock {Improved simulation of stabilizer circuits}.
+\newblock {\em Phys. Rev. A}, 70(5):052328, Nov. 2004,
+  \href{http://arxiv.org/abs/quant-ph/0406196}{{\ttfamily
+  arXiv:quant-ph/0406196}}.
+
+\bibitem{supremacy_1}
+S.~{Boixo}, S.~V. {Isakov}, V.~N. {Smelyanskiy}, R.~{Babbush}, N.~{Ding},
+  Z.~{Jiang}, M.~J. {Bremner}, J.~M. {Martinis}, and H.~{Neven}.
+\newblock {Characterizing Quantum Supremacy in Near-Term Devices}.
+\newblock {\em ArXiv e-prints}, July 2016,
+  \href{http://arxiv.org/abs/1608.00263}{{\ttfamily arXiv:1608.00263}}.
+
+\bibitem{random_clifford}
+R.~{Koenig} and J.~A. {Smolin}.
+\newblock {How to efficiently select an arbitrary Clifford group element}.
+\newblock {\em Journal of Mathematical Physics}, 55(12):122202, Dec. 2014,
+  \href{http://arxiv.org/abs/1406.2170}{{\ttfamily arXiv:1406.2170}}.
+
+\bibitem{matthewkhoury96}
+matthewkhoury96.
+\newblock {matthewkhoury96/random\_quantum\_circuits: Software to Simulate
+  Pseudo-Random Quantum Circuits}, Aug. 2017.
+\newblock \href{http://dx.doi.org/10.5281/zenodo.846467}{\ttfamily
+  doi:10.5281/zenodo.846467}.
+
+\bibitem{nc}
+M.~A. Nielsen and I.~L. Chuang.
+\newblock {\em Quantum Computation and Quantum Information: 10th Anniversary
+  Edition}.
+\newblock Cambridge University Press, New York, NY, USA, 10th edition, 2011.
+
+\end{thebibliography}
