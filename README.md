@@ -26,7 +26,7 @@ Many of the functions in this software are implementations of algorithms describ
 
 ## Technical Report
 I have put together a cohesive technical report documenting some of the mathematics underlying certain algorithms in the code. This report also contains two conjectures that we numerically tested using this code base along with our results. 
-* [Numerical Analysis of the Collision Probability in Pseudo-Random Quantum Circuits](reports/report_1.pdf)
+* [Numerical Analysis of the Collision Probability in Pseudo-Random Quantum Circuits](report/report_1.pdf)
 
 ## License
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details
