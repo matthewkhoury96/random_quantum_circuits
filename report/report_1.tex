@@ -220,7 +220,7 @@ We also note that if we would like $V_S$ to be a non-trivial vector space\footno
 \item\label{cond_1} The elements of $S$ must commute
 \item\label{cond_2} $-I$ cannot be an element of $S$ 
 \end{enumerate} 
-We see that condition {\ref{cond_1}} must hold because if $-I \in S$, then we will have that $-I \ket{\psi} = \ket{\psi}$, which can only be satisfied by $\ket{\psi} = 0$. We see that condition {\ref{cond_2}} must also hold because all of the elements in $S$ either commute or anti-commute, as $S \leq P_n$. This means that if two elements $g, h \in S$ do not commute, then they must anti-commute so that $gh = -hg$. But if this is the case, then $-\ket{\psi} = -hg \ket{\psi} = gh \ket{\psi} = \ket{\psi}$, which can also only be satisfied by $\ket{\psi} = 0$.
+We see that condition {\ref{cond_2}} must hold because if $-I \in S$, then we will have that $-I \ket{\psi} = \ket{\psi}$, which can only be satisfied by $\ket{\psi} = 0$. We see that condition {\ref{cond_1}} must also hold because all of the elements in $S$ either commute or anti-commute, as $S \leq P_n$. This means that if two elements $g, h \in S$ do not commute, then they must anti-commute so that $gh = -hg$. But if this is the case, then $-\ket{\psi} = -hg \ket{\psi} = gh \ket{\psi} = \ket{\psi}$, which can also only be satisfied by $\ket{\psi} = 0$.
 
 Moreover, if $g \in S$, then $g$ cannot have an overall phase of $\pm i$. This follows because if we let
 \begin{equation}
@@ -514,7 +514,7 @@ Where we have used that $y^T = -y^T$ when working in $\mathbb{F}_2^n$. Equivalen
   x_1 u^{(1)} + x_2 u^{(2)} + \cdots + x_n u^{(n)} =
   y_1 v^{(1)} + y_2 v^{(2)} + \cdots + y_n v^{(n)} 
 \end{equation}
-Likewise, we see that by definition ${(x, y)}^T \in \text{Ker}(C)$ if and only if $xA^T = yB^T \in U \cap V$. We also see that if ${(x^{(1)}, y^{(1)})}^T, {(x^{(2)}, y^{(2)})}^T \in \text{Ker}(C)$, then 
+Likewise, we see that by definition ${(x, y)}^T \in \text{Ker}(C)$ if and only if ${(x, y)}^T \in U \cap V$. We also see that if ${(x^{(1)}, y^{(1)})}^T, {(x^{(2)}, y^{(2)})}^T \in \text{Ker}(C)$, then 
 \begin{equation}
 \alpha (A {x^{(1)}}^T + B {y^{(1)}}^T) + \beta (A {x^{(2)}}^T + B {y^{(2)}}^T) = 0
 \end{equation}
@@ -793,6 +793,7 @@ Lastly, we diverged slightly from our original conjectures to discuss fluctuatio
 Throughout this paper, our main focus has been on studying one statistical property of pseudo-random quantum circuits: how the expected value of the collision probability behaves as a function of the depth of the circuit and the number of qubits in the circuit. In doing so, we began by introducing Conjectures {\ref{conjecture_1}} and {\ref{conjecture_2}}, which we have tested numerically via simulations of pseudo-random quantum circuits. Before presenting the structure and results of our simulations, we described some of the mathematical principles allowing us to efficiently simulate quantum circuits composed only of Clifford Gates. We also presented an algorithm to efficiently compute the collision probability of such circuits.
 
 Overall, our numerical results for a 1D lattice and a complete graph strongly agree with the predictions made by Conjectures {\ref{conjecture_1}} and {\ref{conjecture_2}} respectively. Our numerical results also suggest that Conjecture {\ref{conjecture_1}} likely provides meaningful, but somewhat loose, upper bounds for a 2D and 3D lattice. We also found that $-\log_2(\langle P_c \rangle)$ and $-\log_2(\Delta P_c)$ behave similarly as functions of depth and number of qubits and that steady state fluctuations in the collision probability are approximately $\Delta P_c \approx {(1/2)}^n$.
+
 \bibliography{mybib}
 
 \end{document}
